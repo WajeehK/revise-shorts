@@ -1,0 +1,197 @@
+@ chemistry|Chemistry|AQA A level (7405)|orange
+# c-1-1|3.1.1 Atomic structure|Physical Chemistry
+N|⁶³Cu 69.2%, ⁶⁵Cu 30.8%. Relative atomic mass (3 s.f.)?|63.6|0.2||(63 × 69.2 + 65 × 30.8)/100 = 63.6.|(63*69.2+65*30.8)/100
+M|Electron configuration of Fe²⁺|1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶|[Ar] 3d⁴ 4s²|[Ar] 3d⁶ 4s²|[Ar] 3d⁵ 4s¹|4s electrons are lost first.
+W|Why does first ionisation energy decrease down a group?|shielding;further;distance;radius;larger|More shielding and larger radius, so weaker attraction to the outer electron.
+S|Order the stages of time-of-flight mass spectrometry|Ionisation;Acceleration;Ion drift;Detection|Lighter ions arrive first.
+M|Why is first IE lower for Al than Mg?|Al's outer electron is in a higher-energy 3p sub-level|Al has fewer protons|Al has a paired 3p electron|Mg has more shielding|3p is slightly shielded by 3s.
+# c-1-2|3.1.2 Amount of substance|Physical Chemistry
+N|Moles in 4.4 g of CO₂ (Mr 44)?|0.1|0|mol|n = m/Mr.|4.4/44
+N|Volume of 0.5 mol gas at 298 K, 100 kPa (3 s.f.)?|12.4|0.5|dm³|V = nRT/p = 0.0124 m³.|0.5*8.314*298/100000*1000
+N|25.0 cm³ of 0.100 mol dm⁻³ NaOH neutralises 20.0 cm³ HCl. [HCl]?|0.125|0|mol dm⁻³|2.5 × 10⁻³ mol / 0.020 dm³.|0.025*0.1/0.02
+M|Empirical formula: 40.0% C, 6.7% H, 53.3% O|CH₂O|C₂H₄O|CHO|CH₂O₂|Mole ratio 3.33 : 6.7 : 3.33 = 1 : 2 : 1.
+N|Atom economy of C₂H₄ + H₂O → C₂H₅OH?|100|0|%|Only one product.|46/(28+18)*100
+# c-1-3|3.1.3 Bonding|Physical Chemistry
+M|Shape of NH₃|trigonal pyramidal|trigonal planar|tetrahedral|bent|3 bonding pairs, 1 lone pair.
+N|Bond angle in H₂O?|104.5|0.5|°|2 lone pairs reduce 109.5° by about 2.5° each.|109.5-5
+P|Match each molecule to its shape|CH₄=tetrahedral;BF₃=trigonal planar;CO₂=linear;SF₆=octahedral|Electron pair repulsion.
+M|Which has a giant covalent structure?|SiO₂|CO₂|NaCl|I₂|Macromolecular.
+W|Strongest intermolecular force between H₂O molecules?|hydrogen|Hydrogen bonding.
+# c-1-4|3.1.4 Energetics|Physical Chemistry
+N|q = mcΔT for 50 g water, ΔT = 6.0 K, c = 4.18 J g⁻¹ K⁻¹?|1254|0.5|J|50 × 4.18 × 6.|50*4.18*6
+M|Standard enthalpy of formation forms|1 mol of a compound from its elements in standard states|1 mol of an element|1 mol of water|products by burning|Standard conditions 100 kPa, 298 K.
+W|Why are mean bond enthalpies less accurate?|average;mean|They are averages over many compounds.
+N|ΔfH: CO₂ −394, H₂O(l) −286, CH₄ −75 kJ mol⁻¹. ΔcH of CH₄?|-891|0.5|kJ mol⁻¹|(−394 + 2(−286)) − (−75).|(-394+2*-286)-(-75)
+M|An exothermic reaction has ΔH that is|negative|positive|zero|undefined|Energy released to surroundings.
+# c-1-5|3.1.5 Kinetics|Physical Chemistry
+M|A catalyst increases rate by|providing a route with lower activation energy|raising activation energy|giving particles more energy|shifting equilibrium|More particles exceed Ea.
+W|Why does a small temperature rise greatly increase rate?|activation energy;ea|Many more particles have energy ≥ Ea.
+M|At higher temperature, the Maxwell–Boltzmann peak|moves right and gets lower|moves left and rises|stays fixed|moves right and rises|Area stays the same.
+M|The area under a Maxwell–Boltzmann curve is|total number of molecules|activation energy|mean energy|the rate|Constant if no molecules are added.
+S|Order the effect of increasing concentration|More particles per unit volume;More frequent collisions;More successful collisions per second;Faster rate|Same fraction exceed Ea.
+# c-1-6|3.1.6 Chemical equilibria and Kc|Physical Chemistry
+M|Raising pressure on N₂ + 3H₂ ⇌ 2NH₃ shifts equilibrium|right (fewer gas moles)|left|not at all|depends on catalyst|Le Chatelier.
+M|A catalyst|speeds up reaching equilibrium without moving it|shifts it right|shifts it left|changes Kc|Both rates increase equally.
+N|H₂ + I₂ ⇌ 2HI: [H₂] = [I₂] = 0.1, [HI] = 0.8. Kc?|64|0||0.64/0.01.|0.8**2/(0.1*0.1)
+W|What is the only factor that changes Kc?|temperature|Temperature.
+W|Define dynamic equilibrium.|rate & equal;same|Forward and reverse rates are equal; concentrations stay constant.
+# c-1-7|3.1.7 Oxidation, reduction and redox equations|Physical Chemistry
+N|Oxidation state of Mn in MnO₄⁻?|7|0||x + 4(−2) = −1.|-1+8
+M|Oxidation is|loss of electrons|gain of electrons|gain of hydrogen|loss of oxygen|OIL RIG.
+M|2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂. The oxidising agent is|Fe³⁺|I⁻|Fe²⁺|I₂|It gains electrons.
+N|Oxidation state of S in H₂SO₄?|6|0||2 + x − 8 = 0.|8-2
+N|Electrons needed in MnO₄⁻ + 8H⁺ → Mn²⁺ + 4H₂O?|5|0||+7 to +2.|7-2
+# c-1-8|3.1.8 Thermodynamics|Physical Chemistry
+N|ΔH = +50 kJ mol⁻¹, ΔS = +200 J K⁻¹ mol⁻¹. Minimum T for feasibility?|250|0|K|T = ΔH/ΔS = 50000/200.|50000/200
+M|Lattice enthalpy is more exothermic for ions that are|smaller and more highly charged|larger and singly charged|covalent|gaseous|Stronger attraction.
+W|When is a reaction feasible?|negative;<0;≤0;less than zero;zero|When ΔG ≤ 0.
+M|Entropy increases when|a gas is produced from a solid|a gas condenses|a liquid freezes|gas moles decrease|More disorder.
+M|The first electron affinity of oxygen is|exothermic|endothermic|zero|larger than the second in magnitude and positive|The second is endothermic.
+# c-1-9|3.1.9 Rate equations|Physical Chemistry
+N|rate = k[A]²[B]. Overall order?|3|0||2 + 1.|2+1
+N|Second order in A. [A] doubles. Rate increases by a factor of|4|0||rate ∝ [A]², so doubling [A] multiplies the rate by 2² = 4.|2**2
+M|Units of k for a first-order reaction|s⁻¹|mol dm⁻³ s⁻¹|mol⁻¹ dm³ s⁻¹|none|rate/[A].
+W|What is the rate-determining step?|slowest|The slowest step in the mechanism.
+M|Plotting ln k against 1/T gives a gradient of|−Ea/R|Ea/R|ln A|−R/Ea|ln k = ln A − Ea/RT.
+# c-1-10|3.1.10 Equilibrium constant Kp|Physical Chemistry
+N|Total pressure 200 kPa, mole fraction of N₂ 0.25. Partial pressure of N₂?|50|0|kPa|p = xP.|0.25*200
+M|Kp expressions use|partial pressures of gases|concentrations of all species|masses|solids and liquids|Only gases.
+N|2NO₂ ⇌ N₂O₄: pNO₂ = 50 kPa, pN₂O₄ = 25 kPa. Kp?|0.01|0|kPa⁻¹|25/50².|25/50**2
+W|What is a mole fraction?|moles & total|Moles of a gas ÷ total moles of gas.
+# c-1-11|3.1.11 Electrode potentials and cells|Physical Chemistry
+N|E°: Zn²⁺/Zn −0.76 V, Cu²⁺/Cu +0.34 V. E°cell?|1.1|0|V|0.34 − (−0.76).|0.34+0.76
+M|In a cell, the more negative electrode|is oxidised (loses electrons)|is reduced|gains mass|is the cathode|It's the negative terminal.
+W|What does a salt bridge do?|ion|Allows ions to flow to complete the circuit without mixing solutions.
+M|Standard hydrogen electrode conditions|1.00 mol dm⁻³ H⁺, 100 kPa H₂, 298 K, Pt electrode|pH 7, 1 atm O₂|graphite electrode, 373 K|2 mol dm⁻³ H⁺, 50 kPa|E° = 0.00 V by definition.
+M|A hydrogen–oxygen fuel cell produces|water|CO₂|methane|hydrogen peroxide|2H₂ + O₂ → 2H₂O.
+# c-1-12|3.1.12 Acids and bases|Physical Chemistry
+N|pH of 0.010 mol dm⁻³ HCl?|2|0||−log 0.010.|-log10(0.01)
+N|pH of 0.10 mol dm⁻³ NaOH at 298 K (Kw = 1.0 × 10⁻¹⁴)?|13|0||[H⁺] = 10⁻¹³.|14+log10(0.1)
+N|Ka = 1.8 × 10⁻⁵, 0.10 mol dm⁻³ ethanoic acid. pH (3 s.f.)?|2.87|0.5||[H⁺] = √(Ka × c).|-log10(sqrt(1.8e-5*0.1))
+M|A buffer|resists pH change when small amounts of acid or base are added|keeps pH 7|neutralises any amount of acid|only works hot|Weak acid + its salt.
+W|Define a Brønsted–Lowry acid.|proton;h+|A proton (H⁺) donor.
+# c-2-1|3.2.1 Periodicity|Inorganic Chemistry
+M|Across Period 3, atomic radius|decreases|increases|stays the same|increases then decreases|Increasing nuclear charge.
+W|Why does atomic radius decrease across a period?|nuclear charge;protons|More protons with similar shielding pull electrons closer.
+M|Highest melting point in Period 3|Si|Mg|Al|P|Macromolecular structure.
+M|Chlorine is in which block?|p|s|d|f|Outer electrons in 3p.
+# c-2-2|3.2.2 Group 2, the alkaline earth metals|Inorganic Chemistry
+M|Down Group 2, solubility of hydroxides|increases|decreases|stays the same|is zero|Sulfates show the opposite trend.
+M|Which sulfate is used in barium meals?|BaSO₄|MgSO₄|CaSO₄|SrSO₄|Insoluble, so not absorbed.
+W|Why does reactivity increase down Group 2?|ionisation;shielding;further;lose|Outer electrons are further from the nucleus, so less energy is needed to remove them.
+M|Magnesium + steam gives|MgO + H₂|Mg(OH)₂ + H₂|MgO + O₂|no reaction|With cold water it gives Mg(OH)₂ slowly.
+# c-2-3|3.2.3 Group 7, the halogens|Inorganic Chemistry
+M|Which halide reduces conc. H₂SO₄ to H₂S?|I⁻|F⁻|Cl⁻|Br⁻|Strongest reducing agent.
+M|Colour of AgBr precipitate|cream|white|yellow|green|AgCl white, AgI yellow.
+W|Why is chlorine added to drinking water?|kill;bacteria;microorganisms|To kill bacteria; benefit outweighs the risk.
+M|Down Group 7, oxidising ability|decreases|increases|stays the same|varies randomly|Harder to gain an electron.
+M|Which silver halide dissolves in dilute ammonia?|AgCl|AgI|AgBr|none|AgBr needs concentrated.
+# c-2-4|3.2.4 Properties of Period 3 elements and their oxides|Inorganic Chemistry
+M|Na₂O in water gives|NaOH, pH about 14|an acidic solution|pH 7|no reaction|Basic ionic oxide.
+M|SO₂ in water gives|H₂SO₃, pH about 3|NaOH|neutral solution|no reaction|Acidic covalent oxide.
+M|Al₂O₃ is|amphoteric|acidic only|basic only|soluble and neutral|Reacts with acids and bases.
+W|Why does MgO have a higher melting point than Na₂O?|charge;2+;stronger|Mg²⁺ has a higher charge, so stronger ionic attraction.
+# c-2-5|3.2.5 Transition metals|Inorganic Chemistry
+P|Match each ion to its colour in solution|[Cu(H₂O)₆]²⁺=blue;[Fe(H₂O)₆]²⁺=pale green;[Co(H₂O)₆]²⁺=pink;[CuCl₄]²⁻=yellow|Colour depends on ligand, oxidation state and coordination number.
+W|Why are transition metal complexes coloured?|d & split;absorb|d orbitals split; electrons absorb visible light to move up.
+M|Shape of [CuCl₄]²⁻|tetrahedral|octahedral|square planar|linear|Cl⁻ is large.
+M|Shape of cisplatin|square planar|tetrahedral|octahedral|linear|Pt(NH₃)₂Cl₂.
+N|Coordination number in [Co(NH₃)₆]³⁺?|6|0||Six dative bonds.|6
+M|EDTA⁴⁻ is a|hexadentate ligand|monodentate ligand|bidentate ligand|tridentate ligand|Six lone pairs bond.
+# c-2-6|3.2.6 Reactions of ions in aqueous solution|Inorganic Chemistry
+M|Cu²⁺(aq) + NaOH(aq) gives|a blue precipitate|a green precipitate|an orange-brown precipitate|a white precipitate|Cu(OH)₂(H₂O)₄.
+M|Fe³⁺(aq) + NaOH(aq) gives|an orange-brown precipitate|a green precipitate|a blue precipitate|a white precipitate|Fe(OH)₃(H₂O)₃.
+M|[Fe(H₂O)₆]³⁺ is more acidic than [Fe(H₂O)₆]²⁺ because|Fe³⁺ has a higher charge density|Fe³⁺ is larger|Fe²⁺ has fewer electrons|Fe³⁺ has more ligands|It polarises water more.
+W|What forms when excess NH₃ is added to Cu(OH)₂?|deep blue;dark blue;royal blue|A deep blue solution of [Cu(NH₃)₄(H₂O)₂]²⁺.
+M|Al(OH)₃ dissolves in excess NaOH because it is|amphoteric|basic|insoluble|volatile|Forms [Al(OH)₄]⁻.
+# c-3-1|3.3.1 Introduction to organic chemistry|Organic Chemistry
+M|A functional group isomer of propanal is|propanone|propan-1-ol|propanoic acid|propene|Both C₃H₆O.
+M|E/Z isomerism needs|restricted C=C rotation with two different groups on each carbon|a chiral centre|a ring|a triple bond|Stereoisomerism.
+W|What is a homologous series?|functional group;general formula;ch2|Same general formula and functional group; members differ by CH₂.
+N|How many structural isomers does C₄H₁₀ have?|2|0||Butane and methylpropane.|2
+M|IUPAC name of CH₃CH(CH₃)CH₃|methylpropane|butane|propylmethane|2-methylbutane|Longest chain is 3 carbons.
+# c-3-2|3.3.2 Alkanes|Organic Chemistry
+S|Order the free-radical chlorination of methane|Initiation: Cl₂ → 2Cl• (UV);Propagation: Cl• + CH₄ → HCl + •CH₃;Propagation: •CH₃ + Cl₂ → CH₃Cl + Cl•;Termination: two radicals combine|Further substitution can occur.
+M|Fractional distillation separates crude oil by|boiling point|solubility|density|colour|Hotter at the bottom.
+M|Catalytic converters change CO and NO into|CO₂ and N₂|C and O₂|NO₂ and CO₂|H₂O only|Pt/Rh catalyst.
+W|Why is cracking useful?|demand;shorter;alkenes|Makes more useful shorter alkanes and alkenes.
+M|CFCs damage ozone through|Cl• radicals|F⁻ ions|CO₂|O₂|Cl• is regenerated (catalyst).
+# c-3-3|3.3.3 Halogenoalkanes|Organic Chemistry
+M|Which bond hydrolyses fastest?|C–I|C–F|C–Cl|C–Br|Weakest bond enthalpy.
+M|2-bromopropane with KOH in ethanol, heated, gives mainly|propene (elimination)|propan-2-ol|no reaction|propane|Hot ethanolic OH⁻ acts as a base.
+W|What is a nucleophile?|electron pair donor;lone pair|An electron pair donor.
+M|Halogenoalkane + excess NH₃ gives|a primary amine|a nitrile|an alcohol|an alkene|Nucleophilic substitution.
+M|Bromoethane + KCN gives|propanenitrile|ethanenitrile|ethylamine|propanoic acid|Adds one carbon.
+# c-3-4|3.3.4 Alkenes|Organic Chemistry
+M|Bromine water with an alkene goes|orange to colourless|colourless to orange|blue to green|unchanged|Electrophilic addition.
+M|Major product of HBr + propene|2-bromopropane|1-bromopropane|propane|1,2-dibromopropane|Markovnikov.
+W|Why is 2-bromopropane the major product?|secondary & carbocation;stable|It forms via the more stable secondary carbocation.
+M|Mechanism of alkene + Br₂|electrophilic addition|nucleophilic substitution|free-radical substitution|elimination|Br₂ is polarised.
+M|The addition polymer of ethene is|poly(ethene)|polyester|polyamide|ethanol|Unreactive saturated chain.
+# c-3-5|3.3.5 Alcohols|Organic Chemistry
+M|Primary alcohol + excess acidified K₂Cr₂O₇ under reflux gives|a carboxylic acid|a ketone|an alkene|nothing|Distil to get the aldehyde instead.
+M|Tertiary alcohols with acidified dichromate|are not oxidised|give ketones|give aldehydes|give acids|No H on the C–OH carbon.
+N|Moles of CO₂ per mole of glucose fermented?|2|0|mol|C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.|2
+W|Colour change when dichromate oxidises an alcohol?|orange & green|Orange to green.
+M|Alcohol dehydration uses|conc. H₃PO₄ or H₂SO₄, heat|NaOH(aq)|UV light|Ni catalyst|Elimination of water.
+# c-3-6|3.3.6 Organic analysis|Organic Chemistry
+M|Test for an aldehyde|Tollens' reagent gives a silver mirror|limewater turns milky|effervescence with Na₂CO₃|bromine water decolourises|Ketones give no mirror.
+P|Match each bond to its IR range (cm⁻¹)|O–H (acids)=2500–3000;C=O=1680–1750;O–H (alcohols)=3230–3550;C–H=2850–3300|Data sheet values.
+M|A broad IR absorption at 2500–3000 cm⁻¹ shows|O–H in a carboxylic acid|C=O|C–Br|O–H in an alcohol|Very broad.
+N|Integer Mr of C₂H₆O (M⁺ peak)?|46|0||24 + 6 + 16.|2*12+6+16
+W|What is the fingerprint region used for?|identify;compare;match|Comparing with known spectra to identify the compound.
+# c-3-7|3.3.7 Optical isomerism|Organic Chemistry
+M|A chiral carbon has|four different groups|a double bond|two identical groups|three groups|Non-superimposable mirror images.
+W|How do enantiomers differ?|plane & light;polarised;rotate|They rotate plane-polarised light in opposite directions.
+M|A racemic mixture|has equal amounts of each enantiomer|rotates light clockwise|is one enantiomer|contains E/Z isomers|No net rotation.
+M|Nucleophilic addition to a planar C=O gives a racemate because|attack is equally likely from either side|only one side is attacked|C=O is chiral|a catalyst is used|Planar trigonal carbon.
+# c-3-8|3.3.8 Aldehydes and ketones|Organic Chemistry
+M|Which reduces aldehydes and ketones to alcohols?|NaBH₄|K₂Cr₂O₇|conc. H₂SO₄|Tollens' reagent|Hydride ion nucleophile.
+M|Fehling's solution with an aldehyde goes|blue to brick-red precipitate|forms a silver mirror|orange to green|unchanged|Cu²⁺ → Cu₂O.
+M|Propanal + HCN forms|2-hydroxybutanenitrile|propanenitrile|butanoic acid|2-hydroxypropanenitrile|Adds one carbon.
+W|Why is KCN used instead of HCN?|toxic;gas;dangerous|HCN is a highly toxic gas (KCN is still toxic).
+M|Mechanism of carbonyl + NaBH₄|nucleophilic addition|electrophilic addition|nucleophilic substitution|elimination|H⁻ attacks δ+ carbon.
+# c-3-9|3.3.9 Carboxylic acids and derivatives|Organic Chemistry
+M|Carboxylic acid + alcohol (conc. H₂SO₄) forms|an ester + water|an ether|an aldehyde|a salt + H₂|Esterification.
+M|Acyl chloride + water gives|a carboxylic acid + HCl|an ester|an amide|an alcohol|Vigorous, misty fumes.
+M|Ethanoyl chloride + ammonia gives|ethanamide|ethylamine|ethanoic acid|ethyl ethanoate|Nucleophilic addition–elimination.
+W|Test for a carboxylic acid?|effervescence;fizz;co2;bubbles|Add sodium carbonate: effervescence of CO₂.
+M|Biodiesel is made by reacting vegetable oils with|methanol|alkanes|glucose|bromine|Transesterification.
+# c-3-10|3.3.10 Aromatic chemistry|Organic Chemistry
+M|Benzene's typical reaction is|electrophilic substitution|electrophilic addition|nucleophilic substitution|free-radical addition|Keeps the delocalised ring.
+M|The electrophile in nitration is|NO₂⁺|NO₂⁻|NO₃⁻|HNO₃|From HNO₃ + H₂SO₄.
+W|Why is benzene more stable than expected?|delocalised|Delocalised π electrons in the ring.
+M|Catalyst for Friedel–Crafts acylation|AlCl₃|Ni|Pt|Fe₂O₃|Forms the acylium ion.
+N|Cyclohexene hydrogenation is −120 kJ mol⁻¹. Predicted value for a 'triene' benzene?|-360|0|kJ mol⁻¹|3 × (−120); actual is about −208.|3*-120
+# c-3-11|3.3.11 Amines|Organic Chemistry
+M|Strongest base|ethylamine|ammonia|phenylamine|ethanamide|Alkyl group pushes electrons to N.
+W|Why is phenylamine a weaker base than ammonia?|delocalised;ring|The N lone pair is delocalised into the ring.
+M|Nitrobenzene is reduced to phenylamine using|Sn and conc. HCl|NaBH₄|K₂Cr₂O₇|UV light|Then add NaOH.
+M|Amines are nucleophiles because they have|a lone pair on nitrogen|a positive nitrogen|a double bond|an acidic hydrogen|Electron pair donors.
+# c-3-12|3.3.12 Polymers|Organic Chemistry
+M|Polyesters form by|condensation polymerisation|addition polymerisation|cracking|free-radical substitution|Water is lost.
+M|Kevlar is a|polyamide|polyester|poly(alkene)|protein|Aromatic polyamide.
+W|Why are polyesters biodegradable but poly(alkenes) not?|polar;hydrolysed;hydrolysis|Polar ester links can be hydrolysed; C–C chains are non-polar.
+M|A dicarboxylic acid + diamine forming nylon eliminates|water|HCl|NH₃|CO₂|HCl if a diacyl chloride is used.
+# c-3-13|3.3.13 Amino acids, proteins and DNA|Organic Chemistry
+M|At its isoelectric point an amino acid exists as a|zwitterion|cation|anion|free acid|No net charge.
+M|DNA strands are held together by|hydrogen bonds between bases|covalent bonds|ionic bonds|disulfide bridges|Complementary pairs.
+W|How does cisplatin act as an anticancer drug?|dna;guanine|It binds to guanine in DNA, preventing replication.
+M|DNA base pairing is|A–T and C–G|A–C and G–T|A–G and C–T|A–U and C–G|U is in RNA.
+M|Primary protein structure is|the amino acid sequence|the α-helix|3D folding|hydrogen bonding|Secondary = helix/sheet.
+# c-3-14|3.3.14 Organic synthesis|Organic Chemistry
+S|Order the route from ethene to ethanoic acid|Ethene + steam with H₃PO₄ catalyst;Ethanol formed;Reflux with acidified K₂Cr₂O₇;Ethanoic acid formed|Two-step synthesis.
+M|Reagent for bromoethane → ethanol|warm NaOH(aq)|NaOH in ethanol|conc. H₂SO₄|NH₃|Aqueous favours substitution.
+M|Conditions for propan-1-ol → propanal|acidified K₂Cr₂O₇, distil immediately|reflux with excess oxidant|NaBH₄|HCN|Prevents further oxidation.
+W|Why do chemists prefer fewer steps?|yield;waste|Each step lowers overall yield and creates waste.
+# c-3-15|3.3.15 NMR spectroscopy|Organic Chemistry
+M|How many ¹³C NMR peaks does propanone show?|2|3|1|4|Two carbon environments.
+M|TMS is used as a standard because it|gives one peak, set at δ = 0|reacts with the sample|is ionic|absorbs IR|12 equivalent H.
+M|In ¹H NMR, a CH₃ next to a CH₂ shows a|triplet|doublet|quartet|singlet|n + 1 rule.
+W|Why use deuterated solvents like CDCl₃?|no & hydrogen;no h;1h|They contain no ¹H atoms, so give no peaks.
+N|How many ¹H environments in ethanol?|3|0||CH₃, CH₂, OH.|3
+# c-3-16|3.3.16 Chromatography|Organic Chemistry
+N|Spot travels 3.0 cm, solvent front 7.5 cm. Rf?|0.4|0||3.0/7.5.|3/7.5
+M|In GC, retention time is|the time to pass through the column|distance travelled|the Rf|the mass|Identifies components.
+W|What does separation in chromatography depend on?|stationary & mobile|Relative affinity for the stationary and mobile phases.
+M|TLC stationary phase is|silica or alumina on a plate|the solvent|helium|water|Mobile phase is the solvent.

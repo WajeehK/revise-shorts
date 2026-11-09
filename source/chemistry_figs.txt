@@ -1,0 +1,19 @@
+// v10: questions that use a diagram ([fig:name] prefix)
+# c-1-1|3.1.1 Atomic structure|3.1 Physical chemistry
+2M|[fig:c-mass-spec] What causes the peak at m/z = 72?|³⁵Cl³⁷Cl⁺ ions|³⁷Cl₂⁺ ions|³⁵Cl₂⁺ ions|Cl⁺ ions with charge 2+|35 + 37 = 72.
+# c-1-3|3.1.3 Bonding|3.1 Physical chemistry
+2M|[fig:c-shapes] NH₄⁺ has 4 bonding pairs and no lone pairs. Using the diagram, what is its bond angle?|109.5°|107°|104.5°|90°|Four bonding pairs, no lone pairs: tetrahedral like CH₄, 109.5°.
+# c-1-5|3.1.5 Kinetics|3.1 Physical chemistry
+2M|[fig:c-maxwell] How does the distribution change at the higher temperature T₂?|The peak moves to higher energy and becomes lower|The peak moves to lower energy and becomes higher|The area under the curve increases|The activation energy decreases|The number of molecules is unchanged, so the area stays the same.
+# c-1-8|3.1.8 Thermodynamics|3.1 Physical chemistry
+3N|[fig:c-born-haber-q] Use the cycle to calculate the enthalpy of lattice formation of NaCl.|-787|0|kJ mol⁻¹|−411 − (107 + 122 + 496 − 349) = −787.|-411-(107+122+496-349)
+# c-1-11|3.1.11 Electrode potentials and cells|3.1 Physical chemistry
+1M|[fig:c-cell] In the cell shown, which electrode is the negative electrode?|zinc|copper|the salt bridge|neither|Zn is more easily oxidised (more negative E°); electrons leave it.
+# c-1-12|3.1.12 Acids and bases|3.1 Physical chemistry
+2M|[fig:c-titration] From the weak acid curve, where do you read pH = pKₐ?|at half the equivalence volume (12.5 cm³)|at the equivalence point (25 cm³)|at the start (0 cm³)|at pH 7|At half-neutralisation [HA] = [A⁻], so pH = pKₐ.
+# c-3-3|3.3.3 Halogenoalkanes|3.3 Organic chemistry
+1M|[fig:c-sn2] What does the curly arrow from OH⁻ show?|A lone pair moving to form a new bond to carbon|An electron transferring from carbon to oxygen|A single electron moving|The C–Br bond breaking homolytically|Curly arrows show the movement of a pair of electrons.
+# c-3-15|3.3.15 NMR spectroscopy|3.3 Organic chemistry
+2M|[fig:c-nmr] Why is the CH₂ peak of ethanol split into a quartet?|It is next to a CH₃ group with 3 H|It contains 4 hydrogen atoms|It is next to the OH group|It is bonded to oxygen|n + 1 rule: 3 neighbouring H → 4 peaks.
+# c-3-16|3.3.16 Chromatography|3.3 Organic chemistry
+1N|[fig:c-tlc] The solvent front moved 7.5 cm and the purple spot moved 5.0 cm. Find its Rf value (2 d.p.).|0.67|1||Rf = 5.0 ÷ 7.5.|5.0/7.5

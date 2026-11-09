@@ -1,0 +1,267 @@
+@ maths|Mathematics|Edexcel A level (9MA0)|purple
+# m-proof|1: Proof|Pure Mathematics
+1M|Which is a counter-example to "all prime numbers are odd"?|2|3|9|1|2 is prime and even.
+1M|Which disproves "x² > x for all real x"?|x = 0.5|x = 2|x = −3|x = 10|0.25 < 0.5.
+1W|What is proof by exhaustion?|all;every;each & case;possib|Split into a finite set of cases and check every one.
+1M|A general odd number can be written as|2n + 1|2n|n²|n + 1|For integer n.
+1M|The product of two consecutive integers is always|even|odd|prime|a square|One of them is even.
+2S|Order Euclid's proof that there are infinitely many primes|Assume there are finitely many primes p₁, …, pₙ;Let N = p₁p₂…pₙ + 1;No pᵢ divides N (remainder 1);N is prime or has a prime factor not in the list – contradiction|Classic proof by contradiction.
+2S|Order the proof that √2 is irrational|Assume √2 = a/b in lowest terms;Then a² = 2b², so a² and hence a are even;Write a = 2k, giving b² = 2k², so b is even;a and b share factor 2 – contradiction|Contradiction with 'lowest terms'.
+2M|To prove "if n² is even then n is even", it is easiest to prove|the contrapositive: if n is odd then n² is odd|the converse|by counter-example|by checking n = 1 to 10|(2k + 1)² = 2(2k² + 2k) + 1.
+2W|Why does checking n = 1 to 100 not prove a statement for every n?|not all;infinite;every;only some;other values;finite|It only checks some cases; there are infinitely many integers.
+2M|(2n + 1)² − (2n − 1)² simplifies to|8n|4n|8n + 2|2|4n² + 4n + 1 − (4n² − 4n + 1).
+2M|"If x² = 9 then x = 3" is|false: x = −3 is a counter-example|true|true only for integers|unprovable|Squares lose sign information.
+2N|Find the smallest positive integer n for which n² − n + 11 is not prime.|11|0||n = 1…10 give primes; n = 11 gives 121 = 11².|11**2-11+11==121 and 11
+2M|Which number is irrational?|√12|√16 / 2|0.125|22/7|√12 = 2√3.
+3S|Order the proof that n³ + 3n² + 2n is divisible by 6|Factorise: n(n + 1)(n + 2);Three consecutive integers include a multiple of 2;They also include a multiple of 3;So the product is divisible by 6|2 and 3 are coprime.
+3S|Order the proof that log₂3 is irrational|Assume log₂3 = p/q with positive integers p, q;Then 2^p = 3^q;The left side is even and the right side is odd;Contradiction, so log₂3 is irrational|Parity argument.
+3M|To prove there is no greatest even number, assume|a greatest even number N exists, then consider N + 2|all numbers are even|N is odd|N = 0|N + 2 is even and larger – contradiction.
+3M|For integers a and b, if ab is even then|at least one of a and b is even|both are even|both are odd|a + b is even|Odd × odd = odd.
+3S|Order the proof that rational + irrational is irrational|Assume r + x = q, with r and q rational and x irrational;Rearrange: x = q − r;q − r is rational;So x is rational – contradiction|Rationals are closed under subtraction.
+3M|x² − 6x + 10 > 0 for all real x because|it equals (x − 3)² + 1, which is at least 1|its discriminant is positive|x is positive|it has two roots|Completing the square.
+3M|For any integer n, n² mod 4 is always|0 or 1|0, 1, 2 or 3|1 only|2 only|Even² = 4k², odd² = 4(k² + k) + 1.
+3M|Which disproves "if a > b then a² > b²"?|a = 1, b = −2|a = 3, b = 2|a = 2, b = 0|a = 5, b = 1|1 < 4.
+3N|Proof by exhaustion of a statement about n² mod 3 needs how many cases (n mod 3)?|3|0||n ≡ 0, 1, 2.|3
+3W|Prove that the square of an odd number is odd: write (2k + 1)² in the form 2m + 1. What is m?|2k²+2k;2k^2+2k;2(k²+k);2(k^2+k)|(2k + 1)² = 4k² + 4k + 1 = 2(2k² + 2k) + 1.
+2M|A proof by deduction must start from|known facts or definitions|a guess|a counter-example|a diagram|Then use logical steps.
+# s-samp|1: Statistical sampling|Statistics
+1M|The whole group you want to study is the|population|sample|census|frame|A sample is a subset.
+1M|Surveying every member of a population is a|census|sample|quota|stratum|Accurate but costly.
+1W|Give one advantage of a sample over a census.|cheaper;quicker;faster;less time;easier;less data|Cheaper and quicker; less data to process.
+1M|Each item is numbered and chosen with random numbers. This is|simple random sampling|systematic sampling|quota sampling|cluster sampling|Needs a sampling frame.
+1M|Which sampling method is NOT random?|Opportunity|Simple random|Systematic (random start)|Stratified|It uses whoever is available.
+2N|A factory has 120 day-shift and 80 night-shift workers. A stratified sample of 30 is taken. How many from night shift?|12|0||80/200 × 30.|80/200*30
+2N|Systematic sample of 20 from a list of 500. What is the interval k?|25|0||500/20.|500/20
+2M|A disadvantage of opportunity sampling is that it|is unlikely to represent the population|needs a sampling frame|is expensive|takes a long time|The sample is chosen for convenience, so it is likely to be biased and unrepresentative.
+2M|Stratified sampling is useful when|the population splits into clear groups|there is no sampling frame|the population is tiny|data is qualitative only|Each group is fairly represented.
+2W|What is a sampling unit?|individual;item;member;one|A single member (item) of the population that can be sampled.
+2M|In the Large Data Set, 'tr' for rainfall means|trace: less than 0.05 mm|missing data|thunderstorm|treble|It is usually treated as 0.
+2M|Quota sampling is often used in|market research interviews|lotteries|quality control by random numbers|censuses|Interviewers fill quotas.
+3N|Stratified sample of 40 from 3 groups of sizes 150, 250 and 400. How many from the largest group?|20|0||400/800 × 40.|400/800*40
+3M|A student samples the first 50 cars entering a car park to estimate average age of cars in a city. The main problem is|the sample is not representative (bias)|the sample is too large|it is a census|it is stratified|Cars entering one car park at one time differ from the city's cars.
+3W|Why might a systematic sample be biased?|pattern;periodic;cycle;repeat|If the list has a repeating pattern matching the interval.
+3M|Cluster sampling involves|randomly choosing whole groups, then sampling within them|choosing every kth member|choosing people available|interviewing quotas|Cheaper for spread-out populations.
+3N|Random numbers 07, 23, 91, 23, 45 are used to pick 4 distinct items from a list numbered 01–80. Which number is the 4th item chosen?|45|0||Ignore 91 (out of range) and the repeat 23.|45
+3M|To improve reliability of a sample estimate you should|increase the sample size|use opportunity sampling|ignore outliers|use only one stratum|Larger random samples vary less.
+3W|A survey of a school is done by asking the first 20 students in the canteen. Suggest a better method.|stratified;random;systematic|Use stratified (by year group) or simple random sampling from a full school list.
+3M|A sampling frame for a school survey could be|the school register|students in the canteen|people on the bus|teachers only|Lists every member.
+3N|Population 2000, sample 5%. What sample size?|100|0||0.05 × 2000.|0.05*2000
+2M|Which method gives each member an equal chance and needs no sampling frame strata?|Simple random sampling|Quota sampling|Opportunity sampling|Judgement sampling|Simple random sampling: every member is equally likely and no division into strata is needed.
+1M|A sample should be|representative of the population|as small as possible|chosen by the researcher's preference|the whole population|To generalise.
+1W|What is bias in sampling?|not representative;unrepresentative;favour;systematic;skew|When the sample systematically differs from the population.
+2M|Which data is quantitative?|daily max temperature|wind direction (N, NE…)|cloud type|location name|Numerical data.
+# m-proof|1: Proof|Pure Mathematics
+2M|Which statement is a valid conclusion of a proof by contradiction?|The assumption is false, so the original statement is true|The statement is false|Both are true|Nothing can be concluded|The contradiction kills the assumption.
+# m-alg|2: Algebra and functions|Pure Mathematics
+2M|The function f(x) = x², x ∈ ℝ, has no inverse because it is|many-to-one|one-to-one|undefined at 0|discontinuous|Restrict the domain to x ≥ 0.
+2M|y = ∣f(x)∣ is obtained from y = f(x) by|reflecting the parts below the x-axis in the x-axis|reflecting in the y-axis|stretching by 2|translating up|Negative y-values become positive.
+3M|y = f(2x) + 3 is obtained from y = f(x) by|stretch scale factor ½ parallel to x-axis, then translate (0, 3)|stretch factor 2 parallel to x-axis, then up 3|stretch factor ½ parallel to y-axis|translate (3, 0) then stretch|Inside changes act on x 'the opposite way'.
+3W|The graph of y = f⁻¹(x) is a reflection of y = f(x) in which line?|y=x;y = x|The line y = x.
+3M|f(x) = 3/(x − 2). The domain of f⁻¹ is|x ≠ 0|x ≠ 2|x > 2|all real x|Range of f is y ≠ 0.
+# m-coord|3: Coordinate geometry|Pure Mathematics
+2M|The perpendicular bisector of a chord of a circle passes through|the centre|the origin|the chord's endpoint|the tangent point|Key circle theorem.
+2M|The angle in a semicircle is|90°|180°|45°|60°|Used to show AB is a diameter.
+3M|To show a line is a tangent to a circle, show the substituted quadratic has|discriminant = 0|discriminant > 0|discriminant < 0|two roots|One point of contact.
+3W|How do you convert parametric equations to a Cartesian equation?|eliminate & t;parameter|Eliminate the parameter t (rearrange one equation for t and substitute).
+3M|x = 3cos t, y = 3sin t describes|a circle radius 3, centre O|a line|a parabola|an ellipse with axes 3 and 6|cos² + sin² = 1.
+3M|The line y = 2x + c is a tangent to y = x² when c =|−1|1|0|2|x² − 2x − c = 0, discriminant 4 + 4c = 0.
+3M|x = t + 1, y = t² has Cartesian equation|y = (x − 1)²|y = x² − 1|y = x² + 1|y = (x + 1)²|t = x − 1.
+# m-seq|4: Sequences and series|Pure Mathematics
+2M|Σ (from r = 1 to n) of r equals|n(n + 1)/2|n²|n(n − 1)/2|2n + 1|Arithmetic series.
+2M|A geometric series converges when the ratio r satisfies|−1 < r < 1|r > 1|r < −1|r = 1|Then rⁿ → 0.
+2M|uₙ₊₁ = 1/uₙ with u₁ = 2 gives a|periodic sequence of order 2|increasing sequence|arithmetic sequence|convergent sequence to 0|2, ½, 2, ½, …
+2W|What makes a sequence increasing?|uₙ₊₁ > uₙ;u(n+1) > u(n);each term;larger;bigger;greater|Each term is greater than the one before.
+2M|The binomial expansion of (1 + x)ⁿ is finite when n is|a positive integer|negative|a fraction|any real number|Otherwise it is infinite.
+3M|(2 + x)⁻² expanded as a series is valid for|−2 < x < 2|−½ < x < ½|all x|x > 2|Write as ¼(1 + x/2)⁻².
+3W|Why must you take out a factor before expanding (2 + 3x)⁻¹?|1;first term;form (1 + x);(1+x)|The standard expansion needs the form (1 + kx)ⁿ.
+3M|The sum Σ (r = 1 to 20) (3r − 1) equals|610|600|620|590|3 × 210 − 20.
+# m-trig|5: Trigonometry|Pure Mathematics
+2M|cos(A + B) ≡|cos A cos B − sin A sin B|cos A cos B + sin A sin B|sin A cos B + cos A sin B|cos A + cos B|Addition formula.
+2M|The period of y = tan x (degrees) is|180°|360°|90°|720°|Repeats every 180°.
+2M|The range of y = arcsin x is|−π/2 ≤ y ≤ π/2|0 ≤ y ≤ π|−π ≤ y ≤ π|0 ≤ y ≤ 2π|Principal values.
+2M|cot θ is|cos θ / sin θ|sin θ / cos θ|1/cos θ|1/sin θ|Reciprocal of tan.
+3M|cos 2A can be written as|1 − 2sin²A|2 sin A cos A|1 + 2sin²A|sin²A − cos²A|Also 2cos²A − 1.
+3M|For small θ, (sin 3θ)/θ ≈|3|1|θ|1/3|sin 3θ ≈ 3θ.
+3W|Why must angles be in radians for small-angle approximations?|radian|The approximations sin θ ≈ θ etc. only hold in radians.
+3M|The maximum value of 5 sin x − 12 cos x is|13|17|7|5|R = √(25 + 144).
+# m-exp|6: Exponentials and logarithms|Pure Mathematics
+1M|log₃81 =|4|3|27|9|3⁴ = 81.
+1M|log a + log b =|log ab|log(a + b)|log a × log b|log(a/b)|Product law.
+2M|The gradient of y = e^(kx) at x = 0 is|k|1|e|0|dy/dx = ke^(kx).
+2M|ln(e³) =|3|e³|1|3e|ln and e are inverses.
+2M|The graph y = e^(−x) has asymptote|y = 0|x = 0|y = 1|y = x|Decays to 0.
+2W|In y = Ae^(−kt), what does k > 0 represent?|decay;decrease;rate|The rate of exponential decay.
+2M|2 log x − log y =|log(x²/y)|log(2x/y)|log(x² − y)|2 log(x/y)|Power then quotient law.
+3M|If log y = 0.5 log x + 2 (base 10), then|y = 100√x|y = 2√x|y = 0.5x + 2|y = 100x²|y = 10² × x^0.5.
+3W|What does the intercept of a log y against x graph give for y = abˣ?|log a;lg a|log a (so a = 10^intercept).
+3M|Solve e^(2x) − 5eˣ + 6 = 0. The solutions are|x = ln 2, ln 3|x = 2, 3|x = e², e³|x = ln 5|Quadratic in eˣ.
+# m-diff|7: Differentiation|Pure Mathematics
+2M|d/dx (tan x) =|sec²x|−cosec²x|sec x tan x|cot x|Quotient rule on sin/cos.
+2M|At a point of inflection the curve|changes concavity (f″ changes sign)|has f′ > 0|must be stationary|is a maximum|f″ = 0 is necessary, not sufficient.
+3M|A curve is concave where|f″(x) < 0|f″(x) > 0|f′(x) = 0|f(x) < 0|Gradient decreasing.
+3M|d/dx (aˣ) =|aˣ ln a|x aˣ⁻¹|aˣ|aˣ/ln a|Write aˣ = e^(x ln a).
+3M|Connected rates: dV/dt = dV/dr × ?|dr/dt|dt/dr|dV/dr|r|Chain rule.
+# m-int|8: Integration|Pure Mathematics
+2M|∫ sec²x dx =|tan x + c|sec x + c|−cot x + c|2 sec x + c|Reverse of d(tan x).
+2M|∫ e^(5x) dx =|e^(5x)/5 + c|5e^(5x) + c|e^(5x) + c|e^(6x)/6 + c|Divide by 5.
+2M|Area below the x-axis from integration is|negative|positive|zero|undefined|Take the modulus for area.
+3M|∫ f′(x)/f(x) dx =|ln∣f(x)∣ + c|f(x)² + c|1/f(x) + c|f′(x) ln x + c|Standard result.
+3M|To integrate sin²x, first use|sin²x = ½(1 − cos 2x)|sin²x = 1 + cos²x|integration by parts|substitution u = sin x|Double-angle identity.
+# m-num|9: Numerical methods|Pure Mathematics
+2M|An iteration xₙ₊₁ = g(xₙ) converges if near the root|the modulus of g′(x) is less than 1|g′(x) > 1|g(x) = 0|g′(x) = 1|Cobweb or staircase diagram.
+2M|A staircase diagram shows the iteration|converges with g′ positive|diverges|has g′ negative|has no root|Cobwebs occur when g′ is negative.
+2W|Why might a change of sign fail to show a root?|asymptote;discontin;not continuous|The function may be discontinuous (e.g. an asymptote).
+2M|A change of sign may miss roots if|there are two roots close together in the interval|the function is continuous|the interval is large|the gradient is zero|Even number of roots → no sign change.
+3M|Increasing the number of trapezium strips makes the estimate|more accurate|less accurate|unchanged|always an overestimate|Smaller h.
+3W|Why does Newton–Raphson fail if f′(x₀) = 0?|divide;division;zero;horizontal|You would divide by zero – the tangent is horizontal and never meets the axis.
+3M|x³ − 3x + 1 = 0 rearranged as x = (x³ + 1)/3 gives g′ at a root near 0.35 of about|0.12, so it converges|3|1.5, so it diverges|−2|g′(x) = x².
+3M|To show a root is 1.47 to 2 d.p., evaluate f at|1.465 and 1.475|1.46 and 1.48|1.4 and 1.5|1.47 only|Bounds of the rounding interval.
+3M|Upper and lower bounds on an area can be found using|rectangles above and below the curve|only the trapezium rule|Newton–Raphson|iteration|Riemann sums.
+# m-vec|10: Vectors|Pure Mathematics
+2M|A unit vector in the direction of 3i + 4j is|0.6i + 0.8j|3i + 4j|0.3i + 0.4j|i + j|Divide by the magnitude 5.
+2M|Position vector of P(2, −1, 5) is|2i − j + 5k|2i + j + 5k|−2i + j − 5k|2i − j|Coordinates → components.
+2M|If AB = b − a, then BA =|a − b|b − a|a + b|−a − b|Reverse direction.
+2W|What is a position vector?|origin|A vector from the origin to the point.
+2M|Points A, B, C are collinear if|AB = k AC for a scalar k|AB = AC|∣AB∣ = ∣AC∣|A + B = C|Parallel with a common point.
+3M|M divides AB in the ratio 1 : 2. OM =|⅔a + ⅓b|⅓a + ⅔b|½(a + b)|a + 2b|OM = a + ⅓(b − a).
+3W|How do you show that ABCD is a parallelogram using vectors?|AB = DC;AB=DC;parallel & equal|Show AB = DC (equal and parallel opposite sides).
+3M|A ship's velocity is (5i + 12j) km/h. Its speed is|13 km/h|17 km/h|7 km/h|60 km/h|Magnitude.
+# s-data|2: Data presentation and interpretation|Statistics
+1M|Which average is most affected by outliers?|mean|median|mode|lower quartile|It uses every value.
+2M|A box plot shows|min, Q₁, median, Q₃, max and outliers|mean and SD|frequency densities|only the median|Five-number summary.
+2M|Positive skew means|mean > median|mean < median|mean = median|no outliers|Tail on the right.
+3M|Adding 5 to every data value changes the standard deviation by|nothing|+5|×5|+25|Spread unchanged.
+3M|Multiplying every value by 3 multiplies the variance by|9|3|1|√3|Variance scales by the square.
+3W|Explain why correlation does not imply causation.|other;third;factor;variable;coincid;cause|A third factor or coincidence may explain the link.
+3M|The explanatory variable in y = a + bx is|x|y|a|b|It is plotted on the horizontal axis.
+3M|Which is a cleaning step for the Large Data Set?|removing or treating 'n/a' and 'tr' entries|adding extra values|deleting all outliers automatically|rounding everything to 0|Handle missing/trace data.
+# s-prob|3: Probability|Statistics
+2M|A Venn diagram region outside both A and B represents|P(A′ ∩ B′)|P(A ∩ B)|P(A ∪ B)|P(A)|Neither event.
+2M|P(A′) =|1 − P(A)|P(A) − 1|P(A)²|1/P(A)|Complement rule.
+2W|What does it mean for events to be independent?|not affect;doesn't affect;does not affect;no effect;unaffected|One event happening does not change the probability of the other.
+3M|If P(A given B) = P(A), then A and B are|independent|mutually exclusive|exhaustive|complementary|Conditioning has no effect.
+3M|Events that cannot happen together and cover all outcomes are|mutually exclusive and exhaustive|independent|conditional|complementary only if equally likely|Probabilities sum to 1.
+3M|P(A ∪ B) = 0.7, P(A) = 0.4, P(B) = 0.5. P(A ∩ B) =|0.2|0.1|0.3|0.9|0.4 + 0.5 − 0.7.
+2M|Tree diagram probabilities along a branch are|multiplied|added|subtracted|averaged|AND → multiply.
+# s-dist|4: Statistical distributions|Statistics
+1M|A discrete uniform distribution on {1, …, 6} has P(X = 3) =|1/6|1/3|1/2|3/6|Each equally likely.
+2M|The normal distribution is|symmetric about the mean|skewed right|discrete|bounded between 0 and 1|Bell-shaped.
+2M|Points of inflection of a normal curve are at|μ ± σ|μ ± 2σ|μ|μ ± 3σ|One SD from the mean.
+2W|When can a normal approximate B(n, p)?|large n & p;close to 0.5;near 0.5;0.5|When n is large and p is close to 0.5.
+2M|Continuity correction: P(X ≤ 20) for binomial becomes|P(Y < 20.5)|P(Y < 19.5)|P(Y < 20)|P(Y > 20.5)|Discrete → continuous.
+3M|Var(X) for X ~ B(n, p) is|np(1 − p)|np|n²p|p(1 − p)|Variance formula.
+3W|Why might a binomial model not suit "number of rainy days in a week"?|independent;not independent;constant;varies|Days aren't independent and the probability may vary.
+# s-hyp|5: Statistical hypothesis testing|Statistics
+1M|The null hypothesis is the|assumption we test against, assumed true|result we want to prove|alternative claim|significance level|Written with "=".
+1M|A 5% significance level means|5% chance of wrongly rejecting a true H₀|H₀ is 5% true|95% of data is used|the test is 5% accurate|Type I error probability.
+1M|A test statistic in the critical region leads you to|reject H₀|accept H₀|reject H₁|change the significance level|Evidence for H₁.
+1W|What is the acceptance region?|not reject;accept;do not reject|Values of the test statistic for which H₀ is not rejected.
+1M|H₁: p ≠ 0.5 is a|two-tailed test|one-tailed test|null hypothesis|critical value|Change in either direction.
+2M|Conclusions must be written|in context, without certainty|as "H₀ is proven"|only as numbers|without reference to the question|"There is evidence that …"
+2M|The p-value is|the probability of a result at least this extreme if H₀ is true|the probability H₀ is true|the significance level|the critical value|Compare with α.
+2W|Why should you not say "H₀ is accepted"?|evidence;not proven;insufficient;not enough|We only lack evidence to reject it; it is not proven true.
+2M|Testing for correlation uses the|product moment correlation coefficient r|mean|median|binomial distribution|Compare r with the critical value.
+2M|A one-tailed test for a decrease in p at 5% puts|5% in the lower tail|2.5% in each tail|5% in the upper tail|10% in the lower tail|Direction matters.
+2M|Testing a normal mean uses the distribution of|x̄ ~ N(μ, σ²/n)|X ~ B(n, p)|r|x̄ ~ N(μ, σ²)|Sampling distribution.
+2M|PMCC critical value 0.5494, sample r = 0.61, one-tailed H₁: ρ > 0. Conclusion?|Reject H₀: evidence of positive correlation|Do not reject H₀|Reject H₁|Inconclusive|0.61 > 0.5494.
+3M|Increasing the sample size in a test generally|makes it easier to detect a real effect|makes H₀ true|changes α|has no effect|Smaller standard error.
+# k-units|6: Quantities and units in mechanics|Mechanics
+1M|Which is a vector quantity?|velocity|speed|mass|time|Has direction.
+1M|The unit of acceleration is|m s⁻²|m s⁻¹|N|kg m|Change of velocity per second.
+1W|What is the difference between mass and weight?|weight & force;gravity|Mass is the amount of matter (kg); weight is the gravitational force on it (N).
+2M|An 'inextensible' string means|it does not stretch, so connected particles share acceleration|it has no mass|it is smooth|it can break|Equal accelerations.
+2M|A 'smooth' surface means|no friction|no normal reaction|no weight|constant speed|Friction neglected.
+2M|A 'rigid' body means|it does not bend|it has no mass|it is a particle|it is smooth|Used for rods and beams.
+2M|A 'uniform' rod means|its mass is evenly distributed (weight at its midpoint)|it is light|it is smooth|it is vertical|Centre of mass at the centre.
+3M|1 N is the force giving|1 kg an acceleration of 1 m s⁻²|1 g an acceleration of 1 m s⁻²|1 kg a speed of 1 m s⁻¹|1 kg a displacement of 1 m|F = ma definition.
+3M|Modelling a ball as a particle ignores|air resistance effects of size and spin|its mass|gravity|its velocity|Size is negligible.
+3W|Give one limitation of taking g = 9.8 m s⁻².|varies;height;location;altitude;latitude;constant|g varies with location and height; it's an approximation.
+3M|A car's speed is 108 km/h. In m/s this is|30|108|38.9|3.6|÷ 3.6.
+3M|A model treats a lift as a particle. A refinement would be|including air resistance or the lift's dimensions|removing gravity|assuming g = 0|treating it as smooth|Improves realism.
+# k-kin|7: Kinematics|Mechanics
+1M|The gradient of a velocity–time graph is|acceleration|displacement|distance|speed|dv/dt.
+2M|SUVAT equations only apply when|acceleration is constant|velocity is constant|t = 0|motion is circular|Uniform acceleration.
+2M|For variable acceleration a(t), velocity is found by|integrating a with respect to t|differentiating a|multiplying a by t always|squaring a|v = ∫a dt.
+2W|What is the vertical velocity of a projectile at its highest point?|zero;0|Zero.
+2M|Displacement differs from distance because displacement|has direction|is always larger|is scalar|ignores start point|Vector vs scalar.
+3M|A projectile's path (no air resistance) is a|parabola|circle|straight line|hyperbola|Quadratic in x.
+3M|Two balls thrown horizontally and dropped from the same height land|at the same time|thrown one first|dropped one first|depends on mass|Vertical motion is independent.
+3W|To find the time of flight of a projectile, which direction's motion do you use?|vertical|The vertical motion (s = 0 for level ground).
+# k-force|8: Forces and Newton's laws|Mechanics
+1M|Newton's first law says an object with no resultant force|stays at rest or moves at constant velocity|accelerates|stops|moves in a circle|Inertia.
+1M|The normal reaction on a block on a horizontal floor (no other vertical forces) equals|its weight|zero|twice its weight|its mass|R = mg.
+2M|Friction on a block at rest (not limiting) is|at most μR, just enough to prevent motion|always μR|zero|bigger than μR|F ≤ μR.
+2M|On a smooth pulley, the tension in the string is|the same on both sides|zero|different on each side|equal to the total weight|Light string, smooth pulley.
+2W|What does 'limiting equilibrium' mean?|about to;on the point;point of moving;verge|Friction is at its maximum (F = μR) and the object is on the point of moving.
+2M|The force exerted on a pulley by the string is|the resultant of the tensions on both sides|zero|one tension|the weight only|Vector sum.
+2M|A lift accelerating upwards makes the reaction on a passenger|greater than mg|less than mg|zero|equal to mg|R − mg = ma.
+2M|Resolving forces means|splitting them into perpendicular components|adding magnitudes|ignoring friction|taking moments|Usually horizontal and vertical.
+3M|A block on a rough slope at angle θ is about to slide. Then μ =|tan θ|sin θ|cos θ|1/tan θ|μmg cos θ = mg sin θ.
+3W|In a connected-particle problem, why do both particles have the same acceleration?|inextensible;string does not stretch|The string is inextensible (taut).
+3M|A towbar between a car and trailer is modelled as|a light rigid rod (tension or thrust)|a string|a pulley|a spring|Can push or pull.
+# k-mom|9: Moments|Mechanics
+1M|The unit of a moment is|N m|N|N/m|J s|Force × distance.
+1M|The moment of a force about a point is|force × perpendicular distance|force × any distance|force / distance|force + distance|Perpendicular distance.
+1W|A rod resting on two supports is about to tip about one support. What is the reaction at the other support?|zero;0|Zero.
+1M|A uniform rod of length 4 m has its centre of mass at|2 m from either end|1 m from one end|4 m|0 m|Midpoint.
+1M|Taking moments about a point where an unknown force acts|eliminates that force from the equation|doubles it|makes it zero in reality|is not allowed|Useful trick.
+2M|A see-saw balances with 300 N at 2 m one side. A 400 N child sits on the other side at|1.5 m|2 m|2.67 m|1 m|600 = 400d.
+2M|For a ladder against a smooth wall, the wall's reaction is|horizontal (perpendicular to the wall)|vertical|along the ladder|zero|Smooth: no friction.
+2M|A non-uniform rod's weight acts at|its centre of mass, not necessarily the middle|the midpoint|one end|nowhere|Found from moments.
+2W|What two equations do you use for a body in equilibrium under several forces?|resolv;forces;moments|Resolve forces (in two directions) and take moments.
+2M|Clockwise moment 24 N m, anticlockwise 18 N m. The resultant moment is|6 N m clockwise|6 N m anticlockwise|42 N m|0|24 − 18.
+2M|Moving a load further from the pivot|increases its moment|decreases its moment|has no effect|makes the moment zero|M = Fd.
+2M|A rod on two supports: as a load moves toward support A, the reaction at A|increases|decreases|stays the same|becomes zero|Moments about B.
+3M|A non-uniform 6 m rod balances on a pivot 2 m from end A. Its centre of mass is|2 m from A|3 m from A|4 m from A|at A|Balances at the centre of mass.
+3W|Why is a ladder more likely to slip as a person climbs higher?|moment;further;distance|The person's moment about the base increases, needing more friction.
+# s-prob|3: Probability|Statistics
+3N|P(A) = 0.5, P(B given A) = 0.4, P(B given A′) = 0.2. Find P(B).|0.3|0||Total probability: 0.5×0.4 + 0.5×0.2.|0.5*0.4+0.5*0.2
+3N|Same events: find P(A given B) (3 s.f.).|0.667|0.5||0.2/0.3.|0.2/0.3
+3N|Three fair coins are tossed. Find P(at least one head).|0.875|0||1 − (½)³.|1-0.5**3
+2N|A card is drawn from 52. Find P(king or heart) (3 s.f.).|0.308|0.5||(4 + 13 − 1)/52.|16/52
+# s-dist|4: Statistical distributions|Statistics
+3N|X ~ N(30, 25). Find x such that P(X < x) = 0.975 (3 s.f.).|39.8|0.5||x = 30 + 1.96 × 5.|30+1.96*5
+# s-hyp|5: Statistical hypothesis testing|Statistics
+3N|A test of H₀: μ = 50 against H₁: μ > 50 uses n = 25 from N(μ, 10²). Find the z-value for x̄ = 53.5.|1.75|0.5||z = (53.5 − 50)/(10/5).|(53.5-50)/(10/5)
+3N|For the test above at 5% (critical z = 1.645), find the smallest x̄ that leads to rejecting H₀ (3 s.f.).|53.3|0.5||50 + 1.645 × 2.|50+1.645*2
+# k-units|6: Quantities and units in mechanics|Mechanics
+2N|Convert 0.25 km to cm.|25000|0|cm|× 100 000.|0.25*100000
+3N|A cyclist travels 4.5 km in 15 minutes. Find the average speed in m/s.|5|0|m/s|4500/900.|4500/900
+3N|A car travels at a constant 72 km/h. How far does it go in 45 s?|900|0|m|72 km/h = 72 000 ÷ 3600 = 20 m s⁻¹, and 20 × 45 = 900 m.|72000/3600*45
+3N|A 70 kg person stands in a lift accelerating upward at 1.2 m s⁻². Find the reaction (g = 9.8).|770|0|N|R = m(g + a).|70*(9.8+1.2)
+3N|Convert 9.8 m s⁻² into km h⁻² (3 s.f., × 10⁵).|1.27|0.5|× 10⁵ km h⁻²|9.8 × 3600² / 1000.|9.8*3600**2/1000/1e5
+2N|Express 1 tonne-force (weight of 1000 kg, g = 9.8) in kN.|9.8|0|kN|1000 × 9.8 / 1000.|9.8
+# k-kin|7: Kinematics|Mechanics
+3N|A car decelerates uniformly from 25 m/s to rest in 50 m. Find the time taken.|4|0|s|s = ½(u + v)t.|50/(0.5*25)
+3N|Particle: s = t³ − 6t² + 9t. Find the time (other than t = 1) when it is momentarily at rest.|3|0|s|v = 3t² − 12t + 9 = 3(t − 1)(t − 3).|3
+3N|For s = t³ − 6t² + 9t, find the total distance travelled from t = 0 to t = 3.|8|0|m|4 forward to t = 1, then back 4.|4+4
+2N|A train accelerates from rest at 0.5 m s⁻² for 40 s. Find the distance.|400|0|m|½at².|0.5*0.5*40**2
+2N|A ball is thrown up at 14.7 m/s. Find the time to its highest point (g = 9.8).|1.5|0|s|v = u − gt.|14.7/9.8
+# k-force|8: Forces and Newton's laws|Mechanics
+3N|Forces (3i + 4j) N and (5i − 2j) N act on a 2 kg particle. Find the magnitude of its acceleration (3 s.f.).|4.12|0.5|m s⁻²|R = 8i + 2j; a = R/2.|((8**2+2**2)**0.5)/2
+3N|A 5 kg block is at rest on a rough horizontal floor. A 20 N force at 30° above horizontal just moves it. Find μ (3 s.f., g = 9.8).|0.444|0.5||R = 49 − 10 = 39; μ = 17.32/39 ≈ 0.444.|20*cos(radians(30))/(5*9.8-20*sin(radians(30)))
+3N|A car of mass 1000 kg tows a 500 kg trailer with resistances 200 N and 100 N. Driving force 1800 N. Find the tension in the towbar.|600|0|N|a = 1 m s⁻²; T − 100 = 500 × 1, so T = 600 N.|500*((1800-300)/1500)+100
+2N|A 3 kg mass hangs from a string in a lift accelerating down at 2 m s⁻². Find the tension (g = 9.8).|23.4|0.5|N|T = m(g − a).|3*(9.8-2)
+# k-mom|9: Moments|Mechanics
+3N|A uniform 5 m plank of weight 200 N rests on supports 1 m from each end. How far beyond a support can a 400 N man walk before it tips?|0.75|0.5|m|Tips about the support: 400d = 200 × 1.5.|200*1.5/400
+3N|A non-uniform 4 m rod of weight 60 N is supported at its ends; reactions are 20 N and 40 N. How far is the centre of mass from the 20 N end?|2.67|0.5|m|Moments about the 20 N end: 60x = 40 × 4.|40*4/60
+3N|A uniform 3 m rod of weight 50 N is hinged to a wall and held horizontal by a string at its free end making 30° with the rod. Find the tension.|50|0|N|T sin 30° × 3 = 50 × 1.5.|50*1.5/(3*sin(radians(30)))
+# s-data|2: Data presentation and interpretation|Statistics
+2N|Data 3, 7, 8, 12, 15, 21, 30. Find the interquartile range (Q₁ = 7, Q₃ = 21).|14|0||21 − 7.|21-7
+# m-coord|3: Coordinate geometry|Pure Mathematics
+2N|Find the midpoint x-coordinate of (−3, 4) and (7, −2).|2|0||(−3 + 7)/2.|(-3+7)/2
+# m-seq|4: Sequences and series|Pure Mathematics
+2N|Find Σ (r = 1 to 10) 2ʳ.|2046|0||Geometric: 2(2¹⁰ − 1).|2*(2**10-1)
+# m-trig|5: Trigonometry|Pure Mathematics
+2N|Find the exact value of cos 60° + sin 30°.|1|0||½ + ½.|cos(radians(60))+sin(radians(30))
+3N|Solve 3 sin 2x = 2 cos x for 0 < x < 90°, (cos x ≠ 0). Find x (1 d.p.).|19.5|0.5|°|6 sin x cos x = 2 cos x → sin x = ⅓.|degrees(asin(1/3))
+# m-diff|7: Differentiation|Pure Mathematics
+2N|y = (2x + 1)⁴. Find dy/dx at x = 0.|8|0||Chain rule: 8(2x + 1)³.|8
+2N|y = cos(3x). Find d²y/dx² at x = 0.|-9|0||−9 cos 3x.|-9
+3N|Find the equation of the normal to y = x² at x = 1, then give its y-intercept.|1.5|0||Gradient −½ through (1, 1): y = −½x + 1.5.|1.5
+3N|The tangent to y = eˣ at x = 1 meets the x-axis at x = ?|0|0||y − e = e(x − 1); y = 0 → x = 0.|1-exp(1)/exp(1)
+# m-int|8: Integration|Pure Mathematics
+2N|Evaluate ∫₀¹ e^(2x) dx (3 s.f.).|3.19|0.5||(e² − 1)/2.|(exp(2)-1)/2
+3N|Evaluate ∫₀^(π/2) sin²x dx (3 s.f.).|0.785|0.5||Use ½(1 − cos 2x): π/4.|pi/4
+# s-hyp|5: Statistical hypothesis testing|Statistics
+3N|H₀: p = 0.5, n = 10, H₁: p > 0.5. Observed X = 9. Find P(X ≥ 9) (4 d.p.).|0.0107|0.5||(10 + 1)/1024.|11/1024

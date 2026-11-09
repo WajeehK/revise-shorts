@@ -1,0 +1,146 @@
+m
+s
+kg
+N
+J
+W
+V
+A
+C
+Ω
+Pa
+K
+mol
+Hz
+T
+F
+Wb
+eV
+MeV
+keV
+kJ
+MJ
+GJ
+kW
+MW
+mA
+µA
+µF
+nF
+pF
+kΩ
+MΩ
+mm
+cm
+km
+nm
+µm
+pm
+g
+mg
+cm³
+dm³
+m³
+m²
+cm²
+mm²
+%
+°
+rad
+s⁻¹
+kPa
+MPa
+GPa
+N m
+N s
+kg m s⁻¹
+m s⁻¹
+m s⁻²
+kg m⁻³
+g cm⁻³
+J kg⁻¹ K⁻¹
+J kg⁻¹
+J mol⁻¹
+kJ mol⁻¹
+J K⁻¹ mol⁻¹
+J mol⁻¹ K⁻¹
+kJ mol⁻¹ K⁻¹
+kJ K⁻¹ mol⁻¹
+mol dm⁻³
+mol⁻¹ dm³
+mol⁻² dm⁶
+mol dm⁻³ s⁻¹
+mol⁻¹ dm³ s⁻¹
+mol⁻² dm⁶ s⁻¹
+g mol⁻¹
+N kg⁻¹
+N C⁻¹
+V m⁻¹
+J C⁻¹
+Ω m
+W m⁻²
+T m²
+Bq
+Sv
+Gy
+u
+years
+days
+hours
+h
+min
+ms
+µs
+ns
+minutes
+ly
+pc
+AU
+kg m²
+m⁻¹
+N m⁻¹
+kN
+kg m⁻¹
+Wb-turns
+rad s⁻¹
+rad s⁻²
+dB
+cm⁻¹
+ppm
+kPa⁻¹
+atm
+°C
+kWh
+mol⁻¹
+s⁻²
+km/h
+cm³ mol⁻¹
+dm³ mol⁻¹
+kg s⁻¹
+W K⁻¹
+m⁻³
+Pa⁻¹
+J K⁻¹
+kg mol⁻¹
+mm s⁻¹
+cm s⁻¹
+cm²
+units
+units²
+units³
+cm³ s⁻¹
+°/s
+pence
+£
+mJ
+mC
+MBq
+mN
+fm
+mm s⁻²
+km s⁻¹
+mm s⁻¹
+MJ kg⁻¹
+year⁻¹
+p
+km h⁻¹

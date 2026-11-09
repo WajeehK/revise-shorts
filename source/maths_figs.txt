@@ -1,0 +1,15 @@
+// v10: questions that use a diagram ([fig:name] prefix)
+# m-alg|2: Algebra and functions|Pure mathematics
+1M|[fig:m-transl] The orange curve is y = f(x + 2). Which transformation maps y = f(x) onto it?|Translation by the vector (−2, 0)|Translation by the vector (2, 0)|Translation by the vector (0, 2)|Stretch, scale factor 2, in the x-direction|f(x + a) shifts the graph a units to the left.
+# m-trig|5: Trigonometry|Pure mathematics
+1M|[fig:m-cast] In which quadrant is sin θ positive but cos θ negative?|90° < θ < 180°|0° < θ < 90°|180° < θ < 270°|270° < θ < 360°|The S quadrant.
+2M|[fig:m-unit-circle] Using the unit circle, what are the coordinates of the point at θ = 90°?|(0, 1)|(1, 0)|(0, −1)|(1, 1)|(cos 90°, sin 90°) = (0, 1).
+# m-int|8: Integration|Pure mathematics
+2M|[fig:m-trapezium] Why does the trapezium rule overestimate this integral?|The curve is convex, so each chord lies above the curve|The curve is concave, so each chord lies below it|There are too few strips|The function is negative|For a convex curve (f″ > 0) the tops of the trapezia lie above it.
+# s-prob|3: Probability|Statistics
+2N|[fig:s-venn] Using the Venn diagram, find P(A given B) (3 s.f.).|0.667|0.5||P(A ∩ B)/P(B) = 0.2/0.3.|0.2/0.3
+1N|[fig:s-tree] Using the tree diagram, find the probability of getting one of each colour.|0.54|0|| P(RB) + P(BR) = 0.30 + 0.24.|0.30+0.24
+# s-data|2: Data presentation and interpretation|Statistics
+1N|[fig:s-boxplot] Use the box plot to find the interquartile range.|27|0||Q₃ − Q₁ = 55 − 28.|55-28
+# k-force|8: Forces and Newton's laws|Mechanics
+3N|[fig:k-pulley] A has mass 3 kg, B has mass 2 kg and the table is smooth (F = 0). Find the acceleration (g = 9.8).|3.92|0.5|m s⁻²|m₂g = (m₁ + m₂)a → a = 19.6 ÷ 5.|2*9.8/5

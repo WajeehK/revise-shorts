@@ -1,0 +1,302 @@
+@ physics|Physics|OCR A level (H556)|blue
+# p-1|1.1 Practical skills|Module 1: Development of practical skills
+1M|Parallax error is reduced by|reading the scale at eye level, perpendicular to it|repeating readings|using a bigger scale|zeroing the instrument|Line of sight.
+2M|A zero error is an example of a|systematic error|random error|percentage error|human mistake that averaging removes|Shifts every reading equally.
+2M|The independent variable is the one you|change deliberately|measure|keep constant|ignore|Plotted on the x-axis.
+2W|Why should you measure the time for 10 oscillations rather than 1?|uncertainty;percentage;reaction;error|Reduces the percentage uncertainty (reaction time is a smaller fraction).
+2M|A reading is 2.35 V on a voltmeter with resolution 0.01 V. Its uncertainty is usually taken as|± 0.01 V|± 0.1 V|± 0.005 V|± 2.35 V|The resolution (or half of it).
+2M|An anomalous result should be|identified, then repeated or excluded from the mean|always included|always deleted without comment|doubled|Check for mistakes.
+2M|A graph of T² against L for a pendulum is|a straight line through the origin|a curve|a horizontal line|an exponential|T² = (4π²/g)L.
+3M|To find g from a T² against L graph, use|g = 4π²/gradient|g = gradient|g = gradient/4π²|g = 1/gradient|Gradient = 4π²/g.
+3W|Why plot ln y against x for y = Ae^(kx)?|straight line;linear|It gives a straight line: gradient k, intercept ln A.
+3M|Which reduces random error in timing a falling ball?|using light gates connected to a data logger|using a ruler with finer markings|using a heavier ball|timing once carefully|Removes reaction time.
+3W|How would you check a micrometer for zero error?|close;closed;jaws together;read zero|Close the jaws fully and check the reading is zero.
+3M|For P = I²R, I has 2% uncertainty and R 1%. Percentage uncertainty in P is|5%|3%|4%|2%|2 × 2% + 1%.
+3M|Data-logging is preferred when|readings change quickly or over a long time|only one reading is needed|the experiment is cheap|values are constant|High sampling rate.
+1M|Which is a control variable when finding the resistivity of a wire?|temperature of the wire|length|resistance|current reading|Kept constant.
+# p-2-1|2.1 Physical quantities and units|Module 2: Foundations of physics
+1M|Which is NOT an SI base unit?|newton|kelvin|mole|second|Derived: kg m s⁻².
+1M|The prefix 'giga' means|10⁹|10⁶|10¹²|10³|giga (G) = 10⁹; mega = 10⁶, tera = 10¹², kilo = 10³.
+2M|The unit of power in base units is|kg m² s⁻³|kg m² s⁻²|kg m s⁻²|kg m² s⁻¹|W = J s⁻¹ = (kg m² s⁻²) s⁻¹ = kg m² s⁻³.
+2M|The coulomb in base units is|A s|A/s|J/V only|kg m s⁻²|Q = It.
+2M|The volt in base units is|kg m² s⁻³ A⁻¹|kg m s⁻² A⁻¹|kg m² s⁻² A|A Ω⁻¹|V = W/A.
+2W|What is a derived unit?|combination;combine;base units|A unit made by combining base units.
+2M|An order-of-magnitude estimate of the mass of an adult is|10² kg|10¹ kg|10³ kg|10⁰ kg|About 70 kg.
+2M|An estimate of the wavelength of visible light is|5 × 10⁻⁷ m|5 × 10⁻⁵ m|5 × 10⁻⁹ m|5 × 10⁻³ m|400–700 nm.
+3M|Which equation is homogeneous?|v² = u² + 2as|s = ut + at|v = u + as|a = vt|Each term: m² s⁻².
+3M|The Young modulus in base units is|kg m⁻¹ s⁻²|kg m s⁻²|kg m² s⁻²|kg s⁻²|Pa = N/m².
+3W|Can a homogeneous equation still be wrong? Explain.|yes;constant;dimensionless;numerical|Yes – dimensionless constants (e.g. ½) may be missing or wrong.
+3N|Estimate the energy (J) used by a 2 kW kettle boiling for 3 minutes.|360000|0|J|2000 × 180.|2000*180
+3M|The unit of the Planck constant h in base units is|kg m² s⁻¹|kg m² s⁻²|kg m s⁻¹|J|E = hf → J s.
+1M|Mass, length, time, current, temperature and amount are|base quantities|derived quantities|vectors|prefixes|Seven SI base quantities (plus luminous intensity).
+3N|Speed of light 3.00 × 10⁸ m/s. Express in km/h (× 10⁹, 3 s.f.).|1.08|0.5|× 10⁹ km/h|× 3.6 then ÷ 10⁹.|3e8*3.6/1e9
+# p-2-2|2.2 Measurements and uncertainties|Module 2: Foundations of physics
+1M|Precision describes|how close repeated readings are to each other|closeness to the true value|the number of significant figures|zero error|Small spread.
+2M|When adding two quantities, you combine their|absolute uncertainties|percentage uncertainties|fractional uncertainties|squares|Add absolute uncertainties.
+2M|When multiplying quantities, you combine their|percentage uncertainties|absolute uncertainties|ranges|means|Add percentages.
+2W|What is a random error?|unpredictab;scatter;vary;spread|Unpredictable variation in readings, causing scatter about the mean.
+2M|To reduce the effect of random error, you should|repeat readings and average|recalibrate|change instrument|use a zero correction|Averages cancel scatter.
+2M|A result is accurate if|it is close to the true value|it is repeatable|it has small uncertainty|it was measured digitally|Accuracy vs precision.
+3M|A gradient is 4.0 with ±5%. y-intercept irrelevant. The quantity k = 1/gradient has uncertainty|± 5%|± 10%|± 2.5%|± 0%|Fractional uncertainty unchanged for a reciprocal.
+3W|How do you find the uncertainty in a gradient from a graph?|worst & fit;steepest;shallowest|Draw the worst-fit line through the error bars; difference from best gradient.
+3M|If error bars of all points cross a straight line through the origin, then|the data supports direct proportionality|y ∝ x²|there's a systematic error|the data is inaccurate|Within uncertainty.
+3M|The diameter of a wire is best measured with a|micrometer at several places and averaged|metre rule|vernier caliper once|tape measure|Wire may not be uniform.
+3N|L = 1.50 ± 0.01 m and T = 2.46 ± 0.02 s. Percentage uncertainty in L/T² (3 s.f.).|2.29|1|%|0.667% + 2 × 0.813%.|(0.01/1.5+2*0.02/2.46)*100
+2M|The percentage difference between an experimental 9.6 and accepted 9.81 is about|2.1%|0.21%|21%|9.6%|0.21/9.81.
+# p-2-3|2.3 Scalars and vectors|Module 2: Foundations of physics
+1M|Which is a scalar?|kinetic energy|momentum|weight|acceleration|No direction.
+2M|Three coplanar forces in equilibrium form|a closed triangle|a straight line|a square|an open triangle|Vector sum is zero.
+2M|The resultant of 5 N and 12 N can range from|7 N to 17 N|5 N to 12 N|0 to 17 N|12 N to 17 N|Depends on angle.
+2W|What does it mean to resolve a vector?|components;split;perpendicular|Split it into two perpendicular components.
+2M|A plane flies north at 200 m/s in a 50 m/s east wind. Its ground velocity direction is|east of north|west of north|due north|due east|tan⁻¹(50/200) ≈ 14°.
+2M|Subtracting vector B from A is the same as|adding −B to A|adding B to A|multiplying|reversing A|A − B = A + (−B).
+3M|An object is in equilibrium on a slope. The resultant of friction and normal reaction is|equal and opposite to its weight|zero|along the slope|perpendicular to weight|Three-force equilibrium.
+3W|A lamp hangs from two strings at equal angles. Why does tension rise as the strings get more horizontal?|vertical component;smaller vertical;component|Each string's vertical component must still support the weight, so the tension increases.
+3N|A 20 N lamp hangs from two strings each at 30° to the horizontal. Find the tension in each.|20|0|N|2T sin 30° = 20.|20/(2*sin(radians(30)))
+3N|Change in velocity from 10 m/s east to 10 m/s north. Magnitude (3 s.f.).|14.1|0.5|m/s|v − u = √(10² + 10²).|sqrt(200)
+3M|For a body on a frictionless slope, the normal reaction is|mg cos θ|mg sin θ|mg|zero|Perpendicular component.
+1M|Displacement 3 km east then 4 km north gives a resultant displacement of|5 km|7 km|1 km|12 km|Pythagoras.
+# p-3-1|3.1 Motion|Module 3: Forces and motion
+1M|The area under a speed–time graph is|distance|acceleration|speed|force|Velocity–time area = displacement.
+2M|An object in free fall (no air resistance) has|constant acceleration of g|constant velocity|zero acceleration|increasing acceleration|g ≈ 9.81 m s⁻².
+2M|Braking distance increases with|speed squared|speed|reaction time|road angle only|v² = 2as.
+2W|Give two factors that increase thinking distance.|tired;alcohol;drug;speed;distract|Higher speed, tiredness, alcohol/drugs, distractions.
+2M|In projectile motion, the horizontal velocity|stays constant (no air resistance)|increases|decreases|is zero at the top|No horizontal force.
+2M|An object thrown up returns to the thrower's hand with|the same speed it was thrown with|half the speed|zero speed|double the speed|Symmetry (no drag).
+3M|The maximum range on level ground (no drag) is at a launch angle of|45°|30°|60°|90°|sin 2θ = 1.
+3W|How can you find g using a light gate and a falling card of known length?|speed & two;two light gates;v² = u² + 2as|Measure speeds at two gates a known distance apart and use v² = u² + 2as.
+3N|A car accelerates from 12 m/s to 30 m/s over 210 m. Find the acceleration (3 s.f.).|1.8|0.5|m s⁻²|(30² − 12²)/(2 × 210).|(900-144)/420
+3N|A ball is thrown up at 20 m/s. Find the max height (g = 9.81, 3 s.f.).|20.4|0.5|m|u²/2g.|400/(2*9.81)
+3M|An s–t graph that curves upward with increasing gradient shows|acceleration|constant velocity|deceleration|rest|Gradient = velocity.
+# p-3-2|3.2 Forces in action|Module 3: Forces and motion
+1M|Drag on an object generally increases with|speed|mass|time|height|Faster → more drag.
+2M|A skydiver opens the parachute. Immediately after, the skydiver|decelerates|accelerates downward|stops|moves upward|Drag > weight.
+2M|The centre of gravity is|the point where the weight appears to act|always the geometric centre|the base|the pivot|Uniform objects: centre.
+2W|State the condition for an object to be in equilibrium.|resultant force & zero;resultant moment;moments|Zero resultant force and zero resultant moment.
+2M|An object floats when|upthrust equals its weight|upthrust exceeds its weight permanently|its density exceeds the fluid's|it has no mass|Equilibrium.
+2M|Torque of a couple equals|one force × perpendicular separation|sum of forces|force × radius squared|zero|Couples cause rotation only.
+3M|Why does a car with a lower centre of mass topple less easily?|its weight's line of action stays within the base for larger tilts|it is heavier|it has more friction|it has less drag|Toppling when weight acts outside the base.
+3W|Explain why a falling object reaches terminal velocity.|drag & increase;speed & weight;equal|As speed increases, drag increases until it equals weight, so acceleration becomes zero.
+3N|A 2.0 cm³ cube of density 7800 kg m⁻³ in water. Find its apparent weight (mN, 3 s.f., g = 9.81).|133|0.5|mN|(7800 − 1000) × 2.0 × 10⁻⁶ × 9.81.|(7800-1000)*2e-6*9.81*1000
+3M|Pressure in a fluid depends on|depth, density and g|area of the container|shape of the container|mass of the container|p = hρg.
+3M|A free-body diagram should show|all forces acting on one object|forces it exerts on others|velocities|accelerations|One body only.
+# p-3-3|3.3 Work, energy and power|Module 3: Forces and motion
+1M|Work done is zero when the force is|perpendicular to the displacement|parallel to it|large|constant|cos 90° = 0.
+1M|The watt is equal to|J s⁻¹|J s|N m|N s|Rate of energy transfer.
+2M|A pendulum at the top of its swing has|maximum GPE, zero KE|maximum KE|zero GPE|equal KE and GPE always|Energy interchange.
+2W|Define work done.|force & distance;displacement|Force × distance moved in the direction of the force.
+2M|A ball dropped from twice the height hits the ground with|√2 times the speed|2× the speed|4× the speed|the same speed|v = √(2gh).
+2M|Energy wasted in a motor is mostly|thermal energy (heat)|chemical|nuclear|gravitational|Friction and resistance.
+2M|P = Fv applies when|a constant force moves an object at constant velocity|velocity is zero|force is perpendicular|always for any motion|Power at speed v.
+3M|A car's top speed is reached when|driving force equals resistive forces|power is zero|acceleration is maximum|drag is zero|P = Fv with F = drag.
+3W|Why is the KE of a car more than doubled when speed doubles?|square;v²;v^2|KE ∝ v², so it quadruples.
+3N|A 60 kg person climbs 3.0 m of stairs in 4.0 s. Find their power (3 s.f., g = 9.81).|441|0.5|W|mgh/t.|60*9.81*3/4
+3M|A ball bounces to 80% of its height each time. Energy lost per bounce is|20% of GPE|80%|none|depends on mass|Elastic losses.
+# p-3-4|3.4 Materials|Module 3: Forces and motion
+1M|Hooke's law states that extension is|proportional to force (up to the limit of proportionality)|inversely proportional to force|independent of force|proportional to force²|F = kx.
+1M|Elastic deformation means the material|returns to its original shape when unloaded|stays stretched|breaks|becomes brittle|Reversible.
+2M|The area under a force–extension graph is|work done (elastic energy stored if elastic)|the spring constant|stress|strain|½Fx for a straight line.
+2W|What is the ultimate tensile strength?|maximum stress;max stress|The maximum stress a material can withstand.
+2M|A brittle material|breaks with little or no plastic deformation|stretches a lot|is always weak|is a polymer|e.g. glass.
+2M|A ductile material|can be drawn into wires (large plastic deformation)|shatters|has no elastic region|cannot be stretched|e.g. copper.
+2M|Rubber's loading and unloading curves differ. The area between them is|energy dissipated as heat|elastic energy stored|zero|the Young modulus|Hysteresis.
+3M|Two wires, same material and length; B has twice A's diameter. Under the same load B extends|¼ as much|½ as much|twice as much|the same|Area × 4.
+3W|Why do you measure a wire's diameter at several points?|uniform;vary;average|The diameter may not be uniform; averaging reduces error.
+3N|A 2.0 m wire of area 1.0 × 10⁻⁶ m² stretches 1.0 mm under 100 N. Find E (× 10¹¹ Pa).|2|0|× 10¹¹ Pa|(100/1e−6)/(0.001/2).|(100/1e-6)/(0.001/2)/1e11
+3M|Up to the limit of proportionality, the gradient of a stress–strain graph is|the Young modulus|the spring constant|the UTS|work done|E = σ/ε.
+# p-3-5|3.5 Newton's laws and momentum|Module 3: Forces and motion
+1M|The unit of momentum is|kg m s⁻¹|kg m s⁻²|N|J|p = mv.
+1M|Momentum is|a vector|a scalar|always positive|energy|Direction matters.
+2M|Crumple zones reduce injury by|increasing the collision time, reducing force|reducing the change in momentum|increasing mass|reducing speed before impact|F = Δp/Δt.
+2W|State the principle of conservation of momentum.|total momentum & constant;conserved & no external|Total momentum of a system is conserved if no external forces act.
+2M|An inelastic collision|conserves momentum but not kinetic energy|conserves both|conserves neither|conserves KE only|Some KE → heat/sound.
+2M|In an explosion from rest, the total momentum afterwards is|zero|positive|equal to the KE|doubled|Pieces move in opposite directions.
+3M|A rocket accelerates in space because|it pushes exhaust gas backward, which pushes it forward|it pushes against air|gravity is zero|momentum is not conserved|Newton's third law.
+3W|A ball hits a wall and bounces back at the same speed. Why is its momentum change not zero?|direction;reverses;vector|Momentum is a vector; its direction reverses, so Δp = 2mv.
+3N|A 0.15 kg ball at 20 m/s is caught in 0.05 s. Find the average force.|60|0|N|0.15 × 20 / 0.05.|0.15*20/0.05
+3N|A 1200 kg car at 15 m/s hits a stationary 800 kg car; they move together. Find their speed.|9|0|m/s|18000/2000.|1200*15/2000
+3M|Newton's third law pairs act on|different objects and are the same type of force|the same object|different types of force|only in contact|e.g. Earth–Moon gravity.
+# p-4-1|4.1 Charge and current|Module 4: Electrons, waves and photons
+1M|Conventional current flows|from + to −|from − to +|both ways|only in metals|Electrons move − to +.
+1M|The elementary charge is|1.60 × 10⁻¹⁹ C|9.11 × 10⁻³¹ C|1.60 × 10¹⁹ C|6.02 × 10²³ C|Charge on a proton.
+2M|Charge is quantised, meaning it comes in|multiples of e|any value|multiples of 1 C|only positive values|Q = ne.
+2W|Why are insulators poor conductors?|few;no free;electrons|They have very few free (delocalised) electrons.
+2M|A semiconductor has a number density of charge carriers that|is between that of metals and insulators|is higher than metals|is zero|never changes|Increases with temperature.
+2M|In I = nAve, if the wire narrows, the drift velocity|increases|decreases|stays the same|becomes zero|Same I, smaller A.
+3M|Drift velocity in a metal wire is typically|less than 1 mm/s|close to the speed of light|about 100 m/s|1 km/s|Very slow!
+3W|Why does a lamp light almost instantly when switched on despite slow drift velocity?|all;electrons;everywhere;field;immediately|Electrons throughout the circuit start moving at once (the field travels fast).
+3N|A 0.5 mm² copper wire (n = 8.5 × 10²⁸) carries 2.0 A. Drift velocity (× 10⁻⁴ m/s, 3 s.f.).|2.94|1|× 10⁻⁴ m/s|I/(nAe).|2/(8.5e28*0.5e-6*1.6e-19)/1e-4
+3M|In an electrolyte, current is due to|positive and negative ions moving in opposite directions|electrons only|protons|photons|Both contribute.
+3N|Charge of 3.0 × 10⁴ C flows in 2 hours. Average current (3 s.f.)?|4.17|0.5|A|I = Q/t = 3.0 × 10⁴ ÷ (2 × 3600 s).|3e4/7200
+# p-4-2|4.2 Energy, power and resistance|Module 4: Electrons, waves and photons
+1M|The ohm is|V A⁻¹|A V⁻¹|W A|J C⁻¹|R = V/I.
+2M|An ohmic conductor at constant temperature has an I–V graph that is|a straight line through the origin|a curve|horizontal|exponential|R constant.
+2M|A diode conducts when|forward biased above its threshold pd|reverse biased|pd is zero|hot only|≈ 0.6 V for silicon.
+2W|Why does a filament lamp's resistance increase with current?|temperature;hot;vibrat|The filament heats up; ions vibrate more, increasing collisions.
+2M|Resistivity depends on|the material and temperature|length|area|current|R = ρL/A.
+2M|EMF differs from pd because emf is|energy transferred to charge by the source per coulomb|energy transferred from charge to components|always lower|measured in amps|Source vs component.
+3M|Superconductors have zero resistivity|below a critical temperature|above 1000 K|only when current is large|in strong fields|Used in MRI magnets.
+3W|Why does an NTC thermistor's resistance fall as temperature rises?|charge carriers;electrons;more free|More charge carriers are released, increasing n.
+3N|A 2.0 kW kettle on 230 V. Find the current (3 s.f.).|8.7|0.5|A|I = P/V.|2000/230
+3N|Energy transferred when 5.0 C passes through 12 V.|60|0|J|W = VQ.|60
+3M|An LED emits light when|forward-biased and conducting|reverse-biased|cold|unpowered|Electrons release photons.
+# p-4-3|4.3 Electrical circuits|Module 4: Electrons, waves and photons
+1M|In a series circuit the current is|the same everywhere|shared between components|zero|largest near the cell|One path.
+1M|In parallel branches the pd is|the same across each branch|shared|zero|always 12 V|Each branch connects to the same points.
+2M|Adding another resistor in parallel makes the total resistance|smaller|larger|unchanged|zero|More paths.
+2W|What does a potential divider do?|split;divide;fraction|Splits a supply voltage into a chosen fraction.
+2M|A voltmeter ideally has|infinite resistance|zero resistance|1 Ω|equal resistance to the component|Draws no current.
+2M|An ammeter ideally has|zero resistance|infinite resistance|large resistance|10 kΩ|Does not affect the current.
+2M|As load resistance falls, terminal pd of a real cell|falls|rises|stays the same|becomes the emf|More lost volts.
+3M|A graph of terminal pd V against current I for a cell has gradient|−r|r|E|1/r|V = E − Ir.
+3W|How would you find the internal resistance of a cell experimentally?|vary & resistance;V against I;graph;gradient|Vary the load, measure V and I, plot V against I: gradient = −r, intercept = E.
+3N|A cell gives 1.5 V on open circuit and 1.2 V when 0.3 A flows. Internal resistance?|1|0|Ω|r = (E − V)/I.|0.3/0.3
+3N|Four 10 Ω resistors: two in series, in parallel with two in series. Total.|10|0|Ω|20 ∥ 20.|1/(1/20+1/20)
+3M|An LDR in the bottom of a potential divider makes V_out|fall as light increases|rise as light increases|stay constant|equal the supply|LDR resistance drops.
+# p-4-4|4.4 Waves|Module 4: Electrons, waves and photons
+1M|Sound waves are|longitudinal|transverse|electromagnetic|stationary always|Compressions and rarefactions.
+1M|All EM waves in a vacuum travel at|3.00 × 10⁸ m/s|340 m/s|varying speeds|3.00 × 10⁶ m/s|All electromagnetic waves travel at c = 3.00 × 10⁸ m s⁻¹ in a vacuum.
+2M|Diffraction is most noticeable when the gap is|about the same size as the wavelength|much larger|much smaller than an atom|zero|Spreading out.
+2M|Two waves in antiphase meeting give|destructive interference|constructive interference|polarisation|refraction|Phase difference 180°.
+2W|What is the principle of superposition?|sum;add;displacements|The resultant displacement is the sum of the individual displacements.
+2M|Polaroid filters at 90° to each other|block the light|let all light through|double the intensity|reflect it|Crossed polarisers.
+2M|Total internal reflection requires|travel from higher n to lower n, angle > critical|travel from lower to higher n|angle < critical|a mirror|Optical fibres.
+3M|Path difference for a bright fringe is|nλ|(n + ½)λ|λ/4|2nλ only|Constructive.
+3W|Why are stationary waves formed on a string?|reflect;superpos;interfer|Reflected waves superpose with incident waves of the same frequency.
+3N|The 3rd harmonic of a 0.60 m string has frequency 450 Hz. Find the wave speed.|180|0|m/s|λ = 2L/3 = 0.40 m.|450*0.4
+3N|Intensity ∝ amplitude². Amplitude halves. Factor change in intensity?|0.25|0||(½)².|0.25
+3M|Closed pipe resonance gives harmonics of|odd multiples of the fundamental only|all multiples|even multiples|no harmonics|Node at closed end.
+# p-4-5|4.5 Quantum physics|Module 4: Electrons, waves and photons
+1M|A photon is|a quantum of electromagnetic energy|an electron|a nucleon|a sound wave|E = hf.
+1M|The electronvolt equals|1.60 × 10⁻¹⁹ J|1 J|9.11 × 10⁻³¹ J|6.63 × 10⁻³⁴ J|Energy of e moved through 1 V.
+2M|Below the threshold frequency, increasing intensity|still produces no photoelectrons|produces more|increases KE|lowers φ|One photon, one electron.
+2W|Why does the photoelectric effect support the particle model?|threshold;instant;one photon;photon|Emission depends on frequency (threshold), is instantaneous, one photon per electron.
+2M|LEDs can be used to find h by measuring|threshold pd for different wavelengths|current only|resistance|temperature|eV = hc/λ.
+2M|Electron diffraction rings get smaller when accelerating voltage|increases|decreases|is constant|is zero|Higher p → shorter λ.
+3M|The gradient of a KEmax against frequency graph is|h|φ|e|f₀|KE = hf − φ.
+3W|What is the work function?|minimum energy;least energy|The minimum energy needed to remove an electron from a metal surface.
+3N|An LED of λ = 620 nm starts conducting at 2.0 V. Estimate h (× 10⁻³⁴ J s, 3 s.f.).|6.61|1|× 10⁻³⁴ J s|h = eVλ/c.|1.6e-19*2*620e-9/3e8/1e-34
+3M|For the same de Broglie wavelength, a proton compared to an electron moves|much slower|faster|at the same speed|at light speed|Same p, larger m.
+3N|A proton (1.67 × 10⁻²⁷ kg) at 2.0 × 10⁴ m/s. de Broglie wavelength (× 10⁻¹¹ m, 3 s.f.).|1.99|0.5|× 10⁻¹¹ m|h/mv.|6.63e-34/(1.67e-27*2e4)/1e-11
+2M|Which shows light behaving as a wave?|diffraction through a grating|photoelectric effect|line spectra|Compton scattering|Interference/diffraction.
+# p-5-1|5.1 Thermal physics|Module 5: Newtonian world and astrophysics
+1M|Thermal equilibrium means|no net energy transfer between objects|both are at 0 K|they have the same mass|they have the same energy|Same temperature.
+2M|During melting, temperature stays constant because energy|breaks bonds (increases potential energy)|increases KE|is lost|is zero|Latent heat.
+2M|Brownian motion is evidence for|random molecular motion|gravity|electrons|light waves|Smoke particles jiggle.
+2W|State Boyle's law.|pressure & volume & inversely;pV constant;pV = constant|For a fixed mass of gas at constant temperature, pressure is inversely proportional to volume.
+2M|An assumption of kinetic theory is|collisions are perfectly elastic|molecules attract strongly|molecules have large volume|molecules are stationary|Ideal gas.
+2M|Absolute zero is|0 K = −273 °C|0 °C|−100 °C|273 K|Minimum internal energy.
+3M|pV = ⅓Nm c̄² links pressure to|the mean square speed of molecules|temperature in °C|volume only|density only|Kinetic theory.
+3W|Why does gas pressure increase when temperature rises at constant volume?|faster;collisions;momentum|Molecules move faster, hitting walls more often and harder (greater momentum change).
+3N|Number of molecules in 2.0 mol of gas (× 10²⁴, 3 s.f.).|1.2|0.5|× 10²⁴|n × N_A.|2*6.02e23/1e24
+3M|Specific latent heat of vaporisation is usually|larger than of fusion|smaller than of fusion|equal to fusion|zero|More bonds broken.
+3N|An ideal gas at 300 K: volume doubles at constant pressure. New temperature?|600|0|K|V ∝ T.|600
+# p-5-2|5.2 Circular motion|Module 5: Newtonian world and astrophysics
+1M|One radian is the angle subtended by an arc equal to|the radius|the diameter|the circumference|π|Definition.
+2M|Centripetal force does no work because|it acts perpendicular to the velocity|it is small|it is zero|speed decreases|W = Fs cos 90°.
+2M|If speed doubles at the same radius, centripetal force|quadruples|doubles|halves|stays the same|F ∝ v².
+2W|What provides the centripetal force for a satellite in orbit?|gravit|Gravitational attraction to the planet.
+2M|A car rounding a flat bend relies on|friction between tyres and road|engine force|air resistance|weight|Provides centripetal force.
+2M|Angular velocity of the Earth's rotation is about|7.3 × 10⁻⁵ rad/s|1 rad/s|0.26 rad/s|2π rad/s|2π/86400.
+3M|At the bottom of a vertical circle, tension equals|mg + mv²/r|mg − mv²/r|mv²/r|mg|T − mg = mv²/r.
+3W|Why do passengers feel 'thrown outward' on a roundabout?|inertia;straight line;newton's first|Their bodies tend to continue in a straight line (inertia); no outward force acts.
+3N|A 0.20 kg ball on a 0.50 m string at 4.0 m/s in a horizontal circle. Tension.|6.4|0|N|mv²/r.|0.2*16/0.5
+3N|Centripetal acceleration at the equator due to Earth's spin (R = 6.4 × 10⁶ m). mm s⁻², 3 s.f.|33.8|0.5|mm s⁻²|ω = 2π/86 400 s; a = ω²R = (7.27 × 10⁻⁵)² × 6.4 × 10⁶ = 0.0338 m s⁻².|(2*pi/86400)**2*6.4e6*1000
+3M|Banked tracks allow cornering without friction because|the horizontal component of the normal reaction gives centripetal force|weight provides it|drag provides it|tyres grip better|N sin θ = mv²/r.
+# p-5-3|5.3 Oscillations|Module 5: Newtonian world and astrophysics
+1M|In SHM, the period is|independent of amplitude|proportional to amplitude|proportional to amplitude²|zero|Isochronous.
+2M|Maximum speed in SHM occurs at|the equilibrium position|maximum displacement|half amplitude|never|Speed is greatest where the displacement is zero, since all the energy is kinetic there.
+2M|Displacement and acceleration in SHM are|in antiphase|in phase|90° out of phase|unrelated|a = −ω²x.
+2W|Define simple harmonic motion.|acceleration & proportional & displacement & opposite;towards|Acceleration proportional to displacement and directed towards the equilibrium position.
+2M|Free oscillations occur|at the natural frequency with no external driving force|only with damping|at any frequency|in forced systems|Natural frequency.
+2M|Light damping causes amplitude to|decrease gradually (exponentially)|stop at once|increase|stay constant|Energy lost slowly.
+3M|Critical damping returns a system to equilibrium|in the shortest time without oscillating|after many oscillations|never|very slowly|Car suspension.
+3W|Give an example where resonance is useful and one where it is a problem.|microwave;radio;mri;instrument;bridge;building;tacoma;engine|Useful: radio tuning, instruments, MRI. Problem: bridges, buildings, vibrating engine parts.
+3N|A pendulum has period 2.0 s. Find its length (g = 9.81, 3 s.f.).|0.994|0.5|m|L = gT²/4π².|9.81*4/(4*pi**2)
+3M|For a mass–spring system, doubling the mass changes the period by a factor of|√2|2|4|½|T ∝ √m.
+3N|KE at equilibrium of 0.50 kg in SHM with ω = 4.0 rad/s, A = 0.10 m.|0.04|0|J|½mω²A².|0.5*0.5*16*0.01
+# p-5-4|5.4 Gravitational fields|Module 5: Newtonian world and astrophysics
+1M|Gravitational field strength is defined as|force per unit mass|force per unit charge|energy per unit mass|mass per unit force|g = F/m.
+2M|Field lines near Earth's surface are|nearly parallel (uniform field)|circular|radial outward|absent|Locally uniform.
+2M|Gravitational force follows|an inverse square law|an inverse law|a linear law|no law|F ∝ 1/r².
+2W|Define gravitational potential.|work done & unit mass & infinity|Work done per unit mass to bring a mass from infinity to that point.
+2M|A geostationary orbit must be|above the equator, rotating west to east|over the poles|at any height|rotating east to west|Same period as Earth.
+2M|Doubling the orbital radius changes the period by|2^1.5 ≈ 2.83|2|4|½|T² ∝ r³.
+3M|The gradient of a potential–distance graph gives|−g (field strength)|mass|potential energy|force|g = −dV/dr.
+3W|Why is gravitational potential always negative?|zero & infinity;attract|Potential is zero at infinity and gravity is attractive, so work is done by the field bringing masses in.
+3N|Orbital speed of a satellite at r = 7.0 × 10⁶ m around Earth (M = 6.0 × 10²⁴ kg). km/s, 3 s.f.|7.56|0.5|km/s|v = √(GM/r).|sqrt(6.67e-11*6e24/7e6)/1000
+3N|Moon: r = 3.84 × 10⁸ m, T = 27.3 days. Estimate Earth's mass (× 10²⁴ kg, 3 s.f.).|6.02|1|× 10²⁴ kg|M = 4π²r³/GT².|4*pi**2*(3.84e8)**3/(6.67e-11*(27.3*86400)**2)/1e24
+3M|Kepler's second law says a planet sweeps|equal areas in equal times|equal distances in equal times|equal angles|circular paths|Faster near the Sun.
+# p-5-5|5.5 Astrophysics and cosmology|Module 5: Newtonian world and astrophysics
+1M|The Sun will end its life as a|white dwarf|black hole|neutron star|supernova|Low mass star.
+1M|1 light-year is the distance light travels in|one year|one day|one second|one parsec|≈ 9.46 × 10¹⁵ m.
+2M|The Chandrasekhar limit is about|1.4 solar masses|10 solar masses|0.1 solar masses|100 solar masses|Max white dwarf mass.
+2W|What keeps a main sequence star stable?|radiation pressure & gravit;fusion & gravit;balance|Outward radiation/gas pressure from fusion balances inward gravity.
+2M|Line absorption spectra are caused by|electrons absorbing specific photon energies|continuous emission|nuclear decay|Doppler shift only|Discrete energy levels.
+2M|Redshift of distant galaxies suggests the universe is|expanding|contracting|static|rotating|Hubble's law.
+3M|The cosmological principle states the universe is|homogeneous and isotropic on large scales|centred on Earth|static|infinite in age|Same everywhere.
+3W|What is dark energy thought to explain?|accelerat|The accelerating expansion of the universe.
+3N|A star has parallax 0.25 arcsec. Distance in light-years (1 pc = 3.26 ly, 3 s.f.).|13|0.5|ly|4 pc × 3.26.|4*3.26
+3M|Stefan's law: if surface temperature doubles (same radius), luminosity|increases 16 times|doubles|quadruples|increases 8 times|L ∝ T⁴.
+3M|In the Hertzsprung–Russell diagram, white dwarfs are|bottom left (hot, dim)|top right|main sequence|bottom right|Small and hot.
+# p-6-1|6.1 Capacitors|Module 6: Particles and medical physics
+1M|Capacitance is defined as|charge stored per unit pd|pd per unit charge|energy per charge|current × time|C = Q/V.
+2M|The area under a Q–V graph for a capacitor is|energy stored|capacitance|charge|current|Energy stored W = ½QV, the area of the triangle under the graph.
+2M|During discharge, current|decreases exponentially|is constant|increases|is zero|I = I₀e^(−t/RC).
+2W|What does the time constant RC represent?|37;0.37;63;e;time;fall|Time for charge (or pd/current) to fall to 1/e (37%) of its initial value.
+2M|Inserting a dielectric between plates|increases capacitance|decreases capacitance|has no effect|discharges it|C = ε₀εᵣA/d.
+2M|Capacitors in parallel|add capacitances|add reciprocals|halve|keep the smallest|C = C₁ + C₂.
+3M|ln(V) against t for a discharging capacitor gives gradient|−1/RC|RC|−RC|1/RC|ln V = ln V₀ − t/RC.
+3W|Give one use of a capacitor.|flash;backup;smooth;timing;defib|Camera flash, back-up power, smoothing, timing circuits, defibrillators.
+3N|A 2200 µF capacitor at 12 V discharges fully in 0.5 s. Average power (3 s.f.).|0.317|0.5|W|E/t = ½CV²/t.|0.5*2200e-6*144/0.5
+3N|Charging through R from emf E: V across C after one time constant as a fraction of E (3 s.f.).|0.632|0.5||1 − e⁻¹.|1-exp(-1)
+3M|Halving the pd on a capacitor changes its stored energy by a factor of|¼|½|2|4|E ∝ V².
+# p-6-2|6.2 Electric fields|Module 6: Particles and medical physics
+1M|Electric field lines point|from positive to negative|from negative to positive|in circles|nowhere|Direction of force on + charge.
+1M|The unit of electric field strength is|N C⁻¹ (= V m⁻¹)|N m|C N⁻¹|J C|Two equivalent units.
+2M|Between parallel plates the field is|uniform|radial|zero|circular|E = V/d.
+2W|How are electric and gravitational fields different?|attract & repel;repulsive|Electric forces can attract or repel; gravity only attracts.
+2M|An equipotential surface is one where|potential is the same everywhere on it|field is zero|charge is zero|force is maximum|No work moving along it.
+2M|Doubling the distance from a point charge changes the potential by a factor of|½|¼|2|4|V ∝ 1/r.
+3M|In Millikan's experiment a drop is stationary when|eE = mg (qV/d = mg)|E = 0|mg = 0|charge is zero|Balances weight.
+3W|Why are equipotentials perpendicular to field lines?|no work;perpendicular;component|Moving along an equipotential needs no work, so no field component lies along it.
+3N|An oil drop of mass 1.6 × 10⁻¹⁴ kg balances between plates 5.0 mm apart at 2450 V. Find its charge in units of e (nearest integer).|2|0||q = mgd/V ÷ e.|round(1.6e-14*9.81*5e-3/2450/1.6e-19)
+3N|Work done moving 2.0 µC through a pd of 500 V (mJ).|1|0|mJ|W = QV.|2e-6*500*1000
+3M|Electric potential energy of two like charges as they approach|increases|decreases|stays constant|becomes negative|Work done against repulsion.
+# p-6-3|6.3 Electromagnetism|Module 6: Particles and medical physics
+1M|Fleming's left-hand rule gives the direction of|force on a current-carrying wire|induced current|field|emf|Motor effect.
+2M|A charged particle moving parallel to a magnetic field experiences|no force|maximum force|a circular path|acceleration along B|sin 0 = 0.
+2M|Magnetic flux Φ =|BA cos θ|BIL|BQv|NBA²|θ between B and the normal.
+2W|Define the tesla.|1 N & 1 A & 1 m;newton;ampere|1 T gives a force of 1 N on 1 m of wire carrying 1 A perpendicular to the field.
+2M|A velocity selector lets through particles with|v = E/B|v = B/E|v = EB|any v|Electric and magnetic forces balance.
+2M|Transformers only work with|alternating current|direct current|static charge|batteries|Need changing flux.
+3M|Eddy currents in a transformer core are reduced by|laminating the core|using solid iron|increasing current|removing the core|Insulated layers.
+3W|Why is electricity transmitted at high voltage?|current & low;lower current;i²r;heat|Lower current for the same power, so less I²R energy loss in cables.
+3N|A coil of 200 turns, area 4.0 × 10⁻³ m², rotates in 0.15 T at 50 Hz. Peak emf (3 s.f.).|37.7|0.5|V|ε₀ = BANω.|0.15*4e-3*200*2*pi*50
+3N|Charge-to-mass ratio of a particle: r = 0.05 m in 0.02 T at v = 2.0 × 10⁶ m/s (× 10⁹ C/kg).|2|0|× 10⁹ C/kg|q/m = v/(Br).|2e6/(0.02*0.05)/1e9
+3M|The direction of the induced current is given by|Lenz's law (opposing the change)|Faraday's law alone|Ohm's law|Coulomb's law|Energy conservation.
+# p-6-4|6.4 Nuclear and particle physics|Module 6: Particles and medical physics
+1M|An alpha particle is|a helium nucleus|an electron|a photon|a neutron|2p + 2n.
+1M|The most penetrating radiation is|gamma|alpha|beta|all equal|Stopped by thick lead.
+2M|The strong nuclear force is|attractive up to ~3 fm and repulsive below ~0.5 fm|always repulsive|long range|electromagnetic|Holds nucleons together.
+2W|What is meant by isotopes?|same & protons & different & neutrons;proton number;neutron number|Same number of protons, different numbers of neutrons.
+2M|In β⁺ decay a proton becomes|a neutron, a positron and a neutrino|an electron|an alpha|a photon|p → n + e⁺ + ν.
+2M|Nuclear fission releases energy because|products have higher binding energy per nucleon|mass increases|electrons are lost|neutrons are created|Mass defect.
+2M|Which particle is a baryon?|neutron|pion|electron|neutrino|Three quarks.
+3M|Fusion requires very high temperatures to|overcome electrostatic repulsion between nuclei|split nuclei|stop decay|cool the reactor|Coulomb barrier.
+3W|Why are control rods used in a fission reactor?|absorb & neutron|They absorb neutrons to control the rate of fission.
+3N|Nuclear radius for A = 64 using R = 1.2 fm × A^(1/3) (fm).|4.8|0.5|fm|1.2 × 4.|1.2*64**(1/3)
+3M|Antimatter particles have the same mass but|opposite charge|double mass|no spin|opposite mass|e.g. positron.
+3N|Energy released when 1.0 × 10⁻³ kg of mass is converted (× 10¹³ J).|9|0|× 10¹³ J|E = mc².|1e-3*9e16/1e13
+# p-6-5|6.5 Medical imaging|Module 6: Particles and medical physics
+1M|X-rays are produced when|fast electrons hit a metal target|light hits a metal|ultrasound reflects|nuclei decay|Bremsstrahlung.
+2M|Simple scatter of X-rays occurs at energies of about|1–20 keV|0.5–5 MeV|above 1.02 MeV|100 MeV|Low energy.
+2M|Pair production needs photon energy of at least|1.02 MeV|0.51 keV|20 keV|1 eV|2 × mₑc².
+2W|What is a CAT scan?|x-ray & 3d;rotat;slices;computer|X-rays from a rotating tube build up 3D images from many slices using a computer.
+2M|A gamma camera uses a collimator to|only allow gamma rays parallel to the tubes through|focus X-rays|amplify ultrasound|cool the crystal|Sharp image.
+2M|The piezoelectric effect is used in ultrasound to|generate and detect ultrasound|produce X-rays|detect gamma|focus light|Crystal vibrates with pd.
+2M|Doppler ultrasound measures|blood flow speed|bone density|tumour size|X-ray dose|Frequency shift.
+3M|The Compton effect involves|a photon scattering off an electron, losing energy|pair production|simple scatter|photoelectric absorption|0.5–5 MeV.
+3W|Why does PET need a cyclotron nearby?|short half-life;half-life;decay quickly|The tracers (e.g. F-18) have short half-lives.
+3N|Frequency shift factor: Δf/f = 2v cos θ/c. v = 0.30 m/s, θ = 0°, c = 1500 m/s, f = 2.0 MHz. Δf (Hz).|800|0|Hz|2 × 0.30 × 2.0 × 10⁶/1500.|2*0.3*2e6/1500
+3M|A B-scan ultrasound produces|a 2D image from many A-scans|a single depth graph|a 3D X-ray|a gamma image|Brightness modulated.

@@ -52,7 +52,7 @@ function settingsScr(){const name=store.get('name','A-Level');
  <div class="toggle"><span>Calculator angle mode</span><button class="btn w" style="border:1px solid #ccc" onclick="settings.deg=!settings.deg;store.set('settings',settings);render()">${settings.deg?'Degrees':'Radians'}</button></div>
  <div class="toggle"><span>Reset all scores</span><button class="btn d" onclick="if(confirm('Delete all saved scores?')){store.set('progress',{});render()}">Reset</button></div>
  <p class="note">Revise Shorts: original exam-style questions written for Edexcel A level Maths (9MA0), OCR A Physics (H556) and AQA Chemistry (7405). Not affiliated with any exam board or with Science Shorts. Works offline. To install, use your browser's “Add to Home screen”.</p>
- <p class="note">${countQ()} questions · v1</p></div>${tabs('gear')}</div>`}
+ <p class="note">${countQ()} questions · ${Object.keys(FIGS).length} diagrams · v10</p></div>${tabs('gear')}</div>`}
 function countQ(){let n=0;Object.values(TOPICS).forEach(t=>t.quizzes.forEach(z=>n+=z.length));return n}
 // ---------- quiz
 let Q=null;
@@ -64,7 +64,7 @@ let cur={};
 function quiz(){if(!Q)return home();if(Q.i>=Q.qs.length)return results();
  const q=Q.qs[Q.i],a=Q.ans[Q.i],col=Q.color;cur=a?a.resp:(Q.draft&&Q.draft.i===Q.i?Q.draft.v:{});
  const pct=Math.round(Q.ans.filter(Boolean).length/Q.qs.length*100);
- let body=`<div class="qtext">${esc(q.q)}</div>`;
+ let body=`<div class="qtext">${esc(q.q)}</div>`+(q.fig&&FIGS[q.fig]?`<figure class="fig q">${FIGS[q.fig]}</figure>`:'');
  if(q.t==='mc'){body+='<div class="hint">Choose the correct answer:</div>'+q.opts.map((o,k)=>{let c='';if(a){if(o===q.a)c='ok';else if(cur.v===o)c='bad'}return `<button class="opt ${c}" data-k="${k}" ${a?'disabled':''} onclick="pickMC(${k})">${esc(o)}</button>`}).join('')}
  if(q.t==='num'){body+=`<div class="hint">Use the calculator, then enter your answer:</div><input id="ans" class="inp" inputmode="decimal" autocomplete="off" placeholder="Your answer" value="${esc(cur.v||'')}" ${a?'disabled':''} oninput="cur.v=this.value;upd()">${q.u?`<div class="unit">Unit: ${esc(q.u)}</div>`:''}`}
  if(q.t==='text'){body+=`<textarea id="ans" class="inp" placeholder="Enter your answer here..." ${a?'disabled':''} oninput="cur.v=this.value;upd()">${esc(cur.v||'')}</textarea>`}
@@ -97,7 +97,7 @@ function unOrder(k){if(cur.seq[k]!==undefined){cur.seq.splice(k,1);rerenderQ()}}
 function mL(k){if(cur.m[k]!==undefined){delete cur.m[k]}cur.sel=k;rerenderQ()}
 function mR(rk){if(cur.sel===undefined)return;for(const l in cur.m)if(cur.m[l]===rk)delete cur.m[l];cur.m[cur.sel]=rk;delete cur.sel;rerenderQ()}
 function rerenderQ(){const calcOpen=!!$('.calc');Q.draft={i:Q.i,v:cur};Q._noAuto=true;render();Q._noAuto=false;if(calcOpen)openCalc();upd()}
-const norm=s=>String(s).toLowerCase().replace(/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]).replace(/[⁰¹²³⁴-⁹]/g,c=>({'⁰':0,'¹':1,'²':2,'³':3,'⁴':4,'⁵':5,'⁶':6,'⁷':7,'⁸':8,'⁹':9}[c])).replace(/[⁺]/g,'+').replace(/[−–]/g,'-').replace(/\s+/g,'').replace(/ise/g,'ize').replace(/[×*]/g,'x');
+const norm=s=>String(s).toLowerCase().replace(/[‘’]/g,"'").replace(/won't/g,'will not').replace(/can't/g,'cannot').replace(/n't/g,' not').replace(/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]).replace(/[⁰¹²³⁴-⁹]/g,c=>({'⁰':0,'¹':1,'²':2,'³':3,'⁴':4,'⁵':5,'⁶':6,'⁷':7,'⁸':8,'⁹':9}[c])).replace(/[⁺]/g,'+').replace(/[−–]/g,'-').replace(/\s+/g,'').replace(/ise/g,'ize').replace(/[×*]/g,'x');
 function parseNum(s){s=String(s).trim().replace(/[−–]/g,'-').replace(/,/g,'').replace(/\s/g,'').replace(/[x×]10\^?\(?(-?\d+)\)?/i,'e$1');const v=parseFloat(s);return /^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?/i.test(s)?v:NaN}
 function mark(q,r){
  if(q.t==='mc')return r.v===q.a;
@@ -168,15 +168,16 @@ function render(){const h=location.hash||'#/';let html;
  if(!h.startsWith('#/q/')&&h!=='#/quiz')window.scrollTo(0,0);
  const q=Q&&Q.qs[Q.i];if((h.startsWith('#/q/')||h==='#/quiz')&&q&&q.t==='num'&&!Q.ans[Q.i]&&!$('.calc')&&!Q._noAuto)openCalc();}
 window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz'))Q=null;render()});
-let NOTES={};fetch('data/notes.json').then(r=>r.json()).then(n=>{NOTES=n;if((location.hash||'').startsWith('#/t/'))render()}).catch(()=>{});
+let NOTES={},FIGS={};fetch('data/figs.json').then(r=>r.json()).then(f=>{FIGS=f;if(DB)render()}).catch(()=>{});
+fetch('data/notes.json').then(r=>r.json()).then(n=>{NOTES=n;if((location.hash||'').startsWith('#/t/'))render()}).catch(()=>{});
 function texAll(){if(!window.katex)return;document.querySelectorAll('.tx:not([data-r])').forEach(e=>{try{katex.render(e.textContent,e,{displayMode:e.classList.contains('d'),throwOnError:false})}catch(_){}e.dataset.r=1})}
-function notesCard(id,col){const h=NOTES[id];if(!h)return '';return `<div class="notes c-${col}"><div class="nh"><span>📘 Revision notes</span><button class="nt" onclick="const n=this.closest('.notes');const o=!n.querySelector('details:not([open])');n.querySelectorAll('details').forEach(d=>d.open=!o);this.textContent=o?'Expand all':'Collapse all'">Expand all</button></div>${h}</div><div class="sub" style="margin-top:4px">Test yourself:</div>`}
+function notesCard(id,col){let h=NOTES[id];if(!h)return '';h=h.replace(/<figure class="fig" data-fig="([\w-]+)">/g,(m,n)=>m+(FIGS[n]||''));return `<div class="notes c-${col}"><div class="nh"><span>📘 Revision notes</span><button class="nt" onclick="const n=this.closest('.notes');const o=!n.querySelector('details:not([open])');n.querySelectorAll('details').forEach(d=>d.open=!o);this.textContent=o?'Expand all':'Collapse all'">Expand all</button></div>${h}</div><div class="sub" style="margin-top:4px">Test yourself:</div>`}
 fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.sec=sec.name;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 
 function stem(w){return w.replace(/(ations|ation|ings|ing|ions|ion|ies|es|ed|ly|s)$/,'')}
 function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1));p=t}}return d[b.length]}
-function kwHit(ans,words,k){const nk=norm(k);if(ans.includes(nk))return true;if(/\s/.test(k.trim())||nk.length<4)return false;const sk=stem(nk);return words.some(w=>{const sw=stem(w);return sw===sk||(sk.length>=4&&(sw.startsWith(sk)||sk.startsWith(sw)&&sw.length>=4))||lev(sw,sk)<=(sk.length>=8?2:1)})}
+function kwHit(ans,words,k){const nk=norm(k);if(nk.length<4&&!/\s/.test(k)&&/^[a-z0-9]+$/.test(nk))return words.includes(nk);if(ans.includes(nk))return true;if(/\s/.test(k.trim())||nk.length<4)return false;const sk=stem(nk);return words.some(w=>{const sw=stem(w);return sw===sk||(sk.length>=4&&(sw.startsWith(sk)||sk.startsWith(sw)&&sw.length>=4))||lev(sw,sk)<=(sk.length>=8?2:1)})}
 function textHits(q,v){const ans=norm(v);const words=String(v).toLowerCase().replace(/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]).split(/[^a-z0-9+²³⁻]+/).filter(w=>w.length>1);return q.k.filter(g=>g.some(k=>kwHit(ans,words,k))).length}
 const QN=['Quiz 1 · Warm-up','Quiz 2 · Exam practice','Quiz 3 · Exam-style multi-step'];
 const QD=['Core facts and one-step questions','Applying ideas: two-step questions','Harder exam-style problems'];
