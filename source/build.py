@@ -121,8 +121,24 @@ for f in ['maths','physics','chemistry']:
         t['n']=n
         if n<30 or any(len(x)<10 for x in t['quizzes']): report.append(f"  SHORT {t['id']} {[len(x) for x in t['quizzes']]}")
         del t['qs']
+# v11: spec-section layout (AQA 7405 splits AS content from A-level-only content)
+LAYOUT={'chemistry':[('Physical Chemistry','AS · 3.1.1–3.1.7',[f'c-1-{i}' for i in range(1,8)]),('Inorganic Chemistry','AS · 3.2.1–3.2.3',[f'c-2-{i}' for i in range(1,4)]),
+  ('Organic Chemistry','AS · 3.3.1–3.3.6',[f'c-3-{i}' for i in range(1,7)]),('Advanced Physical Chemistry','A-level only · 3.1.8–3.1.12',[f'c-1-{i}' for i in range(8,13)]),
+  ('Advanced Inorganic Chemistry','A-level only · 3.2.4–3.2.6',[f'c-2-{i}' for i in range(4,7)]),('Advanced Organic Chemistry','A-level only · 3.3.7–3.3.16',[f'c-3-{i}' for i in range(7,17)])],
+ 'physics':[('Module 1: Development of practical skills in physics','AS and A level',['p-1']),('Module 2: Foundations of physics','AS and A level',['p-2-1','p-2-2','p-2-3']),
+  ('Module 3: Forces and motion','AS and A level',['p-3-1','p-3-2','p-3-3','p-3-4','p-3-5']),('Module 4: Electrons, waves and photons','AS and A level',['p-4-1','p-4-2','p-4-3','p-4-4','p-4-5']),
+  ('Module 5: Newtonian world and astrophysics','A level only',['p-5-1','p-5-2','p-5-3','p-5-4','p-5-5']),('Module 6: Particles and medical physics','A level only',['p-6-1','p-6-2','p-6-3','p-6-4','p-6-5'])],
+ 'maths':[('Pure Mathematics','Papers 1 and 2 · Topics 1–10',['m-proof','m-alg','m-coord','m-seq','m-trig','m-exp','m-diff','m-int','m-num','m-vec']),
+  ('Statistics','Paper 3 Section A · Topics 1–5',['s-samp','s-data','s-prob','s-dist','s-hyp']),('Mechanics','Paper 3 Section B · Topics 6–9',['k-units','k-kin','k-force','k-mom'])]}
+for s in out:
+    allt={t['id']:t for sec in s['sections'] for t in sec['topics']}
+    lay=LAYOUT[s['id']]; placed=[i for _,_,l in lay for i in l]
+    assert sorted(placed)==sorted(allt), ('layout mismatch',s['id'],set(placed)^set(allt))
+    s['sections']=[dict(name=n,note=d,topics=[allt[i] for i in l]) for n,d,l in lay]
+total=0
 for s in out:
     ts=[t for sec in s['sections'] for t in sec['topics']]
+    total+=sum(t['n'] for t in ts)
     print(s['name'],'topics',len(ts),'questions',sum(t['n'] for t in ts),'min',min(t['n'] for t in ts))
     for t in ts: del t['n']
 print('\n'.join(report) or 'all topics 30+ with 10/10/10')
@@ -133,5 +149,7 @@ for s in out:
         for t in sec['topics']:
             for qz in t['quizzes']:
                 for q in qz: q.pop('_chk',None)
-json.dump(dict(version=2,subjects=out),open('app/data/questions.json','w',encoding='utf8'),ensure_ascii=False,separators=(',',':'))
+print('TOTAL questions',total)
+import datetime
+json.dump(dict(version=3,count=total,built=datetime.date.today().strftime('%d %b %Y'),subjects=out),open('app/data/questions.json','w',encoding='utf8'),ensure_ascii=False,separators=(',',':'))
 sys.exit(1 if errs else 0)

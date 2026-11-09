@@ -1,5 +1,5 @@
 @ physics|Physics|OCR A level (H556)|blue
-# p-1|1.1 Practical skills|Module 1: Development of practical skills
+# p-1|1.1–1.4 Practical skills|Module 1: Development of practical skills
 M|Which instrument has a resolution of 0.01 mm?|Micrometer screw gauge|Vernier caliper|Metre rule|Measuring tape|Micrometers read to 0.01 mm.
 W|What is a systematic error?|same;consistent;offset;zero error;every|An error that shifts every reading by the same amount, e.g. a zero error.
 M|Repeating readings and averaging reduces|random errors|systematic errors|zero errors|calibration errors|Averaging cancels random scatter.
@@ -11,13 +11,13 @@ M|The joule in SI base units is|kg m² s⁻²|kg m s⁻²|kg m² s⁻¹|kg² m s
 N|Convert 2.5 kWh to joules (give the number × 10⁶ J).|9|0|× 10⁶ J|2500 W × 3600 s = 9.0 × 10⁶ J.|2500*3600/1e6
 P|Match each quantity to its SI unit|Charge=coulomb;Energy=joule;Power=watt;Resistance=ohm|Derived units.
 M|The prefix 'pico' means|10⁻¹²|10⁻⁹|10⁻¹⁵|10⁻⁶|p = 10⁻¹².
-# p-2-2|2.2 Measurements and uncertainties|Module 2: Foundations of physics
+# p-2-2|2.2 Making measurements and analysing data|Module 2: Foundations of physics
 N|Length = 50.0 ± 0.5 cm. Percentage uncertainty?|1|0|%|0.5/50 × 100.|0.5/50*100
 N|A = 2.0 ± 2%, B = 3.0 ± 3%. Percentage uncertainty in A × B?|5|0|%|Add percentage uncertainties.|2+3
 N|Percentage uncertainty in r is 2%. Percentage uncertainty in r³?|6|0|%|Multiply by the power.|3*2
 M|An accurate measurement is|close to the true value|repeatable|given to many decimal places|free of uncertainty|Accuracy = closeness to true value.
 M|Worst-fit lines through error bars let you find|the uncertainty in the gradient|more data points|the mean|the zero error|Compare best and worst gradients.
-# p-2-3|2.3 Scalars and vectors|Module 2: Foundations of physics
+# p-2-3|2.3 Nature of quantities (scalars and vectors)|Module 2: Foundations of physics
 N|Two perpendicular forces of 6 N and 8 N. Magnitude of the resultant?|10|0|N|√(36 + 64).|hypot(6,8)
 N|A 20 N force at 30° to the horizontal. Horizontal component (3 s.f.)?|17.3|0.5|N|20 cos 30°.|20*cos(radians(30))
 M|Which is a vector?|displacement|speed|mass|energy|Has magnitude and direction.
@@ -47,7 +47,7 @@ N|40 N on a wire of area 2.0 × 10⁻⁷ m². Stress (give × 10⁸ Pa)?|2|0|× 
 M|Young modulus =|stress ÷ strain|strain ÷ stress|force ÷ extension|stress × strain|E = σ/ε.
 W|What is plastic deformation?|permanent;not return;does not return|The material does not return to its original shape when the load is removed.
 M|Two identical springs (k) in series have combined stiffness|k/2|2k|k|k²|1/k_total = 1/k + 1/k.
-# p-3-5|3.5 Newton's laws and momentum|Module 3: Forces and motion
+# p-3-5|3.5 Newton’s laws of motion and momentum|Module 3: Forces and motion
 N|A 2 kg trolley at 3 m/s sticks to a stationary 1 kg trolley. Common speed?|2|0|m/s|6 = 3v.|6/3
 N|Impulse from 40 N for 0.25 s?|10|0|N s|Impulse = FΔt = 40 × 0.25 = 10 N s (= change in momentum).|40*0.25
 M|In a perfectly elastic collision|kinetic energy is conserved|momentum is not conserved|objects stick together|all KE becomes heat|Momentum is always conserved.
