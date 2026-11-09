@@ -19,7 +19,7 @@ function tabs(on){const t=[['home','#/','Home'],['play','#/videos','Videos'],['t
 function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;if(p[t.id]){done++;sum+=p[t.id].best}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
 // ---------- screens
 function home(){const name=store.get('name','A-Level');
- return `<div class="screen"><div class="hello"><span>Hey, ${esc(name)} Hero!</span><span class="avatar"></span></div><div class="scroll">
+ return `<div class="screen"><div class="hello"><span class="brand"><span class="avatar"></span><span>Hey, ${esc(name)} Hero!</span></span><span class="appname">Revise Shorts</span></div><div class="scroll">
  <h1 class="title">Your A Levels</h1><div class="sub">Choose a subject to test your knowledge:</div>
  <button class="bar b-green" onclick="startMix('all')"><span>Quick-fire mix: all subjects</span><span class="arrow">➜</span></button>
  ${DB.subjects.map(s=>{const st=subjStats(s);const c=SUBJ_COL[s.id];return `<button class="subjcard c-${c}" onclick="location.hash='#/s/${s.id}'"><div class="nm">${esc(s.name)}</div><div class="bd">${esc(s.board)}</div>

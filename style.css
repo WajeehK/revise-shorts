@@ -99,3 +99,5 @@ body{-webkit-text-stroke:.25px currentColor}
 .hello{font-size:16px}h1.title{font-size:26px}.sub{font-size:16px}
 .bar{font-size:15px;padding:12px 14px}.card h2{font-size:18px}.topic{font-size:14px;padding:9px 12px}
 .qhead{font-size:16px}.qtext{font-size:19px}.opt{font-size:16px}.hint{font-size:14px}
+.avatar{width:34px;height:34px;border-radius:10px;background:url(icons/icon-192.png) center/cover;border:0;box-shadow:0 2px 6px rgba(120,90,200,.25)}
+.brand{display:flex;align-items:center;gap:10px}.appname{font-size:13px;color:#7a5bc7}
