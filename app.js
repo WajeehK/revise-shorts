@@ -164,10 +164,13 @@ function render(){const h=location.hash||'#/';let html;
  else if(h.startsWith('#/t/'))html=topicScr(h.slice(4));
  else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(!Q||Q.key!==key)startTopic(id,+(n||1));html=quiz()}
  else if(h==='#/quiz')html=quiz();else html=home();
- $('#app').innerHTML=html;
+ $('#app').innerHTML=html;texAll();
  if(!h.startsWith('#/q/')&&h!=='#/quiz')window.scrollTo(0,0);
  const q=Q&&Q.qs[Q.i];if((h.startsWith('#/q/')||h==='#/quiz')&&q&&q.t==='num'&&!Q.ans[Q.i]&&!$('.calc')&&!Q._noAuto)openCalc();}
 window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz'))Q=null;render()});
+let NOTES={};fetch('data/notes.json').then(r=>r.json()).then(n=>{NOTES=n;if((location.hash||'').startsWith('#/t/'))render()}).catch(()=>{});
+function texAll(){if(!window.katex)return;document.querySelectorAll('.tx:not([data-r])').forEach(e=>{try{katex.render(e.textContent,e,{displayMode:e.classList.contains('d'),throwOnError:false})}catch(_){}e.dataset.r=1})}
+function notesCard(id,col){const h=NOTES[id];if(!h)return '';return `<div class="notes c-${col}"><div class="nh"><span>📘 Revision notes</span><button class="nt" onclick="const n=this.closest('.notes');const o=!n.querySelector('details:not([open])');n.querySelectorAll('details').forEach(d=>d.open=!o);this.textContent=o?'Expand all':'Collapse all'">Expand all</button></div>${h}</div><div class="sub" style="margin-top:4px">Test yourself:</div>`}
 fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.sec=sec.name;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 
@@ -180,7 +183,7 @@ const QD=['Core facts and one-step questions','Applying ideas: two-step question
 function vidURL(t){const n=t.title.replace(/^[\d.:]+\s*/,'');return t.subj==='maths'?YT+'results?search_query='+encodeURIComponent('Edexcel A level maths '+n):YT+'@ScienceShorts/search?query='+encodeURIComponent(n)}
 function topicScr(id){const t=TOPICS[id];if(!t)return home();const p=prog();const col=t.color;const pal=['green','orange','purple'].map(c=>c===col?'blue':c);
  return `<div class="screen"><div class="hello"><button onclick="location.hash='#/s/${t.subj}'" aria-label="Back">← Topics</button><span class="avatar"></span></div><div class="scroll">
- <h1 class="title">${esc(t.title)}</h1><div class="sub">${esc(t.sec)} · choose a quiz:</div>
+ <h1 class="title">${esc(t.title)}</h1><div class="sub">${esc(t.sec)}</div>${notesCard(id,col)}
  ${t.quizzes.map((z,i)=>{const r=p[id+':'+(i+1)];const n=Math.min(10,z.length);return `<button class="subjcard c-${pal[i]}" ${n?`onclick="location.hash='#/q/${id}/${i+1}'"`:'disabled style="opacity:.5"'}><div class="nm">${QN[i]}</div><div class="bd">${QD[i]} · ${n?n+' questions':'coming soon'}</div>
  <div class="prog"><i style="width:${r?r.best:0}%"></i></div><div class="row"><span>${r?`Best ${r.best}% · last ${r.last}% · played ×${r.n}`:'Not tried yet'}</span><span class="arrow">➜</span></div></button>`}).join('')}
  <a class="vid b-${col}" href="${vidURL(t)}" target="_blank" rel="noopener"><span class="play"></span><span>Watch a video on this topic<small>Opens YouTube</small></span></a>
