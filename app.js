@@ -16,7 +16,7 @@ gear:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a
 calc:'<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h1M12 12h1M16 12h0M8 16h1M12 16h1M16 12v4"/></svg>'};
 function tabs(on){const t=[['home','#/','Home'],['play','#/videos','Videos'],['trophy','#/scores','Scores'],['gear','#/settings','Settings']];
  return '<nav class="tabs">'+t.map(([i,h,l])=>`<button class="${on===i?'on':''}" onclick="location.hash='${h}'" aria-label="${l}">${ICON[i]}<span>${l}</span></button>`).join('')+'</nav>'}
-function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;if(p[t.id]){done++;sum+=p[t.id].best}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
+function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;const b=[1,2,3].map(k=>p[t.id+':'+k]).filter(Boolean);if(b.length){done++;sum+=Math.max(...b.map(x=>x.best))}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
 // ---------- screens
 function home(){const name=store.get('name','A-Level');
  return `<div class="screen"><div class="hello"><span class="brand"><span class="avatar"></span><span>Hey, ${esc(name)} Hero!</span></span><span class="appname">Revise Shorts</span></div><div class="scroll">
@@ -30,11 +30,11 @@ function subject(id){const s=DB.subjects.find(x=>x.id===id);if(!s)return home();
  return `<div class="screen"><div class="hello"><button onclick="location.hash='#/'" aria-label="Back">← Subjects</button><span class="avatar"></span></div><div class="scroll">
  <h1 class="title">${esc(boardName.replace(' A level',''))} A Level ${esc(s.name)}</h1><div class="sub">Choose a quiz to test your knowledge:</div>
  <button class="bar b-${c}" onclick="startMix('${s.id}')"><span>Mixed ${esc(s.name)} quiz (10 questions)</span><span class="arrow">➜</span></button>
- ${s.sections.map((sec,i)=>{const col=PAL[(PAL.indexOf(c)+1+i)%4];return `<div class="card c-${col}"><h2>${esc(sec.name)}</h2>${sec.topics.map(t=>`<button class="topic" onclick="location.hash='#/q/${t.id}'"><span>${esc(t.title)}</span><span class="r">${p[t.id]?`<span class="pill">best ${p[t.id].best}%</span>`:''}<span class="arrow">➜</span></span></button>`).join('')}</div>`}).join('')}
+ ${s.sections.map((sec,i)=>{const col=PAL[(PAL.indexOf(c)+1+i)%4];return `<div class="card c-${col}"><h2>${esc(sec.name)}</h2>${sec.topics.map(t=>{const d=[1,2,3].filter(n=>p[t.id+':'+n]).length;return `<button class="topic" onclick="location.hash='#/t/${t.id}'"><span>${esc(t.title)}</span><span class="r">${d?`<span class="pill">${'★'.repeat(d)}${'☆'.repeat(3-d)}</span>`:''}<span class="arrow">➜</span></span></button>`}).join('')}</div>`}).join('')}
  </div>${tabs('home')}</div>`}
 function scores(){const p=prog();
  return `<div class="screen"><div class="hello"><span>Your scores</span><span class="avatar"></span></div><div class="scroll"><h1 class="title">Personal bests</h1><div class="sub">Beat your best score on every topic!</div>
- ${DB.subjects.map(s=>{const st=subjStats(s);const rows=[];s.sections.forEach(sec=>sec.topics.forEach(t=>{if(p[t.id])rows.push(`<div class="li"><span>${esc(t.title)}</span><span>${p[t.id].best}% <small style="font-weight:400">(last ${p[t.id].last}%, ×${p[t.id].n})</small></span></div>`)}));
+ ${DB.subjects.map(s=>{const st=subjStats(s);const rows=[];s.sections.forEach(sec=>sec.topics.forEach(t=>{const b=[1,2,3].map(k=>p[t.id+':'+k]);if(b.some(Boolean))rows.push(`<div class="li"><span>${esc(t.title)}</span><span>${b.map((x,i)=>`Q${i+1} ${x?x.best+'%':'–'}`).join(' · ')}</span></div>`)}));
  const mx=p['mix-'+s.id];if(mx)rows.unshift(`<div class="li"><span>Mixed quiz</span><span>${mx.best}% <small style="font-weight:400">(×${mx.n})</small></span></div>`);
  return `<div class="card c-${SUBJ_COL[s.id]}"><h2>${esc(s.name)} · ${st.done}/${st.n} topics · avg ${st.avg}%</h2><div class="list">${rows.join('')||'<div class="li"><span>No quizzes yet – go try one!</span></div>'}</div></div>`}).join('')}
  </div>${tabs('trophy')}</div>`}
@@ -53,11 +53,11 @@ function settingsScr(){const name=store.get('name','A-Level');
  <div class="toggle"><span>Reset all scores</span><button class="btn d" onclick="if(confirm('Delete all saved scores?')){store.set('progress',{});render()}">Reset</button></div>
  <p class="note">Revise Shorts: original exam-style questions written for Edexcel A level Maths (9MA0), OCR A Physics (H556) and AQA Chemistry (7405). Not affiliated with any exam board or with Science Shorts. Works offline. To install, use your browser's “Add to Home screen”.</p>
  <p class="note">${countQ()} questions · v1</p></div>${tabs('gear')}</div>`}
-function countQ(){let n=0;Object.values(TOPICS).forEach(t=>n+=t.questions.length);return n}
+function countQ(){let n=0;Object.values(TOPICS).forEach(t=>t.quizzes.forEach(z=>n+=z.length));return n}
 // ---------- quiz
 let Q=null;
-function startTopic(id){const t=TOPICS[id];if(!t)return false;Q={key:id,title:t.title,color:t.color,qs:shuffle(t.questions).map(q=>prep(q,t)),i:0,ans:[]};return true}
-function startMix(sid){let pool=[];Object.values(TOPICS).forEach(t=>{if(sid==='all'||t.subj===sid)t.questions.forEach(q=>pool.push([q,t]))});
+function startTopic(id,n){const t=TOPICS[id];if(!t||!t.quizzes[n-1]||!t.quizzes[n-1].length)return false;Q={key:id+':'+n,tid:id,qn:n,title:t.title+' · Quiz '+n,color:t.color,qs:shuffle(t.quizzes[n-1]).slice(0,10).map(q=>prep(q,t)),i:0,ans:[]};return true}
+function startMix(sid){let pool=[];Object.values(TOPICS).forEach(t=>{if(sid==='all'||t.subj===sid)t.quizzes.forEach(z=>z.forEach(q=>pool.push([q,t])))});
  const n=sid==='all'?15:10;Q={key:'mix-'+sid,title:sid==='all'?'Quick-fire mix':'Mixed '+DB.subjects.find(s=>s.id===sid).name,color:sid==='all'?'green':SUBJ_COL[sid],qs:shuffle(pool).slice(0,n).map(([q,t])=>prep(q,t)),i:0,ans:[]};location.hash='#/quiz'}
 function prep(q,t){q=Object.assign({},q,{topic:t.title});if(q.t==='mc')q.opts=shuffle([q.a,...q.w]);if(q.t==='order')q.shuf=shuffle(q.items.map((x,i)=>i));if(q.t==='match')q.right=shuffle(q.pairs.map((x,i)=>i));return q}
 let cur={};
@@ -85,7 +85,8 @@ function feedback(q,a){let corr='';
  if(q.t==='text')corr=`Model answer: ${esc(q.e)}`;
  if(q.t==='order')corr='Correct order: '+q.items.map((x,i)=>`${i+1}. ${esc(x)}`).join(' → ');
  if(q.t==='match')corr='Pairs: '+q.pairs.map(p=>`${esc(p[0])} → ${esc(p[1])}`).join('; ');
- return `<div class="fb ${a.ok?'ok':'bad'}"><div class="h">${a.ok?'✓ Correct!':'✗ Not quite'}</div>${a.ok&&q.t!=='text'?'':corr+'<br>'}${q.t==='text'?'':esc(q.e)}</div>`}
+ return `<div class="fb ${a.ok?'ok':'bad'}"><div class="h">${a.ok?'✓ Correct!':'✗ Not quite'}</div>${a.ok&&q.t!=='text'?'':corr+'<br>'}${q.t==='text'?'':esc(q.e)}${q.t==='text'&&!a.ok?`<br><small>Looking for: ${q.k.map(g=>esc(g[0])).join(', ')}</small><br><button class="btn w" style="margin-top:8px;border:1px solid #ccc" onclick="selfMark()">My answer was right – count it</button>`:''}</div>`}
+function selfMark(){const a=Q.ans[Q.i];a.ok=true;a.resp.self=true;render()}
 function upd(){const q=Q.qs[Q.i];let ready=false;
  if(q.t==='mc')ready=cur.v!==undefined;if(q.t==='num'||q.t==='text')ready=!!(cur.v&&cur.v.trim());
  if(q.t==='order')ready=cur.seq.length===q.items.length;if(q.t==='match')ready=Object.keys(cur.m).length===q.pairs.length;
@@ -101,22 +102,22 @@ function parseNum(s){s=String(s).trim().replace(/[−–]/g,'-').replace(/,/g,''
 function mark(q,r){
  if(q.t==='mc')return r.v===q.a;
  if(q.t==='num'){const v=parseNum(r.v);if(isNaN(v))return false;const tol=Math.max(q.tol,0.1)/100*Math.abs(q.a)+1e-9;return Math.abs(v-q.a)<=tol}
- if(q.t==='text'){const n=norm(r.v);return q.k.every(g=>g.some(k=>n.includes(norm(k))))}
+ if(q.t==='text'){if(r.self)return true;const hit=textHits(q,r.v);return hit>=Math.ceil(q.k.length*0.6)}
  if(q.t==='order')return r.seq.every((v,i)=>v===i);
  if(q.t==='match')return q.pairs.every((p,k)=>r.m[k]===k)}
 function done(){if(Q.ans[Q.i]){Q.i++;render();return}const q=Q.qs[Q.i];Q.ans[Q.i]={ok:mark(q,cur),resp:cur};Q.draft=null;render();const fb=$('.fb');if(fb)fb.scrollIntoView({behavior:'smooth',block:'nearest'})}
 function skip(){Q.draft=null;const q=Q.qs.splice(Q.i,1)[0];Q.qs.push(q);cur={};render()}
-function quitQuiz(){if(Q.ans.filter(Boolean).length&&!confirm('Quit this quiz? Your score won\'t be saved.'))return;const s=TOPICS[Q.key]?TOPICS[Q.key].subj:null;Q=null;location.hash=s?'#/s/'+s:'#/'}
+function quitQuiz(){if(Q.ans.filter(Boolean).length&&!confirm('Quit this quiz? Your score won\'t be saved.'))return;const t=Q.tid;Q=null;location.hash=t?'#/t/'+t:'#/'}
 function results(){const n=Q.qs.length,c=Q.ans.filter(a=>a&&a.ok).length,pc=Math.round(c/n*100);
  if(!Q.saved){const p=prog(),o=p[Q.key]||{best:0,n:0};Q.prevBest=o.n?o.best:null;p[Q.key]={best:Math.max(o.best,pc),last:pc,n:o.n+1,d:Date.now()};store.set('progress',p);Q.saved=true}
- const pb=Q.prevBest===null||pc>Q.prevBest;const back=TOPICS[Q.key]?TOPICS[Q.key].subj:null;
- return `<div class="screen"><div class="qhead b-${Q.color}"><button class="ib" onclick="Q=null;location.hash='${back?'#/s/'+back:'#/'}'">✕</button><span class="t">${esc(Q.title)}</span><span class="ib"></span></div><div class="scroll" style="padding-top:20px">
+ const pb=Q.prevBest===null||pc>Q.prevBest;const back=Q.tid||null;
+ return `<div class="screen"><div class="qhead b-${Q.color}"><button class="ib" onclick="Q=null;location.hash='${back?'#/t/'+back:'#/'}'">✕</button><span class="t">${esc(Q.title)}</span><span class="ib"></span></div><div class="scroll" style="padding-top:20px">
  <div class="big-score">${pc}%</div><div class="center">${c} out of ${n} correct</div>
  <div class="fb ${pb?'ok':'bad'} center"><div class="h">${pb?(Q.prevBest===null?'First score saved!':'🏆 New personal best!'):'Personal best: '+Q.prevBest+'%'}</div>${pb?'Come back later and try to beat it.':'Have another go to beat it!'}</div>
- <button class="btn d big" onclick="retry()">Try again</button><button class="btn big b-${Q.color}" onclick="Q=null;location.hash='${back?'#/s/'+back:'#/'}'">Back to topics</button>
- ${TOPICS[Q.key]?`<a class="vid b-green" target="_blank" rel="noopener" href="${TOPICS[Q.key].subj==='maths'?YT+'results?search_query='+encodeURIComponent('Edexcel A level maths '+Q.title.replace(/^[\d.:]+\s*/,'')):YT+'@ScienceShorts/search?query='+encodeURIComponent(Q.title.replace(/^[\d.:]+\s*/,''))}"><span class="play"></span><span>Watch a video on this topic<small>Opens YouTube</small></span></a>`:''}
+ <button class="btn d big" onclick="retry()">Try again</button><button class="btn big b-${Q.color}" onclick="Q=null;location.hash='${back?'#/t/'+back:'#/'}'">Back to quizzes</button>
+ ${Q.tid?`<a class="vid b-green" target="_blank" rel="noopener" href="${vidURL(TOPICS[Q.tid])}"><span class="play"></span><span>Watch a video on this topic<small>Opens YouTube</small></span></a>`:''}
  </div></div>`}
-function retry(){const k=Q.key;if(k.startsWith('mix-')){startMix(k.slice(4));render()}else{startTopic(k);render()}}
+function retry(){const k=Q.key;if(k.startsWith('mix-')){startMix(k.slice(4));render()}else{startTopic(Q.tid,Q.qn);render()}}
 // ---------- calculator
 const K=[['SHIFT','sh'],['x²','sq'],['√','rt'],['π','pi'],['SF','sf'],['(','('],[')',')'],['sin','sin'],['cos','cos'],['tan','tan'],['7'],['8'],['9'],['DEL','del'],['AC','ac'],['4'],['5'],['6'],['×','*'],['÷','/'],['1'],['2'],['3'],['+','+'],['−','-'],['0'],['.'],['×10ˣ','e10'],['ANS','ans'],['=','=']];
 const KS={sq:'xʸ',rt:'ln',pi:'e',sf:'log',sin:'sin⁻¹',cos:'cos⁻¹',tan:'tan⁻¹'};
@@ -160,11 +161,27 @@ function fmtRes(){if(C.val!==undefined)C.res=fmtNum(C.val,C.sfMode)}
 function render(){const h=location.hash||'#/';let html;
  if(h==='#/videos')html=videos();else if(h==='#/scores')html=scores();else if(h==='#/settings')html=settingsScr();
  else if(h.startsWith('#/s/'))html=subject(h.slice(4));
- else if(h.startsWith('#/q/')){const id=h.slice(4);if(!Q||Q.key!==id||Q.saved&&Q.i>=Q.qs.length&&false){if(!Q||Q.key!==id)startTopic(id)}html=quiz()}
+ else if(h.startsWith('#/t/'))html=topicScr(h.slice(4));
+ else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(!Q||Q.key!==key)startTopic(id,+(n||1));html=quiz()}
  else if(h==='#/quiz')html=quiz();else html=home();
  $('#app').innerHTML=html;
  if(!h.startsWith('#/q/')&&h!=='#/quiz')window.scrollTo(0,0);
  const q=Q&&Q.qs[Q.i];if((h.startsWith('#/q/')||h==='#/quiz')&&q&&q.t==='num'&&!Q.ans[Q.i]&&!$('.calc')&&!Q._noAuto)openCalc();}
 window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz'))Q=null;render()});
-fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
+fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.sec=sec.name;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+function stem(w){return w.replace(/(ations|ation|ings|ing|ions|ion|ies|es|ed|ly|s)$/,'')}
+function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1));p=t}}return d[b.length]}
+function kwHit(ans,words,k){const nk=norm(k);if(ans.includes(nk))return true;if(/\s/.test(k.trim())||nk.length<4)return false;const sk=stem(nk);return words.some(w=>{const sw=stem(w);return sw===sk||(sk.length>=4&&(sw.startsWith(sk)||sk.startsWith(sw)&&sw.length>=4))||lev(sw,sk)<=(sk.length>=8?2:1)})}
+function textHits(q,v){const ans=norm(v);const words=String(v).toLowerCase().replace(/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]).split(/[^a-z0-9+²³⁻]+/).filter(w=>w.length>1);return q.k.filter(g=>g.some(k=>kwHit(ans,words,k))).length}
+const QN=['Quiz 1 · Warm-up','Quiz 2 · Exam practice','Quiz 3 · Exam-style multi-step'];
+const QD=['Core facts and one-step questions','Applying ideas: two-step questions','Harder exam-style problems'];
+function vidURL(t){const n=t.title.replace(/^[\d.:]+\s*/,'');return t.subj==='maths'?YT+'results?search_query='+encodeURIComponent('Edexcel A level maths '+n):YT+'@ScienceShorts/search?query='+encodeURIComponent(n)}
+function topicScr(id){const t=TOPICS[id];if(!t)return home();const p=prog();const col=t.color;const pal=['green','orange','purple'].map(c=>c===col?'blue':c);
+ return `<div class="screen"><div class="hello"><button onclick="location.hash='#/s/${t.subj}'" aria-label="Back">← Topics</button><span class="avatar"></span></div><div class="scroll">
+ <h1 class="title">${esc(t.title)}</h1><div class="sub">${esc(t.sec)} · choose a quiz:</div>
+ ${t.quizzes.map((z,i)=>{const r=p[id+':'+(i+1)];const n=Math.min(10,z.length);return `<button class="subjcard c-${pal[i]}" ${n?`onclick="location.hash='#/q/${id}/${i+1}'"`:'disabled style="opacity:.5"'}><div class="nm">${QN[i]}</div><div class="bd">${QD[i]} · ${n?n+' questions':'coming soon'}</div>
+ <div class="prog"><i style="width:${r?r.best:0}%"></i></div><div class="row"><span>${r?`Best ${r.best}% · last ${r.last}% · played ×${r.n}`:'Not tried yet'}</span><span class="arrow">➜</span></div></button>`}).join('')}
+ <a class="vid b-${col}" href="${vidURL(t)}" target="_blank" rel="noopener"><span class="play"></span><span>Watch a video on this topic<small>Opens YouTube</small></span></a>
+ </div>${tabs('home')}</div>`}
