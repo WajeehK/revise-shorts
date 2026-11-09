@@ -20,7 +20,7 @@ for(const id of ids){
   const closeTable=()=>{if(table){emit('<div class="tbl"><table>'+table.map((r,i)=>'<tr>'+r.map(c=>i===0?`<th>${c}</th>`:`<td>${c}</td>`).join('')+'</tr>').join('')+'</table></div>');table=null}};
   const flush=()=>{closeList();closeTable()};
   let secOpen=false;
-  L.forEach((raw,i)=>{const w=id+':'+(i+1);const ln=raw.replace(/\s+$/,'');
+  L.forEach((raw,i)=>{const w=id+':'+(i+1);const ln=raw.replace(/\s+$/,'').replace(/^\s+(?=- )/,'');
     if(box&&ln===':::'){flush();const [lab,cls]=BOX[box.t];const title=box.t==='ex'?`Worked example ${exN}${box.title?': '+inline(box.title,w):''}`:(box.title?inline(box.title,w):lab);
       html+=`<div class="box ${cls}"><div class="bh">${title}</div>${boxBody}</div>`;box=null;boxBody='';return}
     const bm=ln.match(/^:::(\w+)\s*(.*)$/);
@@ -36,7 +36,7 @@ for(const id of ids){
       const alt=fm[2]||(svg.match(/aria-label="([^"]*)"/)||[])[1]||'';nFig++;figUse[fm[1]]=(figUse[fm[1]]||0)+1;
       emit(`<figure class="fig" data-fig="${fm[1]}"><figcaption>${inline(alt,w)}</figcaption></figure>`);return}
     const m=ln.match(/^\$\$(.+)\$\$$/);
-    if(m){flush();chk(m[1],true,w);emit(`<div class="tx d">${esc(m[1])}</div>`);return}
+    if(m){flush();const parts=[];let d=0,st=0;const t=m[1];for(let i=0;i<t.length;i++){const ch=t[i];if(ch==='{')d++;else if(ch==='}')d--;else if(d===0&&t.startsWith('\\qquad',i)){parts.push(t.slice(st,i));st=i+6;i+=5}}parts.push(t.slice(st));for(let q of parts){q=q.trim().replace(/^,|,$/g,'').trim();if(!q)continue;chk(q,true,w);emit(`<div class="tx d">${esc(q)}</div>`)}return}
     if(ln.startsWith('|')){closeList();const cells=ln.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());if(cells.every(c=>/^:?-+:?$/.test(c)))return;table=table||[];table.push(cells.map(c=>inline(c,w)));return}
     closeTable();
     if(ln.startsWith('- ')){if(list!=='ul'){closeList();emit('<ul>');list='ul'}emit(`<li>${inline(ln.slice(2),w)}</li>`);return}

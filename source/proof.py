@@ -57,10 +57,14 @@ for subj,tid,qn,q in ALL:
     m=re.search(OFF[subj],txt)
     if m: add('off-spec-term',f'{tid}/Q{qn}',f'"{m.group(0)}" in {q["q"][:60]}')
 # notes
-for f in ['maths','physics','chemistry']:
-    for i,l in enumerate(open(f'src/notes/{f}.md',encoding='utf8'),1):
-        if l.count('$')%2: add('notes-unbalanced-$',f'{f}.md:{i}',l[:60])
-        if not l.startswith('!fig') and re.search(OFF[f],l.lower()): add('off-spec-term',f'{f}.md:{i}',re.search(OFF[f],l.lower()).group(0))
+import glob as _g
+NOTEFILES=sorted(_g.glob('src/notes/*.md'))
+SUBJ=lambda f:{'c':'chemistry','p':'physics'}.get(__import__('os').path.basename(f)[0],'maths')
+for fp in NOTEFILES:
+    f=__import__('os').path.basename(fp)
+    for i,l in enumerate(open(fp,encoding='utf8'),1):
+        if l.count('$')%2: add('notes-unbalanced-$',f'{f}:{i}',l[:60])
+        if not l.startswith('!fig') and re.search(OFF[SUBJ(fp)],l.lower()): add('off-spec-term',f'{f}:{i}',re.search(OFF[SUBJ(fp)],l.lower()).group(0))
 # spelling
 if '--words' in sys.argv or True:
     try:
@@ -68,8 +72,8 @@ if '--words' in sys.argv or True:
         sp=SpellChecker(language='en'); allow=set(open('src/words_allow.txt',encoding='utf8').read().split()) if __import__('os').path.exists('src/words_allow.txt') else set()
         cnt=collections.Counter(); where={}
         texts=[(f'{tid}/Q{qn}',' '.join([q['q'],q.get('e',''),str(q.get('a','')),' '.join(q.get('w',[])),' '.join(q.get('items',[])),' '.join(a+' '+b for a,b in q.get('pairs',[]))])) for subj,tid,qn,q in ALL]
-        for f in ['maths','physics','chemistry']:
-            for i,l in enumerate(open(f'src/notes/{f}.md',encoding='utf8'),1): texts.append((f'{f}.md:{i}',re.sub(r'\$[^$]*\$','',l)))
+        for fp in NOTEFILES:
+            for i,l in enumerate(open(fp,encoding='utf8'),1): texts.append((__import__('os').path.basename(fp)+f':{i}',re.sub(r'\$[^$]*\$','',l)))
         for w,t in texts:
             for word in re.findall(r"[A-Za-z][a-z]{3,}",t):
                 lw=word.lower()

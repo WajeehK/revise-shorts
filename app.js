@@ -17,7 +17,7 @@ const ID_MIGRATIONS={};
  store.set('progress',np);store.set('schema',3)})();
 const mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):{matches:false};
 function isDark(){return settings.theme==='dark'||(settings.theme==='system'&&mq.matches)}
-function applyTheme(){const r=document.documentElement;r.dataset.theme=isDark()?'dark':'light';r.style.setProperty('--ts',settings.ts);const m=document.querySelector('meta[name=theme-color]');if(m)m.content=isDark()?'#15171c':'#ffffff'}
+function applyTheme(){const r=document.documentElement;r.dataset.theme=isDark()?'dark':'light';r.style.setProperty('--ts',settings.ts);document.querySelectorAll('meta[name=theme-color]').forEach(m=>m.content=isDark()?'#15171c':'#ffffff')}
 if(mq.addEventListener)mq.addEventListener('change',()=>{applyTheme()});
 applyTheme();
 function saveSettings(){store.set('settings',settings);applyTheme();render()}
@@ -298,7 +298,9 @@ function render(){if(!DB)return;const h=location.hash||'#/';let html;
 window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz'))Q=null;render()});
 let NOTES={},FIGS={};fetch('data/figs.json').then(r=>r.json()).then(f=>{FIGS=f;render()}).catch(()=>{});
 fetch('data/notes.json').then(r=>r.json()).then(n=>{NOTES=n;const h=location.hash||'';if(h.startsWith('#/t/')||h.startsWith('#/n/')||h==='#/settings'){lastHash='';render()}}).catch(()=>{});
-function texAll(){if(!window.katex)return;document.querySelectorAll('.tx:not([data-r])').forEach(e=>{try{katex.render(e.textContent,e,{displayMode:e.classList.contains('d'),throwOnError:false})}catch(_){}e.dataset.r=1})}
+function texAll(){if(!window.katex)return;document.querySelectorAll('.tx:not([data-r])').forEach(e=>{try{katex.render(e.textContent,e,{displayMode:e.classList.contains('d'),throwOnError:false})}catch(_){}e.dataset.r=1});if(document.querySelector('.npage')){requestAnimationFrame(fitTx);setTimeout(fitTx,350);document.fonts&&document.fonts.ready.then(fitTx)}}
+function fitTx(){document.querySelectorAll('.npage .tx.d').forEach(e=>{const k=e.querySelector('.katex-display>.katex')||e.firstElementChild;if(!k)return;k.style.fontSize='';let f=1.21;for(let n=0;n<4;n++){const w=e.clientWidth,sw=e.scrollWidth;if(!w||sw<=w+1)break;f=Math.max(.6,f*(w-2)/sw);k.style.fontSize=f+'em';if(f<=.6)break}})}
+addEventListener('resize',()=>fitTx())
 fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.sec=sec.name;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 function stem(w){return w.replace(/(ations|ation|ings|ing|ions|ion|ies|es|ed|ly|s)$/,'')}
