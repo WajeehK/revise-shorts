@@ -47,7 +47,13 @@ book:'<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2
 back:'<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
 up:'<svg viewBox="0 0 24 24"><path d="M6 14l6-6 6 6"/></svg>'};
 function tabs(on){const t=[['home','#/','Home'],['play','#/videos','Videos'],['trophy','#/scores','Scores'],['gear','#/settings','Settings']];
- return '<nav class="tabs">'+t.map(([i,h,l])=>`<button class="${on===i?'on':''}" onclick="location.hash='${h}'" aria-label="${l}">${ICON[i]}<span>${l}</span></button>`).join('')+'</nav>'}
+ return '<nav class="tabs" data-i="'+t.findIndex(x=>x[0]===on)+'"><span class="pill" aria-hidden="true"><i></i></span>'+t.map(([i,h,l])=>`<button class="${on===i?'on':''}" onclick="location.hash='${h}'" aria-label="${l}"${on===i?' aria-current="page"':''}>${ICON[i]}<span>${l}</span></button>`).join('')+'</nav>'}
+let TABI=-1;
+function placePill(){const nav=$('.tabs');if(!nav)return;const p=nav.querySelector('.pill'),bs=nav.querySelectorAll('button'),i=+nav.dataset.i;if(i<0||!bs[i])return;
+ const at=k=>{p.style.width=bs[k].offsetWidth+'px';p.style.transform=`translate3d(${bs[k].offsetLeft}px,0,0)`};
+ if(TABI<0||TABI===i||!bs[TABI]){p.style.transition='none';at(i);p.offsetWidth;p.style.transition='';TABI=i;return}
+ p.style.transition='none';at(TABI);p.offsetWidth;p.style.transition='';requestAnimationFrame(()=>{at(i);p.classList.remove('mv');p.offsetWidth;p.classList.add('mv')});TABI=i}
+addEventListener('resize',()=>{TABI=-1;placePill()});
 function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;const b=[1,2,3].map(k=>p[t.id+':'+k]).filter(Boolean);if(b.length){done++;sum+=Math.max(...b.map(x=>x.best))}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
 // ---------- screens
 function resumeBar(){const r=store.get('resume',null);if(r&&r.Q&&TOPICS[r.Q.tid]){const q=r.Q;return `<button class="bar b-yellow cont" onclick="resumeQuiz()"><span><small>Continue where you left off</small>${esc(q.title)} · question ${Math.min(q.i+1,q.qs.length)} of ${q.qs.length}</span><span class="arrow">➜</span></button>`}
@@ -289,7 +295,7 @@ function render(){if(!DB)return;const h=location.hash||'#/';let html;
  else if(h.startsWith('#/n/'))html=notesScr(h.slice(4));
  else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(!Q||Q.key!==key)startTopic(id,+(n||1));html=quiz()}
  else if(h==='#/quiz')html=quiz();else html=home();
- $('#app').innerHTML=html;texAll();
+ $('#app').innerHTML=html;placePill();texAll();
  const changed=h!==lastHash;lastHash=h;
  if(h==='#/settings')settingsInfo();
  if(h.startsWith('#/n/')&&changed){const ln=store.get('lastNotes',null);const id=h.slice(4);if(ln&&ln.id===id&&ln.y>200&&ln.f<0.98)requestAnimationFrame(()=>window.scrollTo(0,ln.y));else window.scrollTo(0,0)}
