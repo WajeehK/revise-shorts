@@ -7,6 +7,7 @@ class Bank:
     def __init__(s,seed): s.R=random.Random(seed); s.T={}
     def add(s,tid,lv,q):
         if q.get('e'): q['e']=tidy(q['e'])
+        q['q']=_re.sub(r'(?<![\d.,])1([xy])(?![\w²³])',r'\1',q['q'])
         s.T.setdefault(tid,[]).append((lv,q))
 def N(q,a,tol=0.5,u='',e=''): return dict(t='num',q=q,a=round(float(a),8),tol=tol,u=u,e=e)
 def M(q,a,w,e=''):
@@ -25,4 +26,6 @@ def _sci(m):
 def tidy(e):
     """v11: turn Python e-notation (3.75e+03) in worked explanations into normal or × 10ⁿ form; use proper minus signs before numbers."""
     e=_re.sub(r'(\d(?:\.\d+)?)e([+-])(\d+)',_sci,e)
+    e=_re.sub(r'(?<![\w.)\]])-(?=\d)','−',e)
+    e=_re.sub(r'(?<![\d.,])1([xy])(?![\w²³])',r'\1',e)
     return e

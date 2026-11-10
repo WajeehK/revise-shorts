@@ -320,6 +320,7 @@ def f():
 rep(4,f)
 def f():
     phi,lam=pk(2.3,2.9,4.3,4.7),pk(200,250,300)
+    if h*c/(lam*1e-9)/e<phi+0.3: lam=200
     T('p-4-5',2,f'Work function {phi} eV, light λ = {lam} nm. Max KE of photoelectrons (eV, 3 s.f.)?',h*c/(lam*1e-9)/e-phi,'eV',f'Photon energy = hc/λ = {h*c/(lam*1e-9)/e:.3g} eV. KEmax = hf − φ = {h*c/(lam*1e-9)/e:.3g} − {phi} = {h*c/(lam*1e-9)/e-phi:.3g} eV.')
 rep(4,f)
 def f():
