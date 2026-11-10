@@ -72,6 +72,11 @@ A: $y=3e^{x^2}$
 :::
 - **Forming a differential equation:** translate the words carefully. "The rate of change of $V$ is inversely proportional to $\sqrt V$" becomes $\frac{dV}{dt}=\frac{k}{\sqrt V}$. Decide the sign of $k$ from whether the quantity is increasing or decreasing.
 - **Modelling with differential equations:** "the rate of decrease is proportional to $N$" becomes $\frac{dN}{dt}=-kN$. Interpret the solution in context, and comment on its limitations.
+# Interpreting solutions of differential equations
+- After solving, interpret the solution in the context of the problem. For $P=200e^{0.03t}$, the initial population is 200 (when $t=0$) and it grows by about 3% per unit time.
+- Identify limitations of the solution: exponential growth predicts the population grows without limit, which is unrealistic because of limited food and space. A refined model might level off.
+- Link the solution to kinematics: integrating an acceleration gives a velocity, and a model that gives a negative speed or an infinite time may be invalid outside some range.
+- **Basic integrals.** Integrate $x^n$ (excluding $n=-1$) with related sums, differences and constant multiples: $\int\left(6x^2-4x^{-3}\right)dx=2x^3+2x^{-2}+c$.
 :::warn
 - Forgetting $+c$ in indefinite integrals.
 - Leaving the old limits in place after a substitution.

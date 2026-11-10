@@ -62,6 +62,13 @@ A: $x=0,\frac\pi3,\pi,\frac{5\pi}3,2\pi$
 :::
 - **Proving identities:** start with the more complicated side and work towards the other side. Never treat the identity as an equation by doing the same thing to both sides.
 - **Modelling:** tides, daylight hours and Ferris wheels can be modelled with $h=a+b\sin(\omega t+c)$. The amplitude is $b$, the period is $\frac{2\pi}{\omega}$, and the mean level is $a$.
+# Trigonometry in context
+- **Multiples of the unknown angle.** For $\sin 2\theta=0.5$ with $0\le\theta<360°$, first widen the interval to $0\le2\theta<720°$, find every value of $2\theta$ in that range ($30°, 150°, 390°, 510°$), then halve them.
+- **Quadratic equations in sin, cos and tan.** Replace with a single function using an identity, factorise, and reject impossible roots such as $\sin\theta=2$.
+- **Vectors and forces.** A force $F$ at angle $\theta$ to the horizontal has components $F\cos\theta$ horizontally and $F\sin\theta$ vertically. The angle of a vector $a\mathbf{i}+b\mathbf{j}$ is $\arctan\frac{b}{a}$.
+- **Kinematics.** A projectile launched at speed $U$ at angle $\alpha$ has initial velocity components $U\cos\alpha$ and $U\sin\alpha$; trigonometric functions also model periodic motion, such as tides, with $h=a\sin(bt)+c$.
+- **Geometrical proofs.** The compound-angle formulae can be proved geometrically from right-angled triangles, and give equivalent expressions such as $R\sin(\theta+\alpha)$.
+- The inverse trigonometric functions are written arcsin, arccos and arctan (or sin⁻¹, cos⁻¹ and tan⁻¹). Each one is only an inverse on a restricted domain, so a calculator gives just one principal value.
 :::warn
 - Dividing both sides by $\sin x$ or $\cos x$. This **loses solutions**, so factorise instead.
 - Using degree mode when the question is in radians, or the other way round.

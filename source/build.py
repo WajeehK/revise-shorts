@@ -78,7 +78,7 @@ def figq(q):
     return q
 for f in ['maths','physics','chemistry']:
     subj=None;tops={}
-    files=[f'src/{f}.txt']+[x for x in [f'src/{f}_more.txt',f'src/{f}_figs.txt'] if __import__('os').path.exists(x)]
+    files=[f'src/{f}.txt']+[x for x in [f'src/{f}_more.txt',f'src/{f}_figs.txt',f'src/{f}_cov.txt'] if __import__('os').path.exists(x)]
     for fn in files:
       for ln,line in enumerate(open(fn,encoding='utf8'),1):
         line=line.rstrip('\n')

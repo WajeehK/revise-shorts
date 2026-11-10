@@ -72,6 +72,12 @@ Q: Let $f(x)=\dfrac{3x+1}{x-2}$ for $x>2$. Find $f^{-1}(x)$.
 A: $f^{-1}(x)=\dfrac{2x+1}{x-3}$ for $x>3$, because the range of $f$ is $f(x)>3$.
 :::
 - **Modelling:** use functions in context, for example an exponential model or a quadratic for a projectile, and comment on the model's limitations.
+# Inequalities graphically and in set notation
+- To interpret an inequality graphically, sketch both sides as graphs. The solution of $f(x)>g(x)$ is the set of $x$ values where the curve $y=f(x)$ lies **above** $y=g(x)$. Find the critical values where the graphs cross.
+- Inequalities with brackets and fractions: expand or multiply through first. With a fraction such as $\frac{1}{x}<2$, multiply both sides by $x^2$ (which is always positive) rather than by $x$.
+- Express solutions in set notation: $\{x:-2<x<3\}$ for one interval, and $\{x:x<-2\}\cup\{x:x>3\}$ for two separate regions.
+- Regions in the plane: for $y>x^2-4$ and $y<x+2$, shade the region between the curves. A dashed line means a strict inequality; a solid line means $\le$ or $\ge$.
+- **Manipulating polynomials.** Expanding brackets, collecting like terms, factorisation and simple algebraic division are the basic skills; the factor theorem says that if $f(a)=0$ then $(x-a)$ is a factor.
 :::warn
 - For $y=f(x+a)$, moving the graph to the right. It moves to the **left**.
 - Dividing an inequality by a negative number without reversing the sign.

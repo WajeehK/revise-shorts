@@ -1,146 +1,146 @@
 @ physics|Physics|OCR A level (H556)|blue
 # p-1|1.1–1.4 Practical skills|Module 1: Development of practical skills
-M|Which instrument has a resolution of 0.01 mm?|Micrometer screw gauge|Vernier caliper|Metre rule|Measuring tape|Micrometers read to 0.01 mm.
+M|Which instrument has a resolution of 0.01 mm?|Micrometer screw gauge|Vernier caliper|Metre rule|Measuring tape|A micrometer screw gauge reads to 0.01 mm; a vernier caliper reads to 0.1 mm (or 0.02 mm) and a metre rule to 1 mm.
 W|What is a systematic error?|same;consistent;offset;zero error;every|An error that shifts every reading by the same amount, e.g. a zero error.
-M|Repeating readings and averaging reduces|random errors|systematic errors|zero errors|calibration errors|Averaging cancels random scatter.
-W|What does it mean for measurements to be precise?|close;agree;spread;consistent|They are close to each other (small spread).
-S|Order the steps to find g with a falling ball and two light gates|Measure the distance between the gates;Release the ball from rest above the gates;Record the speed at each gate;Use v² = u² + 2as to find g|Repeat and average.
+M|Repeating readings and averaging reduces|random errors|systematic errors|zero errors|calibration errors|Random errors scatter readings both above and below the true value, so averaging repeats reduces their effect. Systematic errors shift every reading the same way, so averaging does not remove them.
+W|What does it mean for measurements to be precise?|close;agree;spread;consistent|Precise measurements are close to each other (a small spread), whether or not they are close to the true value.
+S|Order the steps to find g with a falling ball and two light gates|Measure the distance between the gates;Release the ball from rest above the gates;Record the speed at each gate;Use v² = u² + 2as to find g|Measure the separation s, release the ball from rest so it falls through both gates, and record its speeds u and v. Then g = (v² − u²) ÷ 2s. Repeat and average.
 # p-2-1|2.1 Physical quantities and units|Module 2: Foundations of physics
-M|The SI base unit of current is the|ampere|coulomb|volt|ohm|Current is a base quantity.
-M|The joule in SI base units is|kg m² s⁻²|kg m s⁻²|kg m² s⁻¹|kg² m s⁻²|J = N m = kg m s⁻² × m.
-N|Convert 2.5 kWh to joules (give the number × 10⁶ J).|9|0|× 10⁶ J|2500 W × 3600 s = 9.0 × 10⁶ J.|2500*3600/1e6
-P|Match each quantity to its SI unit|Charge=coulomb;Energy=joule;Power=watt;Resistance=ohm|Derived units.
-M|The prefix 'pico' means|10⁻¹²|10⁻⁹|10⁻¹⁵|10⁻⁶|p = 10⁻¹².
+M|The SI base unit of current is the|ampere|coulomb|volt|ohm|The seven SI base quantities include current, with base unit the ampere (A). The coulomb, volt and ohm are derived units.
+M|The joule in SI base units is|kg m² s⁻²|kg m s⁻²|kg m² s⁻¹|kg² m s⁻²|J = N m, and N = kg m s⁻², so J = kg m s⁻² × m = kg m² s⁻².
+N|Convert 2.5 kWh to joules (give the number × 10⁶ J).|9|0|× 10⁶ J|2.5 kWh = 2500 W × 3600 s = 9.0 × 10⁶ J.|2500*3600/1e6
+P|Match each quantity to its SI unit|Charge=coulomb;Energy=joule;Power=watt;Resistance=ohm|Charge is in coulombs (C), energy in joules (J), power in watts (W = J s⁻¹) and resistance in ohms (Ω = V A⁻¹).
+M|The prefix 'pico' means|10⁻¹²|10⁻⁹|10⁻¹⁵|10⁻⁶|pico (p) = 10⁻¹², nano = 10⁻⁹, femto = 10⁻¹⁵, micro = 10⁻⁶.
 # p-2-2|2.2 Making measurements and analysing data|Module 2: Foundations of physics
-N|Length = 50.0 ± 0.5 cm. Percentage uncertainty?|1|0|%|0.5/50 × 100.|0.5/50*100
-N|A = 2.0 ± 2%, B = 3.0 ± 3%. Percentage uncertainty in A × B?|5|0|%|Add percentage uncertainties.|2+3
-N|Percentage uncertainty in r is 2%. Percentage uncertainty in r³?|6|0|%|Multiply by the power.|3*2
-M|An accurate measurement is|close to the true value|repeatable|given to many decimal places|free of uncertainty|Accuracy = closeness to true value.
-M|Worst-fit lines through error bars let you find|the uncertainty in the gradient|more data points|the mean|the zero error|Compare best and worst gradients.
+N|Length = 50.0 ± 0.5 cm. Percentage uncertainty?|1|0|%|Percentage uncertainty = absolute uncertainty ÷ value × 100 = 0.5 ÷ 50.0 × 100 = 1%.|0.5/50*100
+N|A = 2.0 ± 2%, B = 3.0 ± 3%. Percentage uncertainty in A × B?|5|0|%|When quantities are multiplied or divided, add their percentage uncertainties: 2% + 3% = 5%.|2+3
+N|Percentage uncertainty in r is 2%. Percentage uncertainty in r³?|6|0|%|For a power, multiply the percentage uncertainty by the power: 3 × 2% = 6%.|3*2
+M|An accurate measurement is|close to the true value|repeatable|given to many decimal places|free of uncertainty|Accuracy is how close a measurement is to the true value. Precision is about the spread of repeated readings.
+M|Worst-fit lines through error bars let you find|the uncertainty in the gradient|more data points|the mean|the zero error|Draw the best-fit and worst acceptable lines through the error bars. The uncertainty in the gradient is the difference between the best and worst gradients.
 # p-2-3|2.3 Nature of quantities (scalars and vectors)|Module 2: Foundations of physics
-N|Two perpendicular forces of 6 N and 8 N. Magnitude of the resultant?|10|0|N|√(36 + 64).|hypot(6,8)
-N|A 20 N force at 30° to the horizontal. Horizontal component (3 s.f.)?|17.3|0.5|N|20 cos 30°.|20*cos(radians(30))
-M|Which is a vector?|displacement|speed|mass|energy|Has magnitude and direction.
-W|What two things describe a vector?|magnitude & direction|Magnitude and direction.
-M|Weight component perpendicular to a slope at angle θ|mg cos θ|mg sin θ|mg tan θ|mg|Resolve perpendicular to the slope.
+N|Two perpendicular forces of 6 N and 8 N. Magnitude of the resultant?|10|0|N|The forces are perpendicular, so use Pythagoras: √(6² + 8²) = √(36 + 64) = √100 = 10 N.|hypot(6,8)
+N|A 20 N force at 30° to the horizontal. Horizontal component (3 s.f.)?|17.3|0.5|N|Horizontal component = F cos θ = 20 × cos 30° = 20 × 0.866 = 17.3 N.|20*cos(radians(30))
+M|Which is a vector?|displacement|speed|mass|energy|Displacement has magnitude and direction, so it is a vector. Speed, mass and energy are scalars.
+W|What two things describe a vector?|magnitude & direction|A vector has both magnitude (size) and direction, e.g. velocity, force and displacement.
+M|Weight component perpendicular to a slope at angle θ|mg cos θ|mg sin θ|mg tan θ|mg|The angle between the weight and the normal to the slope is θ, so the component perpendicular to the slope is mg cos θ (and mg sin θ acts down the slope).
 # p-3-1|3.1 Motion|Module 3: Forces and motion
-N|A car at 15 m/s decelerates at 3 m s⁻². Braking distance?|37.5|0|m|v² = u² + 2as → s = 225/6.|225/6
-M|The gradient of a displacement–time graph is|velocity|acceleration|distance|force|ds/dt.
-N|A stone is thrown horizontally from a 20 m cliff. Time to land (g = 9.81, 3 s.f.)?|2.02|0.5|s|t = √(2 × 20/9.81).|sqrt(40/9.81)
-W|Define thinking distance.|reaction|Distance travelled during the driver's reaction time.
-N|The stone above is thrown at 12 m/s. Horizontal distance (3 s.f.)?|24.2|1|m|12 × 2.02.|12*sqrt(40/9.81)
+N|A car at 15 m/s decelerates at 3 m s⁻². Braking distance?|37.5|0|m|Use v² = u² + 2as with v = 0, u = 15 and a = −3: 0 = 225 − 6s, so s = 37.5 m.|225/6
+M|The gradient of a displacement–time graph is|velocity|acceleration|distance|force|The gradient of a displacement–time graph is Δs/Δt, which is the velocity.
+N|A stone is thrown horizontally from a 20 m cliff. Time to land (g = 9.81, 3 s.f.)?|2.02|0.5|s|Vertically, u = 0 and s = ½gt², so t = √(2s/g) = √(2 × 20 ÷ 9.81) = 2.02 s.|sqrt(40/9.81)
+W|Define thinking distance.|reaction|Thinking distance is the distance travelled during the driver's reaction time, at constant speed, before the brakes are applied: speed × reaction time.
+N|The stone above is thrown at 12 m/s. Horizontal distance (3 s.f.)?|24.2|1|m|The horizontal velocity stays constant: distance = 12 × 2.02 = 24.2 m.|12*sqrt(40/9.81)
 # p-3-2|3.2 Forces in action|Module 3: Forces and motion
-M|Terminal velocity is reached when|drag equals weight|acceleration is maximum|drag is zero|weight is zero|Resultant force is zero.
-N|Density of a 0.50 kg object of volume 2.0 × 10⁻⁴ m³?|2500|0|kg m⁻³|ρ = m/V.|0.5/2e-4
-N|Pressure due to 10 m of water (ρ = 1000, g = 9.81)?|98.1|0.5|kPa|p = hρg.|10*1000*9.81/1000
-W|State the principle of moments.|clockwise & anticlockwise|For equilibrium, sum of clockwise moments = sum of anticlockwise moments about any point.
-M|Upthrust on a submerged object equals|the weight of fluid displaced|the object's weight|the mass of fluid displaced|pressure × depth|Archimedes' principle.
+M|Terminal velocity is reached when|drag equals weight|acceleration is maximum|drag is zero|weight is zero|At terminal velocity the drag equals the weight, so the resultant force is zero and the acceleration is zero.
+N|Density of a 0.50 kg object of volume 2.0 × 10⁻⁴ m³?|2500|0|kg m⁻³|ρ = m ÷ V = 0.50 ÷ 2.0 × 10⁻⁴ = 2500 kg m⁻³.|0.5/2e-4
+N|Pressure due to 10 m of water (ρ = 1000, g = 9.81)?|98.1|0.5|kPa|p = hρg = 10 × 1000 × 9.81 = 98 100 Pa = 98.1 kPa.|10*1000*9.81/1000
+W|State the principle of moments.|clockwise & anticlockwise|For an object in equilibrium, the sum of the clockwise moments about any point equals the sum of the anticlockwise moments about that point.
+M|Upthrust on a submerged object equals|the weight of fluid displaced|the object's weight|the mass of fluid displaced|pressure × depth|Archimedes' principle: the upthrust on an object in a fluid equals the weight of the fluid it displaces.
 # p-3-3|3.3 Work, energy and power|Module 3: Forces and motion
-N|50 N moves an object 4 m at 60° to the force. Work done?|100|0|J|W = Fx cos θ.|50*4*cos(radians(60))
-N|2 kg falls 5 m from rest. Final speed (g = 9.81, 3 s.f.)?|9.90|0.5|m/s|v = √(2gh).|sqrt(2*9.81*5)
-N|A motor lifts 100 N through 3 m in 6 s. Power?|50|0|W|P = W/t.|300/6
-M|Efficiency =|useful output ÷ total input|total input ÷ useful output|wasted ÷ useful|useful − wasted|Often ×100%.
-W|State the principle of conservation of energy.|created & destroyed|Energy cannot be created or destroyed, only transferred.
+N|50 N moves an object 4 m at 60° to the force. Work done?|100|0|J|W = Fx cos θ = 50 × 4 × cos 60° = 50 × 4 × 0.5 = 100 J.|50*4*cos(radians(60))
+N|2 kg falls 5 m from rest. Final speed (g = 9.81, 3 s.f.)?|9.90|0.5|m/s|Ep lost = Ek gained: mgh = ½mv², so v = √(2gh) = √(2 × 9.81 × 5) = 9.90 m s⁻¹. The mass cancels.|sqrt(2*9.81*5)
+N|A motor lifts 100 N through 3 m in 6 s. Power?|50|0|W|Work done = Fd = 100 × 3 = 300 J. P = W ÷ t = 300 ÷ 6 = 50 W.|300/6
+M|Efficiency =|useful output ÷ total input|total input ÷ useful output|wasted ÷ useful|useful − wasted|Efficiency = useful output energy (or power) ÷ total input energy (or power). Multiply by 100 for a percentage.
+W|State the principle of conservation of energy.|created & destroyed|Energy cannot be created or destroyed; it can only be transferred from one form to another. The total energy of a closed system stays constant.
 # p-3-4|3.4 Materials|Module 3: Forces and motion
-N|A spring (k = 200 N/m) is stretched 0.05 m. Elastic potential energy?|0.25|0|J|½kx².|0.5*200*0.05**2
-N|40 N on a wire of area 2.0 × 10⁻⁷ m². Stress (give × 10⁸ Pa)?|2|0|× 10⁸ Pa|σ = F/A.|40/2e-7/1e8
-M|Young modulus =|stress ÷ strain|strain ÷ stress|force ÷ extension|stress × strain|E = σ/ε.
-W|What is plastic deformation?|permanent;not return;does not return|The material does not return to its original shape when the load is removed.
-M|Two identical springs (k) in series have combined stiffness|k/2|2k|k|k²|1/k_total = 1/k + 1/k.
+N|A spring (k = 200 N/m) is stretched 0.05 m. Elastic potential energy?|0.25|0|J|Elastic potential energy = ½kx² = ½ × 200 × 0.05² = 0.25 J.|0.5*200*0.05**2
+N|40 N on a wire of area 2.0 × 10⁻⁷ m². Stress (give × 10⁸ Pa)?|2|0|× 10⁸ Pa|σ = F ÷ A = 40 ÷ 2.0 × 10⁻⁷ = 2.0 × 10⁸ Pa.|40/2e-7/1e8
+M|Young modulus =|stress ÷ strain|strain ÷ stress|force ÷ extension|stress × strain|Young modulus E = stress ÷ strain = σ/ε. It is the gradient of the linear part of a stress–strain graph.
+W|What is plastic deformation?|permanent;not return;does not return|In plastic deformation the material does not return to its original shape when the load is removed; it is permanently deformed.
+M|Two identical springs (k) in series have combined stiffness|k/2|2k|k|k²|For springs in series, 1/k_total = 1/k + 1/k = 2/k, so k_total = k/2. The combination stretches twice as far.
 # p-3-5|3.5 Newton’s laws of motion and momentum|Module 3: Forces and motion
-N|A 2 kg trolley at 3 m/s sticks to a stationary 1 kg trolley. Common speed?|2|0|m/s|6 = 3v.|6/3
+N|A 2 kg trolley at 3 m/s sticks to a stationary 1 kg trolley. Common speed?|2|0|m/s|Momentum before = 2 × 3 = 6 kg m s⁻¹. After, the 3 kg pair moves together: 3v = 6, so v = 2 m s⁻¹.|6/3
 N|Impulse from 40 N for 0.25 s?|10|0|N s|Impulse = FΔt = 40 × 0.25 = 10 N s (= change in momentum).|40*0.25
-M|In a perfectly elastic collision|kinetic energy is conserved|momentum is not conserved|objects stick together|all KE becomes heat|Momentum is always conserved.
-W|State Newton's second law in terms of momentum.|rate & momentum|Net force = rate of change of momentum.
-M|Area under a force–time graph is|impulse|work done|power|acceleration|Impulse = change in momentum.
+M|In a perfectly elastic collision|kinetic energy is conserved|momentum is not conserved|objects stick together|all KE becomes heat|In a perfectly elastic collision the total kinetic energy is conserved. Momentum is conserved in every collision.
+W|State Newton's second law in terms of momentum.|rate & momentum|Newton's second law: the net force on an object is equal to its rate of change of momentum, F = Δp/Δt.
+M|Area under a force–time graph is|impulse|work done|power|acceleration|The area under a force–time graph is FΔt, the impulse, which equals the change in momentum.
 # p-4-1|4.1 Charge and current|Module 4: Electrons, waves and photons
-N|2.0 A flows for 30 s. Charge?|60|0|C|Q = It.|60
-N|How many electrons in 1.6 C (give × 10¹⁹)?|1|0|× 10¹⁹|1.6/1.6 × 10⁻¹⁹.|1.6/1.6e-19/1e19
-M|Kirchhoff's first law follows from conservation of|charge|energy|momentum|mass|Current in = current out at a junction.
-W|What are the charge carriers in an electrolyte?|ion|Ions.
-N|I = nAve, n = 8.5 × 10²⁸ m⁻³, A = 1.0 × 10⁻⁶ m², I = 1.0 A. v (give × 10⁻⁵ m/s, 3 s.f.)?|7.35|1|× 10⁻⁵ m/s|v = I/(nAe).|1/(8.5e28*1e-6*1.6e-19)/1e-5
+N|2.0 A flows for 30 s. Charge?|60|0|C|Q = It = 2.0 × 30 = 60 C.|60
+N|How many electrons in 1.6 C (give × 10¹⁹)?|1|0|× 10¹⁹|Number of electrons = Q ÷ e = 1.6 ÷ 1.6 × 10⁻¹⁹ = 1.0 × 10¹⁹.|1.6/1.6e-19/1e19
+M|Kirchhoff's first law follows from conservation of|charge|energy|momentum|mass|Kirchhoff's first law (current in = current out at a junction) follows from conservation of charge.
+W|What are the charge carriers in an electrolyte?|ion|In an electrolyte the charge carriers are positive and negative ions. In metals they are free electrons.
+N|I = nAve, n = 8.5 × 10²⁸ m⁻³, A = 1.0 × 10⁻⁶ m², I = 1.0 A. v (give × 10⁻⁵ m/s, 3 s.f.)?|7.35|1|× 10⁻⁵ m/s|v = I ÷ (nAe) = 1.0 ÷ (8.5 × 10²⁸ × 1.0 × 10⁻⁶ × 1.6 × 10⁻¹⁹) = 7.35 × 10⁻⁵ m s⁻¹.|1/(8.5e28*1e-6*1.6e-19)/1e-5
 # p-4-2|4.2 Energy, power and resistance|Module 4: Electrons, waves and photons
-N|A 12 V supply drives 0.5 A. Power?|6|0|W|P = VI.|6
-N|ρ = 1.7 × 10⁻⁸ Ω m, L = 2.0 m, A = 1.0 × 10⁻⁶ m². Resistance?|0.034|1|Ω|R = ρL/A.|1.7e-8*2/1e-6
-M|As current through a filament lamp increases, its resistance|increases|decreases|stays constant|drops to zero|The filament heats up.
-W|Define potential difference.|energy;work & charge;coulomb|Energy transferred per unit charge (1 V = 1 J C⁻¹).
-M|As temperature rises, an NTC thermistor's resistance|decreases|increases|stays the same|becomes infinite|More charge carriers are released.
+N|A 12 V supply drives 0.5 A. Power?|6|0|W|P = VI = 12 × 0.5 = 6 W.|6
+N|ρ = 1.7 × 10⁻⁸ Ω m, L = 2.0 m, A = 1.0 × 10⁻⁶ m². Resistance?|0.034|1|Ω|R = ρL ÷ A = 1.7 × 10⁻⁸ × 2.0 ÷ 1.0 × 10⁻⁶ = 0.034 Ω.|1.7e-8*2/1e-6
+M|As current through a filament lamp increases, its resistance|increases|decreases|stays constant|drops to zero|More current makes the filament hotter. The metal ions vibrate more, so electrons collide with them more often and the resistance increases.
+W|Define potential difference.|energy;work & charge;coulomb|Potential difference is the energy transferred from electrical to other forms per unit charge: V = W/Q, and 1 V = 1 J C⁻¹.
+M|As temperature rises, an NTC thermistor's resistance|decreases|increases|stays the same|becomes infinite|Heating the semiconductor releases more charge carriers (higher n), so the current increases and the resistance decreases.
 # p-4-3|4.3 Electrical circuits|Module 4: Electrons, waves and photons
-N|6 Ω and 3 Ω in parallel. Total resistance?|2|0|Ω|1/R = 1/6 + 1/3.|1/(1/6+1/3)
-N|12 V across 2 kΩ and 4 kΩ in series. pd across 4 kΩ?|8|0|V|Potential divider ratio.|12*4/6
-N|EMF 9 V, internal resistance 1 Ω, external 2 Ω. Terminal pd?|6|0|V|I = 3 A, V = IR = 6 V.|9/3*2
-M|Kirchhoff's second law follows from conservation of|energy|charge|momentum|mass|Sum of emfs = sum of pds.
-W|What are 'lost volts'?|internal resistance|Energy per coulomb wasted in the internal resistance (Ir).
+N|6 Ω and 3 Ω in parallel. Total resistance?|2|0|Ω|1/R = 1/6 + 1/3 = 1/6 + 2/6 = 3/6, so R = 2 Ω. Parallel resistance is always less than the smallest resistor.|1/(1/6+1/3)
+N|12 V across 2 kΩ and 4 kΩ in series. pd across 4 kΩ?|8|0|V|The p.d. divides in the ratio of the resistances: V = 12 × 4 ÷ (2 + 4) = 8 V.|12*4/6
+N|EMF 9 V, internal resistance 1 Ω, external 2 Ω. Terminal pd?|6|0|V|I = ε ÷ (R + r) = 9 ÷ (2 + 1) = 3 A. Terminal p.d. V = IR = 3 × 2 = 6 V (3 V are "lost" in the internal resistance).|9/3*2
+M|Kirchhoff's second law follows from conservation of|energy|charge|momentum|mass|Kirchhoff's second law (sum of e.m.f.s = sum of p.d.s around any loop) follows from conservation of energy.
+W|What are 'lost volts'?|internal resistance|Lost volts are the energy per coulomb transferred in the internal resistance of the source: Ir = ε − V.
 # p-4-4|4.4 Waves|Module 4: Electrons, waves and photons
-N|f = 50 Hz, λ = 0.4 m. Wave speed?|20|0|m/s|v = fλ.|50*0.4
-N|Light enters glass (n = 1.5) at 30°. Angle of refraction (3 s.f.)?|19.5|0.5|°|sin r = sin 30°/1.5.|degrees(asin(0.5/1.5))
-M|In a stationary wave, adjacent nodes are separated by|λ/2|λ|λ/4|2λ|Node to node is half a wavelength.
-N|Critical angle for n = 1.5 (3 s.f.)?|41.8|0.5|°|sin C = 1/n.|degrees(asin(1/1.5))
-W|What are coherent sources?|constant & phase|Same frequency and a constant phase difference.
-N|Double slit: λ = 600 nm, a = 0.5 mm, D = 1.5 m. Fringe spacing?|1.8|1|mm|x = λD/a.|600e-9*1.5/0.5e-3*1000
+N|f = 50 Hz, λ = 0.4 m. Wave speed?|20|0|m/s|v = fλ = 50 × 0.4 = 20 m s⁻¹.|50*0.4
+N|Light enters glass (n = 1.5) at 30°. Angle of refraction (3 s.f.)?|19.5|0.5|°|Snell's law: sin r = sin 30° ÷ 1.5 = 0.5 ÷ 1.5 = 0.333, so r = 19.5°.|degrees(asin(0.5/1.5))
+M|In a stationary wave, adjacent nodes are separated by|λ/2|λ|λ/4|2λ|In a stationary wave the distance between adjacent nodes (or antinodes) is λ/2.
+N|Critical angle for n = 1.5 (3 s.f.)?|41.8|0.5|°|sin C = 1/n = 1 ÷ 1.5 = 0.667, so C = 41.8°.|degrees(asin(1/1.5))
+W|What are coherent sources?|constant & phase|Coherent sources have the same frequency (and wavelength) and a constant phase difference.
+N|Double slit: λ = 600 nm, a = 0.5 mm, D = 1.5 m. Fringe spacing?|1.8|1|mm|x = λD ÷ a = 600 × 10⁻⁹ × 1.5 ÷ 0.5 × 10⁻³ = 1.8 × 10⁻³ m = 1.8 mm.|600e-9*1.5/0.5e-3*1000
 # p-4-5|4.5 Quantum physics|Module 4: Electrons, waves and photons
-N|Photon energy at 500 nm (h = 6.63 × 10⁻³⁴, c = 3.00 × 10⁸). Give × 10⁻¹⁹ J (3 s.f.).|3.98|1|× 10⁻¹⁹ J|E = hc/λ.|6.63e-34*3e8/500e-9/1e-19
-M|Above threshold, increasing light intensity|increases electrons emitted per second|increases maximum KE|lowers the work function|changes threshold frequency|More photons per second.
-W|What does electron diffraction show?|wave|Electrons have wave properties.
-N|Work function 2.0 eV, photon 3.5 eV. Maximum KE?|1.5|0|eV|KEmax = hf − φ.|3.5-2
-M|De Broglie wavelength λ =|h/p|p/h|hp|hf|p = mv.
+N|Photon energy at 500 nm (h = 6.63 × 10⁻³⁴, c = 3.00 × 10⁸). Give × 10⁻¹⁹ J (3 s.f.).|3.98|1|× 10⁻¹⁹ J|E = hc ÷ λ = 6.63 × 10⁻³⁴ × 3.00 × 10⁸ ÷ 500 × 10⁻⁹ = 3.98 × 10⁻¹⁹ J.|6.63e-34*3e8/500e-9/1e-19
+M|Above threshold, increasing light intensity|increases electrons emitted per second|increases maximum KE|lowers the work function|changes threshold frequency|Greater intensity means more photons per second, so more electrons are emitted per second. Each photon has the same energy, so KEmax does not change.
+W|What does electron diffraction show?|wave|Electron diffraction shows that electrons, which are particles, also behave as waves (wave–particle duality).
+N|Work function 2.0 eV, photon 3.5 eV. Maximum KE?|1.5|0|eV|KEmax = hf − φ = 3.5 − 2.0 = 1.5 eV.|3.5-2
+M|De Broglie wavelength λ =|h/p|p/h|hp|hf|The de Broglie wavelength is λ = h ÷ p, where p = mv is the momentum of the particle.
 # p-5-1|5.1 Thermal physics|Module 5: Newtonian world and astrophysics
-N|Energy to heat 2 kg of water by 10 K (c = 4200)?|84000|0|J|E = mcΔθ.|2*4200*10
-N|Energy to melt 0.5 kg of ice (L = 3.3 × 10⁵ J/kg). Give × 10⁵ J.|1.65|0.5|× 10⁵ J|E = mL.|0.5*3.3e5/1e5
-N|2.0 mol at 300 K in 0.050 m³. Pressure (give × 10⁴ Pa, 3 s.f.)?|9.97|1|× 10⁴ Pa|p = nRT/V.|2*8.31*300/0.05/1e4
-M|At absolute zero, the internal energy of a substance is|a minimum|a maximum|unchanged|infinite|Particles have minimum energy.
-W|Define internal energy.|kinetic & potential|Sum of the randomly distributed kinetic and potential energies of the particles.
+N|Energy to heat 2 kg of water by 10 K (c = 4200)?|84000|0|J|E = mcΔθ = 2 × 4200 × 10 = 84 000 J.|2*4200*10
+N|Energy to melt 0.5 kg of ice (L = 3.3 × 10⁵ J/kg). Give × 10⁵ J.|1.65|0.5|× 10⁵ J|E = mL = 0.5 × 3.3 × 10⁵ = 1.65 × 10⁵ J. The temperature does not change while it melts.|0.5*3.3e5/1e5
+N|2.0 mol at 300 K in 0.050 m³. Pressure (give × 10⁴ Pa, 3 s.f.)?|9.97|1|× 10⁴ Pa|p = nRT ÷ V = 2.0 × 8.31 × 300 ÷ 0.050 = 9.97 × 10⁴ Pa.|2*8.31*300/0.05/1e4
+M|At absolute zero, the internal energy of a substance is|a minimum|a maximum|unchanged|infinite|At absolute zero the particles have minimum internal energy (minimum kinetic energy).
+W|Define internal energy.|kinetic & potential|Internal energy is the sum of the randomly distributed kinetic and potential energies of all the particles in a body.
 # p-5-2|5.2 Circular motion|Module 5: Newtonian world and astrophysics
-N|3.0 revolutions per second as angular velocity (3 s.f.)?|18.8|0.5|rad/s|ω = 2πf.|2*pi*3
-N|0.5 kg at 4 m/s, radius 2 m. Centripetal force?|4|0|N|F = mv²/r.|0.5*16/2
-M|Centripetal acceleration is directed|towards the centre|along the tangent|outwards|along the velocity|Perpendicular to velocity.
-W|Why is something moving in a circle at constant speed accelerating?|direction|Its direction (so velocity) is constantly changing.
+N|3.0 revolutions per second as angular velocity (3 s.f.)?|18.8|0.5|rad/s|ω = 2πf = 2π × 3.0 = 18.8 rad s⁻¹.|2*pi*3
+N|0.5 kg at 4 m/s, radius 2 m. Centripetal force?|4|0|N|F = mv² ÷ r = 0.5 × 4² ÷ 2 = 4 N.|0.5*16/2
+M|Centripetal acceleration is directed|towards the centre|along the tangent|outwards|along the velocity|Centripetal acceleration is directed towards the centre of the circle, perpendicular to the velocity.
+W|Why is something moving in a circle at constant speed accelerating?|direction|Velocity is a vector. Its direction is constantly changing, so the velocity changes, which means it is accelerating (towards the centre).
 N|Convert 90° to radians (3 s.f.).|1.57|0.5|rad|180° = π rad, so 90° = π/2 rad.|pi/2
 # p-5-3|5.3 Oscillations|Module 5: Newtonian world and astrophysics
-N|SHM, f = 2 Hz, A = 0.10 m. Maximum speed (3 s.f.)?|1.26|0.5|m/s|vmax = ωA = 4π × 0.1.|2*pi*2*0.1
-N|Mass–spring: m = 0.4 kg, k = 40 N/m. Period (3 s.f.)?|0.628|0.5|s|T = 2π√(m/k).|2*pi*sqrt(0.01)
-M|In SHM, acceleration is|proportional to displacement and opposite in direction|constant|proportional to velocity|zero at maximum displacement|a = −ω²x.
-W|What is resonance?|natural frequency|Driving frequency equals the natural frequency, so amplitude is maximum.
-M|Increasing damping makes the resonance peak|lower and broader|higher and sharper|unchanged|disappear at once|Peak also shifts slightly lower in frequency.
+N|SHM, f = 2 Hz, A = 0.10 m. Maximum speed (3 s.f.)?|1.26|0.5|m/s|vmax = ωA = 2πfA = 2π × 2 × 0.10 = 1.26 m s⁻¹.|2*pi*2*0.1
+N|Mass–spring: m = 0.4 kg, k = 40 N/m. Period (3 s.f.)?|0.628|0.5|s|T = 2π√(m/k) = 2π√(0.4 ÷ 40) = 2π × 0.1 = 0.628 s.|2*pi*sqrt(0.01)
+M|In SHM, acceleration is|proportional to displacement and opposite in direction|constant|proportional to velocity|zero at maximum displacement|In SHM, a = −ω²x: the acceleration is proportional to the displacement and directed opposite to it (towards the equilibrium position).
+W|What is resonance?|natural frequency|Resonance happens when the driving frequency equals the natural frequency of the system; the amplitude of the oscillations becomes a maximum.
+M|Increasing damping makes the resonance peak|lower and broader|higher and sharper|unchanged|disappear at once|More damping removes energy faster, so the resonance peak is lower and broader, and it shifts slightly to a lower frequency.
 # p-5-4|5.4 Gravitational fields|Module 5: Newtonian world and astrophysics
-N|M = 6.0 × 10²⁴ kg, r = 6.4 × 10⁶ m. g at the surface (3 s.f.)?|9.77|1|N/kg|g = GM/r².|6.67e-11*6e24/6.4e6**2
-M|Gravitational potential is|negative, zero at infinity|positive at the surface|zero at the surface|always positive|Work must be done to escape.
-W|State Kepler's third law.|T² & r³;T^2 & r^3|T² ∝ r³.
-M|A geostationary satellite has a period of|24 hours|12 hours|90 minutes|1 year|It stays above one point.
-N|Distance from a planet's centre doubles. g changes by a factor of|0.25|0||Inverse square law.|0.25
+N|M = 6.0 × 10²⁴ kg, r = 6.4 × 10⁶ m. g at the surface (3 s.f.)?|9.77|1|N/kg|g = GM ÷ r² = 6.67 × 10⁻¹¹ × 6.0 × 10²⁴ ÷ (6.4 × 10⁶)² = 9.77 N kg⁻¹.|6.67e-11*6e24/6.4e6**2
+M|Gravitational potential is|negative, zero at infinity|positive at the surface|zero at the surface|always positive|Gravitational potential is zero at infinity and negative everywhere else, because work must be done against gravity to move a mass out to infinity.
+W|State Kepler's third law.|T² & r³;T^2 & r^3|Kepler's third law: the square of the orbital period is proportional to the cube of the mean distance from the central body, T² ∝ r³.
+M|A geostationary satellite has a period of|24 hours|12 hours|90 minutes|1 year|A geostationary satellite orbits above the equator with a period of 24 hours, the same as the Earth's rotation, so it stays above one point.
+N|Distance from a planet's centre doubles. g changes by a factor of|0.25|0||g ∝ 1/r². Doubling r multiplies g by 1/2² = 0.25.|0.25
 # p-5-5|5.5 Astrophysics and cosmology|Module 5: Newtonian world and astrophysics
-M|A star above about 10 solar masses ends as|a neutron star or black hole after a supernova|a white dwarf|a red dwarf|a brown dwarf|Core collapse.
-N|Wien's law (λmaxT = 2.9 × 10⁻³ m K). λmax = 500 nm. T?|5800|0.5|K|T = 2.9 × 10⁻³/5 × 10⁻⁷.|2.9e-3/500e-9
-N|H₀ = 70 km s⁻¹ Mpc⁻¹. Recession speed at 100 Mpc?|7000|0|km/s|v = H₀d.|7000
-W|What is the CMB evidence for?|big bang;hot;dense|A hot, dense early universe that expanded and cooled (Big Bang).
-S|Order the life of a Sun-like star|Nebula;Protostar;Main sequence;Red giant;White dwarf|Planetary nebula forms before the white dwarf.
+M|A star above about 10 solar masses ends as|a neutron star or black hole after a supernova|a white dwarf|a red dwarf|a brown dwarf|A massive star's core collapses after fusion stops, causing a supernova. The remnant is a neutron star, or a black hole if the core is massive enough.
+N|Wien's law (λmaxT = 2.9 × 10⁻³ m K). λmax = 500 nm. T?|5800|0.5|K|T = 2.9 × 10⁻³ ÷ λmax = 2.9 × 10⁻³ ÷ 500 × 10⁻⁹ = 5800 K.|2.9e-3/500e-9
+N|H₀ = 70 km s⁻¹ Mpc⁻¹. Recession speed at 100 Mpc?|7000|0|km/s|v = H₀d = 70 × 100 = 7000 km s⁻¹.|7000
+W|What is the CMB evidence for?|big bang;hot;dense|The cosmic microwave background is radiation left from a hot, dense early universe. It has been stretched to microwave wavelengths as the universe expanded and cooled, supporting the Big Bang.
+S|Order the life of a Sun-like star|Nebula;Protostar;Main sequence;Red giant;White dwarf|A nebula collapses into a protostar, which fuses hydrogen on the main sequence. It becomes a red giant, then loses its outer layers as a planetary nebula and leaves a white dwarf.
 # p-6-1|6.1 Capacitors|Module 6: Particles and medical physics
-N|Charge on 470 µF at 6.0 V?|2.82|0.5|mC|Q = CV.|470e-6*6*1000
-N|Energy stored in 100 µF at 10 V?|0.005|0|J|½CV².|0.5*100e-6*100
-N|Time constant for R = 10 kΩ, C = 200 µF?|2|0|s|τ = RC.|10e3*200e-6
-M|After one time constant, a discharging capacitor holds|37% of its initial charge|63%|50%|0%|e⁻¹ ≈ 0.37.
-M|Two 10 µF capacitors in parallel give|20 µF|5 µF|10 µF|100 µF|Parallel capacitances add.
+N|Charge on 470 µF at 6.0 V?|2.82|0.5|mC|Q = CV = 470 × 10⁻⁶ × 6.0 = 2.82 × 10⁻³ C = 2.82 mC.|470e-6*6*1000
+N|Energy stored in 100 µF at 10 V?|0.005|0|J|W = ½CV² = ½ × 100 × 10⁻⁶ × 10² = 0.005 J.|0.5*100e-6*100
+N|Time constant for R = 10 kΩ, C = 200 µF?|2|0|s|τ = RC = 10 × 10³ × 200 × 10⁻⁶ = 2.0 s.|10e3*200e-6
+M|After one time constant, a discharging capacitor holds|37% of its initial charge|63%|50%|0%|Q = Q₀e^(−t/RC). At t = RC, Q = Q₀e⁻¹ = 0.37 Q₀, so 37% remains.
+M|Two 10 µF capacitors in parallel give|20 µF|5 µF|10 µF|100 µF|Capacitors in parallel add: C = 10 + 10 = 20 µF.
 # p-6-2|6.2 Electric fields|Module 6: Particles and medical physics
-N|500 V across plates 0.02 m apart. Field strength?|25000|0|V/m|E = V/d.|500/0.02
-N|Force on an electron in 1.0 × 10⁴ V/m (give × 10⁻¹⁵ N)?|1.6|0.5|× 10⁻¹⁵ N|F = EQ.|1e4*1.6e-19/1e-15
-M|Field strength of a point charge varies as|1/r²|1/r|r|1/r³|Coulomb's law.
-W|Define electric field strength.|force & charge;coulomb|Force per unit positive charge.
-M|An electron entering a uniform field at right angles follows a|parabola|circle|straight line|spiral|Constant force perpendicular to initial velocity.
+N|500 V across plates 0.02 m apart. Field strength?|25000|0|V/m|E = V ÷ d = 500 ÷ 0.02 = 25 000 V m⁻¹.|500/0.02
+N|Force on an electron in 1.0 × 10⁴ V/m (give × 10⁻¹⁵ N)?|1.6|0.5|× 10⁻¹⁵ N|F = EQ = 1.0 × 10⁴ × 1.6 × 10⁻¹⁹ = 1.6 × 10⁻¹⁵ N.|1e4*1.6e-19/1e-15
+M|Field strength of a point charge varies as|1/r²|1/r|r|1/r³|For a point charge, E = Q ÷ (4πε₀r²), so E ∝ 1/r².
+W|Define electric field strength.|force & charge;coulomb|Electric field strength is the force per unit positive charge at a point: E = F/Q.
+M|An electron entering a uniform field at right angles follows a|parabola|circle|straight line|spiral|The constant force is perpendicular to the initial velocity, like gravity on a horizontal projectile, so the path is a parabola.
 # p-6-3|6.3 Electromagnetism|Module 6: Particles and medical physics
-N|0.2 m wire, 3 A, perpendicular to 0.5 T. Force?|0.3|0|N|F = BIL.|0.5*3*0.2
-N|Electron (9.11 × 10⁻³¹ kg) at 2.0 × 10⁶ m/s in 0.01 T. Radius (3 s.f.)?|1.14|1|mm|r = mv/(BQ).|9.11e-31*2e6/(0.01*1.6e-19)*1000
-M|Faraday's law: induced emf equals|rate of change of flux linkage|flux linkage|flux density|current × resistance|ε = −d(NΦ)/dt.
-W|State Lenz's law.|oppose|The induced emf acts to oppose the change that produces it.
-N|Ideal transformer: 230 V, 1000 primary turns, 50 secondary turns. Secondary voltage?|11.5|0|V|Vs/Vp = Ns/Np.|230*50/1000
+N|0.2 m wire, 3 A, perpendicular to 0.5 T. Force?|0.3|0|N|F = BIL = 0.5 × 3 × 0.2 = 0.3 N.|0.5*3*0.2
+N|Electron (9.11 × 10⁻³¹ kg) at 2.0 × 10⁶ m/s in 0.01 T. Radius (3 s.f.)?|1.14|1|mm|r = mv ÷ (BQ) = 9.11 × 10⁻³¹ × 2.0 × 10⁶ ÷ (0.01 × 1.6 × 10⁻¹⁹) = 1.14 × 10⁻³ m = 1.14 mm.|9.11e-31*2e6/(0.01*1.6e-19)*1000
+M|Faraday's law: induced emf equals|rate of change of flux linkage|flux linkage|flux density|current × resistance|Faraday's law: the magnitude of the induced e.m.f. equals the rate of change of magnetic flux linkage, ε = −Δ(NΦ)/Δt.
+W|State Lenz's law.|oppose|Lenz's law: the direction of the induced e.m.f. (or current) is such that it opposes the change that produces it.
+N|Ideal transformer: 230 V, 1000 primary turns, 50 secondary turns. Secondary voltage?|11.5|0|V|Vs ÷ Vp = Ns ÷ Np, so Vs = 230 × 50 ÷ 1000 = 11.5 V.|230*50/1000
 # p-6-4|6.4 Nuclear and particle physics|Module 6: Particles and medical physics
-M|A proton's quark content is|uud|udd|uds|uū|Charge +⅔ +⅔ −⅓ = +1.
-N|Half-life 5 days. Fraction left after 15 days?|0.125|0||(½)³.|0.5**3
-W|What did alpha scattering show?|nucleus|A tiny, dense, positive nucleus; most of the atom is empty space.
-P|Match each particle to its class|proton=baryon;pion=meson;electron=lepton;photon=gauge boson|Hadrons are baryons or mesons.
-M|In β⁻ decay, a down quark becomes|an up quark|a strange quark|an anti-up quark|a down antiquark|n → p + e⁻ + ν̄.
+M|A proton's quark content is|uud|udd|uds|uū|A proton is uud: charge +⅔ + ⅔ − ⅓ = +1. A neutron is udd.
+N|Half-life 5 days. Fraction left after 15 days?|0.125|0||15 days is 3 half-lives, so the fraction left is (½)³ = 0.125.|0.5**3
+W|What did alpha scattering show?|nucleus|Most alpha particles went straight through, so the atom is mostly empty space. A few were deflected through large angles by a tiny, dense, positive nucleus.
+P|Match each particle to its class|proton=baryon;pion=meson;electron=lepton;photon=gauge boson|Protons are baryons (3 quarks), pions are mesons (quark–antiquark), electrons are leptons (fundamental) and photons are exchange (gauge) bosons.
+M|In β⁻ decay, a down quark becomes|an up quark|a strange quark|an anti-up quark|a down antiquark|In β⁻ decay a down quark changes into an up quark, so a neutron becomes a proton: n → p + e⁻ + ν̄ₑ.
 # p-6-5|6.5 Medical imaging|Module 6: Particles and medical physics
-M|Barium is used as an X-ray contrast medium because it|has high Z so absorbs X-rays strongly|emits gamma rays|is transparent to X-rays|removes the dose|Photoelectric absorption ∝ Z³.
+M|Barium is used as an X-ray contrast medium because it|has high Z so absorbs X-rays strongly|emits gamma rays|is transparent to X-rays|removes the dose|Barium has a high proton number Z. X-ray absorption by the photoelectric effect is roughly ∝ Z³, so barium absorbs strongly and shows soft tissue (the gut) clearly.
 N|I = I₀e^(−μx), μ = 0.5 cm⁻¹, x = 2 cm. Fraction transmitted (3 s.f.)?|0.368|0.5||I/I₀ = e^(−μx) = e^(−0.5 × 2) = e⁻¹.|exp(-1)
-W|Why is gel used in ultrasound scanning?|air;impedance|It removes air, matching acoustic impedance so less ultrasound reflects at the skin.
-M|PET scanners detect|pairs of gamma photons from annihilation|alpha particles|X-rays|ultrasound echoes|Positron–electron annihilation.
-M|Technetium-99m is a good tracer because it|emits only gamma and has a ~6 h half-life|emits alpha|has a half-life of years|is not absorbed|Low dose, easy to detect.
+W|Why is gel used in ultrasound scanning?|air;impedance|Air reflects almost all ultrasound because its acoustic impedance is very different from skin. The gel removes the air and has an impedance similar to skin, so most ultrasound enters the body.
+M|PET scanners detect|pairs of gamma photons from annihilation|alpha particles|X-rays|ultrasound echoes|A positron from the tracer annihilates with an electron, producing two gamma photons that travel in opposite directions. Detecting both locates the source.
+M|Technetium-99m is a good tracer because it|emits only gamma and has a ~6 h half-life|emits alpha|has a half-life of years|is not absorbed|Tc-99m emits only gamma rays (which escape the body and are easy to detect) and has a half-life of about 6 hours: long enough for the scan, short enough to keep the dose low.

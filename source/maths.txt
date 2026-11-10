@@ -1,121 +1,121 @@
 @ maths|Mathematics|Edexcel A level (9MA0)|purple
 # m-proof|1: Proof|Pure Mathematics
 M|Which value of n is a counter-example to "n² + n + 41 is prime for every positive integer n"?|40|1|10|20|n = 40 gives 1600 + 40 + 41 = 1681 = 41², which is not prime.
-W|In proof by contradiction, what do you assume at the start?|opposite;negation;false;not true|Assume the statement is false (its negation is true), then show this leads to a contradiction.
+W|In proof by contradiction, what do you assume at the start?|opposite;negation;false;not true|Assume the statement is false (that its negation is true), then show this leads to a contradiction, so the original statement must be true.
 M|To prove √2 is irrational by contradiction, you first assume|√2 = a/b, with integers a, b sharing no common factor|√2 is an integer|√2 is irrational|a and b are both even|Assume √2 is rational in lowest terms, then show a and b must both be even – a contradiction.
-S|Put the steps proving "the sum of two odd numbers is even" in order|Let the odd numbers be 2m + 1 and 2n + 1;Add them: 2m + 2n + 2;Factorise: 2(m + n + 1);m + n + 1 is an integer, so the sum is even|Proof by deduction uses general algebraic forms for odd and even numbers.
-M|Best method to prove "n³ − n is divisible by 6 for every integer n"|Factorise as (n − 1)n(n + 1): three consecutive integers|Check n = 1 to 10|Find a counter-example|Assume n is prime|Three consecutive integers always contain a multiple of 2 and a multiple of 3.
+S|Put the steps proving "the sum of two odd numbers is even" in order|Let the odd numbers be 2m + 1 and 2n + 1;Add them: 2m + 2n + 2;Factorise: 2(m + n + 1);m + n + 1 is an integer, so the sum is even|Write the odd numbers in general form (2m + 1 and 2n + 1, with m and n integers), add, then factor out 2. Since m + n + 1 is an integer, the sum is a multiple of 2, so it is even. Proof by deduction.
+M|Best method to prove "n³ − n is divisible by 6 for every integer n"|Factorise as (n − 1)n(n + 1): three consecutive integers|Check n = 1 to 10|Find a counter-example|Assume n is prime|n³ − n = n(n² − 1) = (n − 1)n(n + 1), the product of three consecutive integers. One of them is even and one is a multiple of 3, so the product is divisible by 2 × 3 = 6. Checking examples is not a proof.
 # m-alg|2: Algebra and functions|Pure Mathematics
-N|Find the remainder when f(x) = x³ − 4x + 5 is divided by (x − 2).|5|0||Remainder theorem: f(2) = 8 − 8 + 5 = 5.|2**3-4*2+5
+N|Find the remainder when f(x) = x³ − 4x + 5 is divided by (x − 2).|5|0||Remainder theorem: dividing by (x − 2) leaves remainder f(2) = 2³ − 4(2) + 5 = 8 − 8 + 5 = 5.|2**3-4*2+5
 M|f(x) = 2x + 3 and g(x) = x². What is fg(x)?|2x² + 3|(2x + 3)²|4x² + 9|2x² + 9|fg(x) means apply g first, then f: f(x²) = 2x² + 3.
-N|f(x) = (x − 1)/3. Find f⁻¹(4).|13|0||f⁻¹(x) = 3x + 1, so f⁻¹(4) = 13.|3*4+1
+N|f(x) = (x − 1)/3. Find f⁻¹(4).|13|0||Let y = (x − 1)/3, so x = 3y + 1. Hence f⁻¹(x) = 3x + 1 and f⁻¹(4) = 3(4) + 1 = 13. Check: f(13) = 12/3 = 4.|3*4+1
 M|(5x + 1)/((x + 1)(x − 1)) ≡ A/(x + 1) + B/(x − 1). Find A and B.|A = 2, B = 3|A = 3, B = 2|A = −2, B = 3|A = 2, B = −3|Cover-up: x = −1 gives A = −4/−2 = 2; x = 1 gives B = 6/2 = 3.
-W|Describe the transformation mapping y = f(x) onto y = f(x − 3).|translation;translate;shift & 3|Translation by 3 units in the positive x-direction, vector (3, 0).
+W|Describe the transformation mapping y = f(x) onto y = f(x − 3).|translation;translate;shift & 3|Replacing x with (x − 3) moves the graph 3 units in the positive x-direction: a translation by the vector (3, 0). It is not to the left, despite the minus sign.
 # m-coord|3: Coordinate geometry|Pure Mathematics
-N|Find the gradient of a line perpendicular to 2x + 3y = 6.|1.5|0||The line has gradient −2/3, so the perpendicular gradient is 3/2.|3/2
+N|Find the gradient of a line perpendicular to 2x + 3y = 6.|1.5|0||Rearrange: 3y = −2x + 6, so y = −(2/3)x + 2 and the gradient is −2/3. Perpendicular gradients multiply to −1, so the answer is 3/2 = 1.5.|3/2
 N|Find the radius of the circle x² + y² − 6x + 4y − 12 = 0.|5|0||Complete the square: (x − 3)² + (y + 2)² = 12 + 9 + 4 = 25, so r = 5.|sqrt(12+9+4)
-M|The curve x = t², y = 2t has Cartesian equation|y² = 4x|y = 2x²|y² = 2x|x² = 4y|t = y/2, so x = y²/4.
-W|A tangent to a circle at P is perpendicular to what?|radius|The radius at P.
-M|Which point lies on y = 3x − 7?|(4, 5)|(5, 4)|(2, 1)|(−1, −4)|3(4) − 7 = 5.
+M|The curve x = t², y = 2t has Cartesian equation|y² = 4x|y = 2x²|y² = 2x|x² = 4y|From y = 2t, t = y/2. Substitute into x = t²: x = y²/4, so y² = 4x.
+W|A tangent to a circle at P is perpendicular to what?|radius|The tangent at P is perpendicular to the radius at P, so its gradient is the negative reciprocal of the gradient of the radius.
+M|Which point lies on y = 3x − 7?|(4, 5)|(5, 4)|(2, 1)|(−1, −4)|Substitute each x: for (4, 5), 3(4) − 7 = 5, which matches y. The others fail, e.g. (5, 4) gives 3(5) − 7 = 8, not 4.
 # m-seq|4: Sequences and series|Pure Mathematics
-N|An arithmetic series has first term 5 and common difference 3. Find the sum of the first 20 terms.|670|0||S = n/2(2a + (n − 1)d) = 10(10 + 57) = 670.|10*(10+19*3)
-N|Find the sum to infinity of 12 + 6 + 3 + …|24|0||r = ½, so S∞ = a/(1 − r) = 12/0.5 = 24.|12/(1-0.5)
-M|The coefficient of x² in (1 + 2x)⁵ is|40|10|20|80|⁵C₂ × 2² = 10 × 4 = 40.
-M|The binomial expansion of (1 + 3x)⁻¹ is valid for|−⅓ < x < ⅓|−3 < x < 3|all real x|x > 0|Valid when the modulus of 3x is less than 1.
-N|uₙ₊₁ = 2uₙ − 1 with u₁ = 3. Find u₄.|17|0||u₂ = 5, u₃ = 9, u₄ = 17.|2*(2*(2*3-1)-1)-1
+N|An arithmetic series has first term 5 and common difference 3. Find the sum of the first 20 terms.|670|0||Sₙ = n/2 × (2a + (n − 1)d) = 20/2 × (2 × 5 + 19 × 3) = 10 × (10 + 57) = 670.|10*(10+19*3)
+N|Find the sum to infinity of 12 + 6 + 3 + …|24|0||a = 12 and r = 6/12 = ½. Since the modulus of r is less than 1, S∞ = a/(1 − r) = 12/(1 − ½) = 24.|12/(1-0.5)
+M|The coefficient of x² in (1 + 2x)⁵ is|40|10|20|80|The x² term is ⁵C₂ × 1³ × (2x)² = 10 × 4x² = 40x², so the coefficient is 40. Remember to square the 2 as well as the x.
+M|The binomial expansion of (1 + 3x)⁻¹ is valid for|−⅓ < x < ⅓|−3 < x < 3|all real x|x > 0|(1 + kx)ⁿ for negative or fractional n is valid when the modulus of kx is less than 1. Here 3x must lie between −1 and 1, so −⅓ < x < ⅓.
+N|uₙ₊₁ = 2uₙ − 1 with u₁ = 3. Find u₄.|17|0||u₂ = 2(3) − 1 = 5, u₃ = 2(5) − 1 = 9, u₄ = 2(9) − 1 = 17.|2*(2*(2*3-1)-1)-1
 # m-trig|5: Trigonometry|Pure Mathematics
-N|Convert 150° to radians (3 s.f.).|2.62|0.5||150 × π/180 = 5π/6 ≈ 2.618.|150*pi/180
-M|sec²θ is identical to|1 + tan²θ|1 − tan²θ|1 + cot²θ|tan²θ − 1|Divide sin²θ + cos²θ ≡ 1 by cos²θ.
-N|Find the arc length of a sector with radius 6 cm and angle 1.2 rad.|7.2|0.5|cm|s = rθ = 6 × 1.2 = 7.2 cm.|6*1.2
-M|For small θ in radians, cos θ ≈|1 − θ²/2|θ|1 − θ|θ²/2|Small-angle approximation.
-M|sin 2A ≡|2 sin A cos A|cos²A − sin²A|2 sin A|sin²A + cos²A|Double-angle formula.
-W|State the exact value of sin 30°.|1/2;0.5;half|sin 30° = ½.
+N|Convert 150° to radians (3 s.f.).|2.62|0.5||Multiply by π/180: 150 × π/180 = 5π/6 ≈ 2.62 radians.|150*pi/180
+M|sec²θ is identical to|1 + tan²θ|1 − tan²θ|1 + cot²θ|tan²θ − 1|Divide sin²θ + cos²θ ≡ 1 by cos²θ: tan²θ + 1 ≡ sec²θ.
+N|Find the arc length of a sector with radius 6 cm and angle 1.2 rad.|7.2|0.5|cm|With θ in radians, arc length s = rθ = 6 × 1.2 = 7.2 cm.|6*1.2
+M|For small θ in radians, cos θ ≈|1 − θ²/2|θ|1 − θ|θ²/2|Small-angle approximations (θ in radians): sin θ ≈ θ, tan θ ≈ θ, cos θ ≈ 1 − θ²/2.
+M|sin 2A ≡|2 sin A cos A|cos²A − sin²A|2 sin A|sin²A + cos²A|Double-angle formula from sin(A + B) with B = A: sin 2A ≡ 2 sin A cos A. The formula cos²A − sin²A is cos 2A.
+W|State the exact value of sin 30°.|1/2;0.5;half|From half an equilateral triangle of side 2: the side opposite 30° is 1 and the hypotenuse is 2, so sin 30° = ½.
 # m-exp|6: Exponentials and logarithms|Pure Mathematics
-N|Solve 3ˣ = 20 (3 s.f.).|2.73|0.5||x = ln 20 / ln 3 ≈ 2.727.|log(20)/log(3)
-M|log₂8 + log₂4 =|5|12|32|3|log₂32 = 5.
-M|The derivative of e³ˣ is|3e³ˣ|e³ˣ|e³ˣ/3|3xe³ˣ⁻¹|Chain rule.
+N|Solve 3ˣ = 20 (3 s.f.).|2.73|0.5||Take logs of both sides: x ln 3 = ln 20, so x = ln 20 ÷ ln 3 = 2.996 ÷ 1.099 ≈ 2.73.|log(20)/log(3)
+M|log₂8 + log₂4 =|5|12|32|3|log₂8 = 3 and log₂4 = 2, so the sum is 5. Equivalently log₂(8 × 4) = log₂32 = 5.
+M|The derivative of e³ˣ is|3e³ˣ|e³ˣ|e³ˣ/3|3xe³ˣ⁻¹|Chain rule: d/dx of e^(kx) is ke^(kx), so the derivative of e³ˣ is 3e³ˣ.
 W|If y = abˣ, what should you plot against x to get a straight line?|log;ln|Plot log y against x: log y = log a + x log b (gradient log b, intercept log a).
-N|P = 200e^(0.05t). Find P when t = 10 (3 s.f.).|330|0.5||200e^0.5 ≈ 329.7.|200*exp(0.5)
+N|P = 200e^(0.05t). Find P when t = 10 (3 s.f.).|330|0.5||P = 200e^(0.05 × 10) = 200e^0.5 = 200 × 1.6487 ≈ 330.|200*exp(0.5)
 # m-diff|7: Differentiation|Pure Mathematics
-M|The derivative of x³ − 5x is|3x² − 5|3x² − 5x|x² − 5|3x³ − 5|Power rule.
-N|Find the gradient of y = x² ln x at x = 1.|1|0||Product rule: 2x ln x + x; at x = 1 this is 0 + 1 = 1.|2*1*log(1)+1
-P|Match each function to its derivative|sin x=cos x;eˣ=eˣ;ln x=1/x;x³=3x²|Standard derivatives (x in radians).
-W|What sign must d²y/dx² have at a minimum point?|positive;>0;greater than|d²y/dx² > 0 indicates a minimum.
+M|The derivative of x³ − 5x is|3x² − 5|3x² − 5x|x² − 5|3x³ − 5|Power rule: d/dx of xⁿ is nxⁿ⁻¹. So x³ gives 3x² and −5x gives −5: the derivative is 3x² − 5.
+N|Find the gradient of y = x² ln x at x = 1.|1|0||Product rule with u = x² and v = ln x: dy/dx = 2x ln x + x² × (1/x) = 2x ln x + x. At x = 1, ln 1 = 0, so the gradient is 0 + 1 = 1.|2*1*log(1)+1
+P|Match each function to its derivative|sin x=cos x;eˣ=eˣ;ln x=1/x;x³=3x²|d/dx sin x = cos x (x in radians); d/dx eˣ = eˣ; d/dx ln x = 1/x; d/dx x³ = 3x².
+W|What sign must d²y/dx² have at a minimum point?|positive;>0;greater than|At a minimum the gradient goes from negative to zero to positive, so it is increasing and d²y/dx² > 0. If d²y/dx² = 0 the test is inconclusive.
 M|x = t², y = t³. dy/dx =|3t/2|2t/3|3t²|t/2|dy/dx = (dy/dt)/(dx/dt) = 3t²/2t = 3t/2.
-S|Order the steps to find a stationary point|Differentiate to find dy/dx;Set dy/dx = 0;Solve for x;Substitute x into y for the coordinate|Then use d²y/dx² to classify it.
+S|Order the steps to find a stationary point|Differentiate to find dy/dx;Set dy/dx = 0;Solve for x;Substitute x into y for the coordinate|Stationary points are where dy/dx = 0. Solve for x and substitute back into y for the coordinates, then use the sign of d²y/dx² to classify each point.
 # m-int|8: Integration|Pure Mathematics
-N|Evaluate ∫₀² (3x² + 1) dx.|10|0||[x³ + x]₀² = 8 + 2 = 10.|8+2
-M|∫ (1/x) dx for x > 0 is|ln x + c|−1/(2x²) + c|1/x² + c|eˣ + c|Standard integral.
-M|∫ cos 2x dx =|½ sin 2x + c|2 sin 2x + c|−½ sin 2x + c|sin 2x + c|Reverse chain rule: divide by 2.
-W|Which technique would you use for ∫ x eˣ dx?|parts|Integration by parts with u = x, dv/dx = eˣ.
-N|Find the area between y = x² and the x-axis from x = 0 to x = 3.|9|0||∫₀³ x² dx = 27/3 = 9.|27/3
+N|Evaluate ∫₀² (3x² + 1) dx.|10|0||Integrate: [x³ + x] from 0 to 2 = (8 + 2) − (0 + 0) = 10.|8+2
+M|∫ (1/x) dx for x > 0 is|ln x + c|−1/(2x²) + c|1/x² + c|eˣ + c|d/dx ln x = 1/x, so ∫ (1/x) dx = ln x + c for x > 0. The power rule fails here because n = −1.
+M|∫ cos 2x dx =|½ sin 2x + c|2 sin 2x + c|−½ sin 2x + c|sin 2x + c|d/dx sin 2x = 2 cos 2x, so to reverse it divide by 2: ∫ cos 2x dx = ½ sin 2x + c.
+W|Which technique would you use for ∫ x eˣ dx?|parts|Integration by parts: let u = x (it simplifies when differentiated) and dv/dx = eˣ. Then ∫ x eˣ dx = xeˣ − ∫ eˣ dx = xeˣ − eˣ + c.
+N|Find the area between y = x² and the x-axis from x = 0 to x = 3.|9|0||Area = ∫₀³ x² dx = [x³/3] from 0 to 3 = 27/3 − 0 = 9 square units.|27/3
 # m-num|9: Numerical methods|Pure Mathematics
 M|f(x) = x³ − 2x − 5. f(2) = −1, f(3) = 16. This shows|a root lies between 2 and 3 (f is continuous)|there are no roots|f is decreasing|there is a turning point|A change of sign of a continuous function implies a root.
-N|One Newton–Raphson step on f(x) = x² − 5 from x₀ = 2. Find x₁.|2.25|0||x₁ = 2 − f(2)/f′(2) = 2 − (−1)/4 = 2.25.|2-(4-5)/4
-W|When does Newton–Raphson fail?|stationary;turning;f'(x)=0;gradient zero;horizontal|If x₀ is at or near a stationary point (f′(x) ≈ 0).
-M|The trapezium rule overestimates the area when the curve is|convex (bends upwards)|concave (bends downwards)|a straight line|below the x-axis|Chords lie above a convex curve.
-N|xₙ₊₁ = √(xₙ + 2), x₀ = 1. Find x₂ (3 d.p.).|1.932|0.05||x₁ = √3 ≈ 1.7321, x₂ = √3.7321 ≈ 1.9319.|sqrt(sqrt(3)+2)
+N|One Newton–Raphson step on f(x) = x² − 5 from x₀ = 2. Find x₁.|2.25|0||f(2) = 4 − 5 = −1 and f′(x) = 2x, so f′(2) = 4. x₁ = x₀ − f(x₀)/f′(x₀) = 2 − (−1)/4 = 2.25.|2-(4-5)/4
+W|When does Newton–Raphson fail?|stationary;turning;f'(x)=0;gradient zero;horizontal|If x₀ is at or near a stationary point, f′(x₀) ≈ 0, so dividing by it sends the next estimate far away (or is impossible). It can also fail if it converges to a different root.
+M|The trapezium rule overestimates the area when the curve is|convex (bends upwards)|concave (bends downwards)|a straight line|below the x-axis|For a convex curve (bending upwards) the straight tops of the trapezia lie above the curve, so the rule overestimates. For a concave curve it underestimates.
+N|xₙ₊₁ = √(xₙ + 2), x₀ = 1. Find x₂ (3 d.p.).|1.932|0.05||x₁ = √(1 + 2) = √3 ≈ 1.7321. x₂ = √(1.7321 + 2) = √3.7321 ≈ 1.932.|sqrt(sqrt(3)+2)
 # m-vec|10: Vectors|Pure Mathematics
-N|Find the magnitude of 3i + 4j.|5|0||√(9 + 16) = 5.|hypot(3,4)
-N|Find the magnitude of 2i − j + 2k.|3|0||√(4 + 1 + 4) = 3.|sqrt(9)
-M|A(1, 2, 3), B(4, 6, 3). Vector AB is|3i + 4j|5i + 8j + 6k|−3i − 4j|3i + 4j + 3k|AB = b − a.
-W|What does a = kb (k a scalar) tell you about a and b?|parallel|They are parallel.
-N|Find the distance between (1, 2, 3) and (4, 6, 15).|13|0||√(9 + 16 + 144) = 13.|sqrt(9+16+144)
+N|Find the magnitude of 3i + 4j.|5|0||The magnitude of xi + yj is √(x² + y²) = √(3² + 4²) = √25 = 5.|hypot(3,4)
+N|Find the magnitude of 2i − j + 2k.|3|0||Magnitude = √(2² + (−1)² + 2²) = √(4 + 1 + 4) = √9 = 3.|sqrt(9)
+M|A(1, 2, 3), B(4, 6, 3). Vector AB is|3i + 4j|5i + 8j + 6k|−3i − 4j|3i + 4j + 3k|AB = b − a = (4 − 1)i + (6 − 2)j + (3 − 3)k = 3i + 4j.
+W|What does a = kb (k a scalar) tell you about a and b?|parallel|If a = kb, the vectors are parallel (same direction for k > 0, opposite for k < 0), and the magnitude of a is k times that of b.
+N|Find the distance between (1, 2, 3) and (4, 6, 15).|13|0||Differences: 3, 4 and 12. Distance = √(3² + 4² + 12²) = √(9 + 16 + 144) = √169 = 13.|sqrt(9+16+144)
 # s-samp|1: Statistical sampling|Statistics
-M|Which method selects every kth item after a random start?|Systematic|Stratified|Quota|Opportunity|Systematic sampling.
+M|Which method selects every kth item after a random start?|Systematic|Stratified|Quota|Opportunity|Systematic sampling: pick a random start from the first k items, then take every kth item from the list (k = population ÷ sample size).
 M|A disadvantage of quota sampling is|it is not random so may be biased|it needs a sampling frame|it is always expensive|it cannot be used for large populations|The interviewer chooses who fills each quota.
-W|What is a sampling frame?|list|A list of all members of the population that could be sampled.
-N|300 Y12 and 200 Y13 students. In a stratified sample of 50, how many are Y13?|20|0||200/500 × 50 = 20.|200/500*50
-P|Match each sampling method to its description|Stratified=proportional from each group;Systematic=every kth item;Quota=interviewer fills set groups;Opportunity=whoever is available|Know one advantage and disadvantage of each.
+W|What is a sampling frame?|list|A sampling frame is a list of all the members of the population that could be sampled, e.g. a school register.
+N|300 Y12 and 200 Y13 students. In a stratified sample of 50, how many are Y13?|20|0||Stratified sampling is proportional: Y13 makes up 200/500 of the population, so 200/500 × 50 = 20 students.|200/500*50
+P|Match each sampling method to its description|Stratified=proportional from each group;Systematic=every kth item;Quota=interviewer fills set groups;Opportunity=whoever is available|Stratified samples each group in proportion; systematic takes every kth item; quota lets the interviewer fill set groups (not random); opportunity uses whoever is available.
 # s-data|2: Data presentation and interpretation|Statistics
-N|Find the mean of 2, 4, 4, 5, 7, 8.|5|0||30/6 = 5.|30/6
-N|Outliers lie more than 1.5 × IQR beyond the quartiles. Q₁ = 10, Q₃ = 18. Find the upper limit.|30|0||18 + 1.5 × 8 = 30.|18+1.5*8
-M|In a histogram, frequency is proportional to|bar area|bar height|bar width|class midpoint|Frequency density = frequency ÷ class width.
-M|r = −0.92 indicates|strong negative linear correlation|weak negative correlation|no correlation|strong positive correlation|Close to −1.
-W|Why should you avoid extrapolating a regression line?|outside & range|Predictions outside the range of the data may be unreliable.
-N|Σx = 50, Σx² = 300, n = 10. Find the variance.|5|0||Σx²/n − x̄² = 30 − 25 = 5.|30-25
+N|Find the mean of 2, 4, 4, 5, 7, 8.|5|0||Mean = total ÷ number of values = (2 + 4 + 4 + 5 + 7 + 8) ÷ 6 = 30 ÷ 6 = 5.|30/6
+N|Outliers lie more than 1.5 × IQR beyond the quartiles. Q₁ = 10, Q₃ = 18. Find the upper limit.|30|0||IQR = Q₃ − Q₁ = 18 − 10 = 8. Upper limit = Q₃ + 1.5 × IQR = 18 + 12 = 30.|18+1.5*8
+M|In a histogram, frequency is proportional to|bar area|bar height|bar width|class midpoint|In a histogram the bar area is proportional to frequency, since frequency density = frequency ÷ class width.
+M|r = −0.92 indicates|strong negative linear correlation|weak negative correlation|no correlation|strong positive correlation|r close to −1 means a strong negative linear correlation: as one variable increases, the other tends to decrease.
+W|Why should you avoid extrapolating a regression line?|outside & range|The relationship is only known within the range of the data, so predictions outside that range (extrapolation) may be unreliable.
+N|Σx = 50, Σx² = 300, n = 10. Find the variance.|5|0||x̄ = 50/10 = 5. Variance = Σx²/n − x̄² = 300/10 − 5² = 30 − 25 = 5.|30-25
 # s-prob|3: Probability|Statistics
-N|P(A) = 0.4, P(B) = 0.5, independent. Find P(A ∩ B).|0.2|0||0.4 × 0.5.|0.2
-N|P(A) = 0.6, P(B) = 0.3, P(A ∩ B) = 0.1. Find P(A ∪ B).|0.8|0||0.6 + 0.3 − 0.1.|0.6+0.3-0.1
-M|A and B are mutually exclusive. Then|P(A ∩ B) = 0|P(A ∩ B) = P(A)P(B)|P(A ∪ B) = 0|P(A given B) = P(A)|They cannot both happen.
-N|P(A ∩ B) = 0.12, P(B) = 0.4. Find P(A given B).|0.3|0||0.12/0.4.|0.12/0.4
-W|State the test for independence of A and B.|P(A)P(B);P(A)×P(B);product|P(A ∩ B) = P(A) × P(B).
+N|P(A) = 0.4, P(B) = 0.5, independent. Find P(A ∩ B).|0.2|0||For independent events P(A ∩ B) = P(A) × P(B) = 0.4 × 0.5 = 0.2.|0.2
+N|P(A) = 0.6, P(B) = 0.3, P(A ∩ B) = 0.1. Find P(A ∪ B).|0.8|0||Addition rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.3 − 0.1 = 0.8.|0.6+0.3-0.1
+M|A and B are mutually exclusive. Then|P(A ∩ B) = 0|P(A ∩ B) = P(A)P(B)|P(A ∪ B) = 0|P(A given B) = P(A)|Mutually exclusive events cannot happen together, so P(A ∩ B) = 0 and P(A ∪ B) = P(A) + P(B).
+N|P(A ∩ B) = 0.12, P(B) = 0.4. Find P(A given B).|0.3|0||P(A given B) = P(A ∩ B) ÷ P(B) = 0.12 ÷ 0.4 = 0.3.|0.12/0.4
+W|State the test for independence of A and B.|P(A)P(B);P(A)×P(B);product|A and B are independent if P(A ∩ B) = P(A) × P(B), or equivalently if P(A given B) = P(A).
 # s-dist|4: Statistical distributions|Statistics
-N|X ~ B(10, 0.3). Find E(X).|3|0||np = 3.|3
-N|X ~ B(4, 0.5). Find P(X = 2).|0.375|0||⁴C₂ × 0.5⁴ = 6/16.|6*0.5**4
-M|For a normal distribution, about 95% of values lie within|2 standard deviations of the mean|1 standard deviation|3 standard deviations|0.5 standard deviations|More precisely ±1.96σ.
-N|X ~ N(50, 16). Find P(X < 50).|0.5|0||By symmetry about the mean.|0.5
-W|Give one condition for a binomial model.|fixed;independent;two outcomes;constant|Fixed number of independent trials, two outcomes, constant probability.
-N|P(Z < 1) = 0.8413. Find P(Z > 1).|0.1587|0||1 − 0.8413.|1-0.8413
+N|X ~ B(10, 0.3). Find E(X).|3|0||For X ~ B(n, p) the mean is E(X) = np = 10 × 0.3 = 3.|3
+N|X ~ B(4, 0.5). Find P(X = 2).|0.375|0||P(X = 2) = ⁴C₂ × 0.5² × 0.5² = 6 × 0.0625 = 0.375.|6*0.5**4
+M|For a normal distribution, about 95% of values lie within|2 standard deviations of the mean|1 standard deviation|3 standard deviations|0.5 standard deviations|About 68% lie within 1σ, 95% within 2σ (more precisely ±1.96σ) and 99.7% within 3σ of the mean.
+N|X ~ N(50, 16). Find P(X < 50).|0.5|0||A normal distribution is symmetric about its mean, so exactly half the values lie below 50: P(X < 50) = 0.5.|0.5
+W|Give one condition for a binomial model.|fixed;independent;two outcomes;constant|A binomial model needs a fixed number of trials, independent trials, two outcomes (success or failure) and a constant probability of success.
+N|P(Z < 1) = 0.8413. Find P(Z > 1).|0.1587|0||The total probability is 1, so P(Z > 1) = 1 − P(Z < 1) = 1 − 0.8413 = 0.1587.|1-0.8413
 # s-hyp|5: Statistical hypothesis testing|Statistics
-M|One-tailed test of H₀: p = 0.3 for an increase. H₁ is|p > 0.3|p < 0.3|p ≠ 0.3|p = 0.3|Increase means greater than.
-W|What is a critical region?|reject|The values of the test statistic that lead to rejecting H₀.
-M|p-value 0.03 at the 5% level. You|reject H₀|prove H₀ true|do not reject H₀|reject H₁|0.03 < 0.05.
-M|A two-tailed test at 10% puts in each tail|5%|10%|20%|2.5%|Split the significance level equally.
-W|Testing a correlation coefficient, what is H₀?|ρ=0;rho=0;zero;no correlation|H₀: ρ = 0.
+M|One-tailed test of H₀: p = 0.3 for an increase. H₁ is|p > 0.3|p < 0.3|p ≠ 0.3|p = 0.3|Testing for an increase, the alternative hypothesis is H₁: p > 0.3 (one-tailed). H₀ always contains the equals sign.
+W|What is a critical region?|reject|The critical region is the set of values of the test statistic that would lead you to reject H₀. Its boundary is the critical value.
+M|p-value 0.03 at the 5% level. You|reject H₀|prove H₀ true|do not reject H₀|reject H₁|The p-value 0.03 is less than the significance level 0.05, so the result is significant: reject H₀. This never proves either hypothesis.
+M|A two-tailed test at 10% puts in each tail|5%|10%|20%|2.5%|In a two-tailed test the significance level is split equally between the tails: 10% ÷ 2 = 5% in each.
+W|Testing a correlation coefficient, what is H₀?|ρ=0;rho=0;zero;no correlation|H₀: ρ = 0 (no correlation in the population), against H₁: ρ > 0, ρ < 0 or ρ ≠ 0.
 # k-units|6: Quantities and units in mechanics|Mechanics
-M|The newton in SI base units is|kg m s⁻²|kg m s⁻¹|kg m² s⁻²|N m|F = ma.
-N|Convert 72 km/h to m/s.|20|0|m/s|72 ÷ 3.6 = 20.|72/3.6
-M|A 'light' string in a model means|negligible mass|it cannot stretch|it is smooth|negligible length|Light = massless.
-W|What does modelling an object as a particle mean?|point;dimension;size|Its size is negligible; its mass acts at a single point.
-N|Weight of a 5 kg mass (g = 9.8).|49|0|N|W = mg.|49
+M|The newton in SI base units is|kg m s⁻²|kg m s⁻¹|kg m² s⁻²|N m|F = ma, so 1 N = 1 kg × 1 m s⁻² = 1 kg m s⁻².
+N|Convert 72 km/h to m/s.|20|0|m/s|72 km/h = 72 000 m ÷ 3600 s = 20 m/s. A shortcut is to divide by 3.6.|72/3.6
+M|A 'light' string in a model means|negligible mass|it cannot stretch|it is smooth|negligible length|'Light' means the mass is negligible, so the tension is the same throughout the string. 'Inextensible' means it cannot stretch.
+W|What does modelling an object as a particle mean?|point;dimension;size|As a particle, the object's size is negligible: its mass acts at a single point, so rotation and air resistance from its shape are ignored.
+N|Weight of a 5 kg mass (g = 9.8).|49|0|N|W = mg = 5 × 9.8 = 49 N.|49
 # k-kin|7: Kinematics|Mechanics
-N|A car accelerates uniformly from 4 m/s to 20 m/s in 8 s. Find the acceleration.|2|0|m s⁻²|a = (20 − 4)/8.|16/8
-N|A ball is dropped from rest. Find its speed after falling 20 m (g = 9.8, 3 s.f.).|19.8|0.5|m/s|v² = 2 × 9.8 × 20 = 392.|sqrt(2*9.8*20)
-M|The area under a velocity–time graph is|displacement|acceleration|speed|force|∫v dt = s.
-N|v = 3t² − 2t. Find the acceleration at t = 2.|10|0|m s⁻²|a = 6t − 2.|6*2-2
-W|A projectile is thrown horizontally. What is its horizontal acceleration (no air resistance)?|zero;0;none|Zero – horizontal velocity is constant.
-N|Projected at 20 m/s, 30° above horizontal. Initial vertical velocity?|10|0|m/s|20 sin 30°.|20*sin(radians(30))
+N|A car accelerates uniformly from 4 m/s to 20 m/s in 8 s. Find the acceleration.|2|0|m s⁻²|a = (v − u)/t = (20 − 4)/8 = 16/8 = 2 m s⁻².|16/8
+N|A ball is dropped from rest. Find its speed after falling 20 m (g = 9.8, 3 s.f.).|19.8|0.5|m/s|v² = u² + 2as = 0 + 2 × 9.8 × 20 = 392, so v = √392 = 19.8 m/s.|sqrt(2*9.8*20)
+M|The area under a velocity–time graph is|displacement|acceleration|speed|force|The area under a velocity–time graph (∫ v dt) is the displacement. The gradient is the acceleration.
+N|v = 3t² − 2t. Find the acceleration at t = 2.|10|0|m s⁻²|a = dv/dt = 6t − 2. At t = 2, a = 12 − 2 = 10 m s⁻².|6*2-2
+W|A projectile is thrown horizontally. What is its horizontal acceleration (no air resistance)?|zero;0;none|With no air resistance, no horizontal force acts, so the horizontal acceleration is zero and the horizontal velocity is constant. Only gravity acts, vertically.
+N|Projected at 20 m/s, 30° above horizontal. Initial vertical velocity?|10|0|m/s|Vertical component = U sin θ = 20 sin 30° = 20 × 0.5 = 10 m/s.|20*sin(radians(30))
 # k-force|8: Forces and Newton's laws|Mechanics
-N|A resultant force of 12 N acts on 3 kg. Find the acceleration.|4|0|m s⁻²|F = ma.|12/3
-N|2 kg block, rough horizontal surface, μ = 0.4. Limiting friction (g = 9.8)?|7.84|0.5|N|F = μR = 0.4 × 19.6.|0.4*2*9.8
-M|A particle in equilibrium has|zero resultant force|to be at rest|no forces acting|increasing speed|It could be moving at constant velocity.
-N|3 kg and 1 kg hang over a smooth pulley. Find the acceleration (g = 9.8).|4.9|0.5|m s⁻²|a = (3 − 1)g / 4.|2*9.8/4
-W|State Newton's third law.|equal & opposite|If A exerts a force on B, B exerts an equal and opposite force on A.
-M|Component of weight down a slope at angle θ|mg sin θ|mg cos θ|mg tan θ|mg|Resolve parallel to the slope.
+N|A resultant force of 12 N acts on 3 kg. Find the acceleration.|4|0|m s⁻²|F = ma, so a = F/m = 12/3 = 4 m s⁻².|12/3
+N|2 kg block, rough horizontal surface, μ = 0.4. Limiting friction (g = 9.8)?|7.84|0.5|N|On a horizontal surface R = mg = 2 × 9.8 = 19.6 N. Limiting friction F = μR = 0.4 × 19.6 = 7.84 N.|0.4*2*9.8
+M|A particle in equilibrium has|zero resultant force|to be at rest|no forces acting|increasing speed|Equilibrium means zero resultant force, so the particle is at rest or moving at constant velocity. Forces can still act.
+N|3 kg and 1 kg hang over a smooth pulley. Find the acceleration (g = 9.8).|4.9|0.5|m s⁻²|Treat the system as one: resultant force = (3 − 1)g = 19.6 N acting on 4 kg, so a = 19.6/4 = 4.9 m s⁻².|2*9.8/4
+W|State Newton's third law.|equal & opposite|If body A exerts a force on body B, then B exerts a force on A that is equal in size, opposite in direction and of the same type.
+M|Component of weight down a slope at angle θ|mg sin θ|mg cos θ|mg tan θ|mg|Resolve the weight parallel to the slope: mg sin θ down the slope; mg cos θ is the component perpendicular to it.
 # k-mom|9: Moments|Mechanics
-N|A 4 N force acts perpendicular, 0.5 m from a pivot. Moment?|2|0|N m|M = Fd.|2
-M|A rigid body in equilibrium has|zero resultant force and zero resultant moment|only zero resultant moment|only zero resultant force|to be horizontal|Both conditions are needed.
-N|A uniform 2 m rod of weight 30 N rests on supports at its ends. Reaction at each end?|15|0|N|Symmetry.|15
-W|Where does the weight of a uniform rod act?|centre;midpoint;middle|At its midpoint.
-N|Plank pivoted at centre. A 50 N child sits 1.2 m left. How far right must a 60 N child sit?|1|0|m|50 × 1.2 = 60d.|50*1.2/60
+N|A 4 N force acts perpendicular, 0.5 m from a pivot. Moment?|2|0|N m|Moment = force × perpendicular distance from the pivot = 4 × 0.5 = 2 N m.|2
+M|A rigid body in equilibrium has|zero resultant force and zero resultant moment|only zero resultant moment|only zero resultant force|to be horizontal|A rigid body is in equilibrium only if the resultant force is zero and the resultant moment about any point is zero.
+N|A uniform 2 m rod of weight 30 N rests on supports at its ends. Reaction at each end?|15|0|N|The rod is uniform, so its weight acts at the midpoint, equidistant from both supports. By symmetry each reaction is 30 ÷ 2 = 15 N.|15
+W|Where does the weight of a uniform rod act?|centre;midpoint;middle|For a uniform rod the centre of mass is at its midpoint, so the weight acts there.
+N|Plank pivoted at centre. A 50 N child sits 1.2 m left. How far right must a 60 N child sit?|1|0|m|Moments about the pivot: 50 × 1.2 = 60 × d, so d = 60/60 = 1.0 m.|50*1.2/60

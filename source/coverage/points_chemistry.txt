@@ -1,0 +1,572 @@
+3.1.1.1.1|Appreciate that knowledge and understanding of atomic structure has evolved over time
+3.1.1.1.2|Protons, neutrons and electrons: relative charge and relative mass
+3.1.1.1.3|An atom consists of a nucleus containing protons and neutrons surrounded by electrons
+3.1.1.2.1|Mass number (A) and atomic (proton) number (Z)
+3.1.1.2.2|determine the number of fundamental particles in atoms and ions using mass number, atomic number and charge
+3.1.1.2.3|explain the existence of isotopes
+3.1.1.2.4|The principles of a simple time of flight (TOF) mass spectrometer, limited to ionisation, acceleration to give all ions constant kinetic energy, ion drift, ion detection, data analysis
+3.1.1.2.5|The mass spectrometer gives accurate information about relative isotopic mass and also about the relative abundance of isotopes
+3.1.1.2.6|Mass spectrometry can be used to identify elements
+3.1.1.2.7|Mass spectrometry can be used to determine relative molecular mass
+3.1.1.2.8|interpret simple mass spectra of elements
+3.1.1.2.9|calculate relative atomic mass from isotopic abundance, limited to mononuclear ions
+3.1.1.3.1|Electron configurations of atoms and ions up to Z = 36 in terms of shells and sub-shells (orbitals) s, p and d
+3.1.1.3.2|Ionisation energies
+3.1.1.3.3|define first ionisation energy
+3.1.1.3.4|write equations for first and successive ionisation energies
+3.1.1.3.5|explain how first and successive ionisation energies in Period 3 (Na–Ar) and in Group 2 (Be–Ba) give evidence for electron configuration in sub-shells and in shells
+3.1.2.1.1|Relative atomic mass and relative molecular mass in terms of 12C
+3.1.2.1.2|The term relative formula mass will be used for ionic compounds
+3.1.2.1.3|define relative atomic mass (Ar)
+3.1.2.1.4|define relative molecular mass (Mr)
+3.1.2.2.1|The Avogadro constant as the number of particles in a mole
+3.1.2.2.2|The mole as applied to electrons, atoms, molecules, ions, numbers in standard and ordinary formulas and equations
+3.1.2.2.3|The concentration of a substance in solution, measured in MS 0.4 mol dm–3
+3.1.2.2.4|using the Avogadro constant
+3.1.2.2.5|using mass of substance, Mr, and amount in moles
+3.1.2.2.6|using concentration, volume and amount of substance in a solution
+3.1.2.3.1|The ideal gas equation pV = nRT with the variables in SI units
+3.1.2.3.2|use the equation in calculations
+3.1.2.4.1|Empirical formula is the simplest whole number ratio of atoms of each element in a compound
+3.1.2.4.2|Molecular formula is the actual number of atoms of each element in a compound
+3.1.2.4.3|The relationship between empirical formula and molecular formula
+3.1.2.4.4|calculate empirical formula from data giving composition by mass or percentage by mass
+3.1.2.4.5|calculate molecular formula from the empirical formula and relative molecular mass
+3.1.2.5.1|Equations (full and ionic)
+3.1.2.5.2|Percentage atom economy is: molecular mass of desired product sum of molecular masses of all reactants Economic, ethical and environmental advantages for society and for industry of developing chemical processes with a high atom economy
+3.1.2.5.3|write balanced equations for reactions studied
+3.1.2.5.4|balance equations for unfamiliar reactions when reactants and products are specified
+3.1.2.5.5|volumes of gases
+3.1.2.5.6|percentage yields
+3.1.2.5.7|percentage atom economies
+3.1.2.5.8|concentrations and volumes for reactions in solutions
+3.1.2.5.9|Required practical 1 Make up a volumetric solution and carry out a simple acid–base titration
+3.1.3.1.1|Ionic bonding involves electrostatic attraction between oppositely charged ions in a lattice
+3.1.3.1.2|The formulas of compound ions, eg sulfate, hydroxide, nitrate, carbonate and ammonium
+3.1.3.1.3|predict the charge on a simple ion using the position of the element in the Periodic Table
+3.1.3.1.4|construct formulas for ionic compounds
+3.1.3.2.1|A single covalent bond contains a shared pair of electrons
+3.1.3.2.2|Multiple bonds contain multiple pairs of electrons
+3.1.3.2.3|A co-ordinate (dative covalent) bond contains a shared pair of electrons with both electrons supplied by one atom
+3.1.3.2.4|a covalent bond using a line
+3.1.3.2.5|a co-ordinate bond using an arrow
+3.1.3.3.1|Metallic bonding involves attraction between delocalised electrons and positive ions arranged in a lattice
+3.1.3.4.1|The four types of crystal structure:
+3.1.3.4.2|macromolecular (giant covalent)
+3.1.3.4.3|molecular
+3.1.3.4.4|The structures of the following crystals as examples of these four types of crystal structure:
+3.1.3.4.5|magnesium
+3.1.3.4.6|sodium chloride
+3.1.3.4.7|relate the melting point and conductivity of materials to the type of structure and the bonding present
+3.1.3.4.8|explain the energy changes associated with changes of state
+3.1.3.4.9|draw diagrams to represent these structures involving specified numbers of particles
+3.1.3.5.1|Bonding pairs and lone (non-bonding) pairs of electrons as charge clouds that repel each other
+3.1.3.5.2|Pairs of electrons in the outer shell of atoms arrange themselves as far apart as possible to minimise repulsion. asked to deduce the shape according Lone pair–lone pair repulsion is greater than lone pair– bond pair repulsion, which is greater than bond pair–bond pair repulsion
+3.1.3.5.3|The effect of electron pair repulsion on bond angles
+3.1.3.5.4|explain the shapes of, and bond angles in, simple molecules and ions with up to six electron pairs (including lone pairs of electrons) surrounding the central atom
+3.1.3.6.1|Electronegativity as the power of an atom to attract the pair of electrons in a covalent bond
+3.1.3.6.2|The electron distribution in a covalent bond between elements with different electronegativities will be unsymmetrical. This produces a polar covalent bond, and may cause a molecule to have a permanent dipole
+3.1.3.6.3|use partial charges to show that a bond is polar
+3.1.3.6.4|explain why some molecules with polar bonds do not have a permanent dipole
+3.1.3.7.1|Forces between molecules:
+3.1.3.7.2|permanent dipole–dipole forces
+3.1.3.7.3|induced dipole–dipole (van der Waals, dispersion, London) forces
+3.1.3.7.4|hydrogen bonding
+3.1.3.7.5|The melting and boiling points of molecular substances are influenced by the strength of these intermolecular forces
+3.1.3.7.6|The importance of hydrogen bonding in the low density of ice and the anomalous boiling points of compounds
+3.1.3.7.7|explain the existence of these forces between familiar and unfamiliar molecules
+3.1.3.7.8|explain how melting and boiling points are influenced by these intermolecular forces
+3.1.4.1.1|Reactions can be endothermic or exothermic
+3.1.4.1.2|Enthalpy change (∆H) is the heat energy change measured under conditions of constant pressure
+3.1.4.1.3|Standard enthalpy changes refer to standard conditions, ie 100 kPa and a stated temperature (eg ∆H298Ɵ)
+3.1.4.1.4|define standard enthalpy of combustion (∆cHƟ)
+3.1.4.1.5|define standard enthalpy of formation (∆fHƟ)
+3.1.4.2.1|The heat change, q, in a reaction is given by the equation MS 0.0 and 1.1 q = mc∆T where m is the mass of the substance that has a temperature change ∆T and a specific heat capacity c
+3.1.4.2.2|use this equation to calculate the molar enthalpy change for a reaction
+3.1.4.2.3|use this equation in related calculations
+3.1.4.2.4|Required practical 2 Measurement of an enthalpy change
+3.1.4.3.1|Hess’s law
+3.1.4.3.2|use Hess’s law to perform calculations, including calculation of enthalpy changes for reactions from enthalpies of combustion or from enthalpies of formation
+3.1.4.4.1|Mean bond enthalpy
+3.1.4.4.2|define the term mean bond enthalpy
+3.1.4.4.3|use mean bond enthalpies to calculate an approximate value of ∆H for reactions in the gaseous phase
+3.1.4.4.4|explain why values from mean bond enthalpy calculations differ from those determined using Hess’s law
+3.1.5.1.1|Reactions can only occur when collisions take place between particles having sufficient energy
+3.1.5.1.2|This energy is called the activation energy
+3.1.5.1.3|define the term activation energy
+3.1.5.1.4|explain why most collisions do not lead to a reaction
+3.1.5.2.1|Maxwell–Boltzmann distribution of molecular energies in gases
+3.1.5.2.2|draw and interpret distribution curves for different temperatures
+3.1.5.3.1|Meaning of the term rate of reaction
+3.1.5.3.2|The qualitative effect of temperature changes on the rate of reaction
+3.1.5.3.3|use the Maxwell–Boltzmann distribution to explain why a small temperature increase can lead to a large increase in rate
+3.1.5.3.4|Required practical 3 Investigation of how the rate of a reaction changes with temperature
+3.1.5.4.1|The qualitative effect of changes in concentration on collision frequency
+3.1.5.4.2|The qualitative effect of a change in the pressure of a gas of changing the concentration of acid on collision frequency
+3.1.5.4.3|explain how a change in concentration or a change in pressure influences the rate of a reaction
+3.1.5.5.1|A catalyst is a substance that increases the rate of a chemical reaction without being changed in chemical composition or amount
+3.1.5.5.2|Catalysts work by providing an alternative reaction route of lower activation energy
+3.1.5.5.3|use a Maxwell–Boltzmann distribution to help explain how a catalyst increases the rate of a reaction involving a gas
+3.1.6.1.1|Many chemical reactions are reversible
+3.1.6.1.2|In a reversible reaction at equilibrium:
+3.1.6.1.3|forward and reverse reactions proceed at equal rates
+3.1.6.1.4|the concentrations of reactants and products remain constant Le Chatelier’s principle
+3.1.6.1.5|Le Chatelier's principle can be used to predict the effects of changes in temperature, pressure and concentration on the position of equilibrium in homogeneous reactions
+3.1.6.1.6|A catalyst does not affect the position of equilibrium
+3.1.6.1.7|use Le Chatelier’s principle to predict qualitatively the effect of changes in temperature, pressure and concentration on the position of equilibrium
+3.1.6.1.8|explain why, for a reversible reaction used in an industrial process, a compromise temperature and pressure may be used
+3.1.6.2.1|The equilibrium constant Kc is deduced from the equation MS 0.3 for a reversible reaction
+3.1.6.2.2|The concentration, in mol dm–3, of a species X involved in changing experimental parameters on the expression for Kc is represented by [X] The value of the equilibrium constant is not affected either by changes in concentration or addition of a catalyst
+3.1.6.2.3|construct an expression for Kc for a homogeneous system in equilibrium
+3.1.6.2.4|calculate a value for Kc from the equilibrium concentrations for a homogeneous system at constant temperature
+3.1.6.2.5|perform calculations involving Kc
+3.1.6.2.6|predict the qualitative effects of changes of temperature on the value of Kc
+3.1.7.1|Redox reactions involve a transfer of electrons from the reducing agent to the oxidising agent. The change in the oxidation state of an element in a compound or ion is used to identify the element that has been oxidised or reduced in a given reaction. Separate half-equations are written for the oxidation or reduction processes. These half-equations can then be combined to give an overall equation for any redox reaction
+3.1.7.2|Oxidation is the process of electron loss and oxidising agents are electron acceptors
+3.1.7.3|Reduction is the process of electron gain and reducing agents are electron donors
+3.1.7.4|The rules for assigning oxidation states
+3.1.7.5|work out the oxidation state of an element in a compound or ion from the formula
+3.1.7.6|write half-equations identifying the oxidation and reduction processes in redox reactions
+3.1.7.7|combine half-equations to give an overall redox equation
+3.1.8.1.1|Lattice enthalpy can be defined as either enthalpy of lattice dissociation or enthalpy of lattice formation
+3.1.8.1.2|Born–Haber cycles are used to calculate lattice enthalpies using the following data:
+3.1.8.1.3|enthalpy of formation
+3.1.8.1.4|ionisation energy
+3.1.8.1.5|enthalpy of atomisation
+3.1.8.1.6|bond enthalpy
+3.1.8.1.7|electron affinity
+3.1.8.1.8|define each of the above terms and lattice enthalpy
+3.1.8.1.9|construct Born–Haber cycles to calculate lattice enthalpies using these enthalpy changes
+3.1.8.1.10|construct Born–Haber cycles to calculate one of the other enthalpy changes
+3.1.8.1.11|compare lattice enthalpies from Born–Haber cycles with those from calculations based on a perfect ionic model to provide evidence for covalent character in ionic compounds
+3.1.8.1.12|Cycles are used to calculate enthalpies of solution for ionic compounds from lattice enthalpies and enthalpies of hydration
+3.1.8.1.13|define the term enthalpy of hydration
+3.1.8.1.14|perform calculations of an enthalpy change using these cycles
+3.1.8.2.1|∆H, whilst important, is not sufficient to explain feasible change
+3.1.8.2.2|The concept of increasing disorder (entropy change, ∆S)
+3.1.8.2.3|∆S accounts for the above deficiency, illustrated by physical changes and chemical changes
+3.1.8.2.4|The balance between entropy and enthalpy determines the feasibility of a reaction given by the relationship: ∆G = ∆H – T∆S (derivation not required)
+3.1.8.2.5|For a reaction to be feasible, the value of ∆G must be zero or negative
+3.1.8.2.6|calculate entropy changes from absolute entropy values
+3.1.8.2.7|use the relationship ∆G = ∆H – T∆S to determine how ∆G varies with temperature
+3.1.8.2.8|use the relationship ∆G = ∆H – T∆S to determine the temperature at which a reaction becomes feasible
+3.1.9.1.1|The rate of a chemical reaction is related to the concentration of reactants by a rate equation of the form: Rate = k[A]m [B]n where m and n are the orders of reaction with respect to reactants A and B and k is the rate constant
+3.1.9.1.2|The orders m and n are restricted to the values 0, 1, and 2
+3.1.9.1.3|The rate constant k varies with temperature as shown by the equation: k = Ae–Ea/RT where A is a constant, known as the Arrhenius constant, Ea is the activation energy and T is the temperature in K
+3.1.9.1.4|define the terms order of reaction and rate constant
+3.1.9.1.5|perform calculations using the rate equation
+3.1.9.1.6|explain the qualitative effect of changes in temperature on the rate constant k
+3.1.9.1.7|perform calculations using the equation k = Ae–Ea/RT
+3.1.9.1.8|understand that the equation k = Ae–Ea/RT can be rearranged into the form ln k = –Ea /RT + ln A and know how to use this rearranged equation with experimental data to plot a straight line graph with slope –Ea/R These equations and the gas constant, R, will be given when required
+3.1.9.2.1|The rate equation is an experimentally determined relationship
+3.1.9.2.2|The orders with respect to reactants can provide information about the mechanism of a reaction
+3.1.9.2.3|use concentration–time graphs to deduce the rate of MS 3.1 a reaction
+3.1.9.2.4|use initial concentration–time data to deduce the initial rate of a reaction
+3.1.9.2.5|use rate–concentration data or graphs to deduce the order (0, 1 or 2) with respect to a reactant
+3.1.9.2.6|derive the rate equation for a reaction from the orders with respect to each of the reactants
+3.1.9.2.7|use the orders with respect to reactants to provide information about the rate determining/limiting step Students calculate the rate constant of a reaction
+3.1.9.2.8|Required practical 7 Measuring the rate of reaction:
+3.1.9.2.9|by an initial rate method
+3.1.9.2.10|by a continuous monitoring method
+3.1.10.1|only) The further study of equilibria considers how the mathematical expression for the equilibrium constant Kp enables us to calculate how an equilibrium yield will be influenced by the partial pressures of reactants and products. This has important consequences for many industrial processes
+3.1.10.2|The equilibrium constant Kp is deduced from the equation for a reversible reaction occurring in the gas phase
+3.1.10.3|Kp is the equilibrium constant calculated from partial pressures for a system at constant temperature
+3.1.10.4|derive partial pressure from mole fraction and total pressure
+3.1.10.5|construct an expression for Kp for a homogeneous system in equilibrium
+3.1.10.6|perform calculations involving Kp
+3.1.10.7|predict the qualitative effects of changes in temperature and pressure on the position of equilibrium
+3.1.10.8|predict the qualitative effects of changes in temperature on the value of Kp
+3.1.10.9|understand that, whilst a catalyst can affect the rate of attainment of an equilibrium, it does not affect the value of the equilibrium constant
+3.1.11.1.1|IUPAC convention for writing half-equations for electrode reactions
+3.1.11.1.2|The conventional representation of cells
+3.1.11.1.3|Cells are used to measure electrode potentials by reference to the standard hydrogen electrode
+3.1.11.1.4|The importance of the conditions when measuring the electrode potential, E (Nernst equation not required)
+3.1.11.1.5|Standard electrode potential, EƟ, refers to conditions of 298 K, 100 kPa and 1.00 mol dm−3 solution of ions
+3.1.11.1.6|Standard electrode potentials can be listed as an electrochemical series
+3.1.11.1.7|use EƟ values to predict the direction of simple redox reactions
+3.1.11.1.8|calculate the EMF of a cell
+3.1.11.1.9|write and apply the conventional representation of a cell
+3.1.11.1.10|Required practical 8 Measuring the EMF of an electrochemical cell
+3.1.11.2.1|Electrochemical cells can be used as a commercial source of electrical energy
+3.1.11.2.2|The simplified electrode reactions in a lithium cell: Positive electrode: Li+ + CoO2 + e– → Li+[CoO2]– Negative electrode: Li → Li+ + e– Cells can be non-rechargeable (irreversible), rechargeable or fuel cells
+3.1.11.2.3|Fuel cells are used to generate an electric current and do not need to be electrically recharged
+3.1.11.2.4|The electrode reactions in an alkaline hydrogen–oxygen fuel cell
+3.1.11.2.5|The benefits and risks to society associated with using these cells
+3.1.11.2.6|use given electrode data to deduce the reactions occurring in non-rechargeable and rechargeable cells
+3.1.11.2.7|deduce the EMF of a cell
+3.1.11.2.8|explain how the electrode reactions can be used to generate an electric current
+3.1.12.1.1|An acid is a proton donor
+3.1.12.1.2|A base is a proton acceptor
+3.1.12.1.3|Acid–base equilibria involve the transfer of protons
+3.1.12.2.1|The concentration of hydrogen ions in aqueous solution covers a very wide range. Therefore, a logarithmic scale, the pH scale, is used as a measure of hydrogen ion concentration
+3.1.12.2.2|pH = –log10[H+]
+3.1.12.2.3|convert concentration of hydrogen ions into pH and vice versa
+3.1.12.2.4|calculate the pH of a solution of a strong acid from its concentration
+3.1.12.3.1|Water is slightly dissociated
+3.1.12.3.2|Kw is derived from the equilibrium constant for this dissociation
+3.1.12.3.3|Kw = [H+][OH–] The value of Kw varies with temperature
+3.1.12.3.4|use Kw to calculate the pH of a strong base from its concentration
+3.1.12.4.1|Weak acids and weak bases dissociate only slightly in aqueous solution
+3.1.12.4.2|Ka is the dissociation constant for a weak acid
+3.1.12.4.3|pKa = –log10 Ka
+3.1.12.4.4|construct an expression for Ka
+3.1.12.4.5|perform calculations relating the pH of a weak acid to the concentration of the acid and the dissociation AT a, c, d, e, f and k constant, Ka
+3.1.12.4.6|convert Ka into pKa and vice versa
+3.1.12.4.7|3.1.12.5 pH curves, titrations and indicators (A-level only) Titrations of acids with bases
+3.1.12.4.8|perform calculations for these titrations based on experimental results
+3.1.12.4.9|Typical pH curves for acid–base titrations in all combinations of weak and strong monoprotic acids and bases
+3.1.12.4.10|sketch and explain the shapes of typical pH curves
+3.1.12.4.11|use pH curves to select an appropriate indicator
+3.1.12.4.12|Required practical 9 Investigate how pH changes when a weak acid reacts with a strong base and when a strong acid reacts with a weak base
+3.1.12.6.1|A buffer solution maintains an approximately constant pH, AT a, c, e and k despite dilution or addition of small amounts of acid or base
+3.1.12.6.2|Acidic buffer solutions contain a weak acid and the salt of that weak acid
+3.1.12.6.3|Basic buffer solutions contain a weak base and the salt of that weak base
+3.1.12.6.4|Applications of buffer solutions
+3.1.12.6.5|explain qualitatively the action of acidic and basic buffers
+3.1.12.6.6|calculate the pH of acidic buffer solutions
+3.1.12.6.7|3.2 Inorganic chemistry
+3.2.1.1.1|An element is classified as s, p, d or f block according to its position in the Periodic Table, which is determined by its proton number
+3.2.1.2.1|The trends in atomic radius, first ionisation energy and melting point of the elements Na–Ar The reasons for these trends in terms of the structure of and bonding in the elements
+3.2.1.2.2|explain the trends in atomic radius and first ionisation energy
+3.2.1.2.3|explain the melting point of the elements in terms of their structure and bonding
+3.2.2.1|The elements in Group 2 are called the alkaline earth metals. The trends in the solubilities of the hydroxides and the sulfates of these elements are linked to their use. Barium sulfate, magnesium hydroxide and magnesium sulfate have applications in medicines whilst calcium hydroxide is used in agriculture to change soil pH, which is essential for good crop production and maintaining the food supply
+3.2.2.2|The trends in atomic radius, first ionisation energy and melting point of the elements Mg–Ba
+3.2.2.3|explain the trends in atomic radius and first ionisation energy
+3.2.2.4|explain the melting point of the elements in terms of AT d and k their structure and bonding
+3.2.2.5|The reactions of the elements Mg–Ba with water
+3.2.2.6|The use of magnesium in the extraction of titanium from TiCl4 The relative solubilities of the hydroxides of the elements sodium hydroxide and record their Mg–Ba in water
+3.2.2.7|Mg(OH)2 is sparingly soluble
+3.2.2.8|The use of Mg(OH)2 in medicine and of Ca(OH)2 in agriculture
+3.2.2.9|The use of CaO or CaCO3 to remove SO2 from flue gases
+3.2.2.10|The relative solubilities of the sulfates of the elements Mg–Ba in water
+3.2.2.11|BaSO4 is insoluble
+3.2.2.12|The use of acidified BaCl2 solution to test for sulfate ions
+3.2.2.13|The use of BaSO4 in medicine
+3.2.2.14|explain why BaCl2 solution is used to test for sulfate ions and why it is acidified
+3.2.3.1.1|The trends in electronegativity and boiling point of the halogens
+3.2.3.1.2|explain the trend in electronegativity
+3.2.3.1.3|explain the trend in the boiling point of the elements (Cl2, Br2, I2) with solutions containing in terms of their structure and bonding
+3.2.3.1.4|The trend in oxidising ability of the halogens down the group, including displacement reactions of halide ions in aqueous solution
+3.2.3.1.5|The trend in reducing ability of the halide ions, including the reactions of solid sodium halides with concentrated sulfuric acid
+3.2.3.1.6|The use of acidified silver nitrate solution to identify and distinguish between halide ions
+3.2.3.1.7|The trend in solubility of the silver halides in ammonia
+3.2.3.1.8|silver nitrate solution is used to identify halide ions
+3.2.3.1.9|the silver nitrate solution is acidified
+3.2.3.1.10|ammonia solution is added
+3.2.3.2.1|The reaction of chlorine with water to form chloride ions and chlorate(I) ions
+3.2.3.2.2|The reaction of chlorine with water to form chloride ions and oxygen
+3.2.3.2.3|Appreciate that society assesses the advantages and disadvantages when deciding if chemicals should be added to water supplies
+3.2.3.2.4|The use of chlorine in water treatment
+3.2.3.2.5|Appreciate that the benefits to health of water treatment by chlorine outweigh its toxic effects
+3.2.3.2.6|The reaction of chlorine with cold, dilute, aqueous NaOH and uses of the solution formed
+3.2.3.2.7|Required practical 4 Carry out simple test-tube reactions to identify:
+3.2.3.2.8|cations – Group 2, NH4+
+3.2.3.2.9|anions – Group 7 (halide ions), OH–, CO32–, SO42–
+3.2.4.1|The reactions of the Period 3 elements with oxygen are considered. The pH of the solutions formed when the oxides react with water illustrates further trends in properties across this period
+3.2.4.2|Explanations of these reactions offer opportunities to develop an in-depth understanding of how and why these reactions occur
+3.2.4.3|The reactions of Na and Mg with water
+3.2.4.4|The trends in the reactions of the elements Na, Mg, Al, Si, PS 2.2 P and S with oxygen, limited to the formation of Na2O, MgO, Al2O3, SiO2, P4O10, SO2 and SO3 The trend in the melting point of the highest oxides of the of the resulting oxides
+3.2.4.5|elements Na–S The reactions of the oxides of the elements Na–S with water, limited to Na2O, MgO, Al2O3, SiO2, P4O10, SO2 and SO3, and the pH of the solutions formed
+3.2.4.6|The structures of the acids and the anions formed when P4O10, SO2 and SO3 react with water
+3.2.4.7|explain the trend in the melting point of the oxides of the elements Na–S in terms of their structure and bonding
+3.2.4.8|explain the trends in the reactions of the oxides with water in terms of the type of bonding present in each oxide
+3.2.4.9|write equations for the reactions that occur between the oxides of the elements Na–S and given acids and bases
+3.2.5.1.1|Transition metal characteristics of elements Ti–Cu arise from an incomplete d sub-level in atoms or ions
+3.2.5.1.2|The characteristic properties include:
+3.2.5.1.3|complex formation
+3.2.5.1.4|formation of coloured ions
+3.2.5.1.5|variable oxidation state
+3.2.5.1.6|catalytic activity
+3.2.5.1.7|A ligand is a molecule or ion that forms a co-ordinate bond with a transition metal by donating a pair of electrons
+3.2.5.1.8|A complex is a central metal atom or ion surrounded by ligands
+3.2.5.1.9|Co-ordination number is number of co-ordinate bonds to the central metal atom or ion
+3.2.5.2.1|H2O, NH3 and Cl− can act as monodentate ligands
+3.2.5.2.2|The ligands NH3 and H2O are similar in size and are uncharged
+3.2.5.2.3|Exchange of the ligands NH3 and H2O occurs without change of co-ordination number (eg Co2+ and Cu2+)
+3.2.5.2.4|Substitution may be incomplete (eg the formation of [Cu(NH3)4(H2O)2]2+)
+3.2.5.2.5|The Cl− ligand is larger than the uncharged ligands NH3 and H2O Exchange of the ligand H2O by Cl– can involve a change of co-ordination number (eg Co2+, Cu2+ and Fe3+)
+3.2.5.2.6|Ligands can be bidentate (eg H2NCH2CH2NH2 and C2O42–)
+3.2.5.2.7|Ligands can be multidentate (eg EDTA4–)
+3.2.5.2.8|Haem is an iron(II) complex with a multidentate ligand
+3.2.5.2.9|Oxygen forms a co-ordinate bond to Fe(II) in haemoglobin, enabling oxygen to be transported in the blood
+3.2.5.2.10|Carbon monoxide is toxic because it replaces oxygen co- ordinately bonded to Fe(II) in haemoglobin
+3.2.5.2.11|Bidentate and multidentate ligands replace monodentate ligands from complexes. This is called the chelate effect
+3.2.5.2.12|explain the chelate effect, in terms of the balance between the entropy and enthalpy change in these reactions
+3.2.5.3.1|Transition metal ions commonly form octahedral complexes with small ligands (eg H2O and NH3)
+3.2.5.3.2|Octahedral complexes can display cis–trans isomerism (a shape of complex ions
+3.2.5.3.3|special case of E–Z isomerism) with monodentate ligands and optical isomerism with bidentate ligands
+3.2.5.3.4|Transition metal ions commonly form tetrahedral complexes with larger ligands (eg Cl–)
+3.2.5.3.5|Square planar complexes are also formed and can display cis–trans isomerism
+3.2.5.3.6|Cisplatin is the cis isomer
+3.2.5.3.7|Ag+ forms the linear complex [Ag(NH3)2]+ as used in Tollens’ reagent
+3.2.5.4.1|Transition metal ions can be identified by their colour
+3.2.5.4.2|Colour arises when some of the wavelengths of visible light are absorbed and the remaining wavelengths of light concentration of a solution of are transmitted or reflected
+3.2.5.4.3|d electrons move from the ground state to an excited state when light is absorbed
+3.2.5.4.4|The energy difference between the ground state and the excited state of the d electrons is given by: ∆E = hν = hc/λ Changes in oxidation state, co-ordination number and ligand alter ∆E and this leads to a change in colour
+3.2.5.4.5|The absorption of visible light is used in spectroscopy
+3.2.5.4.6|A simple colorimeter can be used to determine the concentration of coloured ions in solution
+3.2.5.5.1|Transition elements show variable oxidation states
+3.2.5.5.2|Vanadium species in oxidation states IV, III and II are formed by the reduction of vanadate(V) ions by zinc in acidic solution
+3.2.5.5.3|The redox potential for a transition metal ion changing from a higher to a lower oxidation state is influenced by pH and by the ligand
+3.2.5.5.4|The reduction of [Ag(NH3)2]+ (Tollens’ reagent) to metallic Students could carry out test-tube silver is used to distinguish between aldehydes and ketones
+3.2.5.5.5|The redox titrations of Fe2+ and C2O42– with MnO4–
+3.2.5.5.6|perform calculations for these titrations and similar redox reactions
+3.2.5.6.1|Transition metals and their compounds can act as heterogeneous and homogeneous catalysts
+3.2.5.6.2|A heterogeneous catalyst is in a different phase from the reactants and the reaction occurs at active sites on the surface
+3.2.5.6.3|The use of a support medium to maximise the surface area of a heterogeneous catalyst and minimise the cost
+3.2.5.6.4|V2O5 acts as a heterogeneous catalyst in the Contact process
+3.2.5.6.5|Fe is used as a heterogeneous catalyst in the Haber process
+3.2.5.6.6|Heterogeneous catalysts can become poisoned by impurities that block the active sites and consequently have reduced efficiency; this has a cost implication
+3.2.5.6.7|A homogeneous catalyst is in the same phase as the reactants
+3.2.5.6.8|When catalysts and reactants are in the same phase, the reaction proceeds through an intermediate species
+3.2.5.6.9|explain the importance of variable oxidation states in catalysis
+3.2.5.6.10|explain, with the aid of equations, how V2O5 acts as a catalyst in the Contact process
+3.2.5.6.11|explain, with the aid of equations, how Fe2+ ions catalyse the reaction between I− and S2O82–
+3.2.5.6.12|explain, with the aid of equations, how Mn2+ ions autocatalyse the reaction between C2O42– and MnO4–
+3.2.6.1|The reactions of transition metal ions in aqueous solution provide a practical opportunity for students to show and to understand how transition metal ions can be identified by test-tube reactions in the laboratory
+3.2.6.2|In aqueous solution, the following metal-aqua ions are formed: [M(H2O)6]2+, limited to M = Fe and Cu [M(H2O)6]3+, limited to M = Al and Fe The acidity of [M(H2O)6]3+ is greater than that of [M(H2O)6]2+ Some metal hydroxides show amphoteric character by dissolving in both acids and bases (eg hydroxides of Al3+)
+3.2.6.3|explain, in terms of the charge/size ratio of the metal ion, why the acidity of [M(H2O)6]3+ is greater than that of [M(H2O)6]2+
+3.2.6.4|describe and explain the simple test-tube reactions of: M2+(aq) ions, limited to M = Fe and Cu, and of M3+(aq) ions, limited to M = Al and Fe, with the bases OH–, NH3 and CO32– Required practical 11 Carry out simple test-tube reactions to identify transition metal ions in aqueous solution
+3.2.6.5|3.3 Organic chemistry
+3.3.1.1.1|Organic compounds can be represented by:
+3.3.1.1.2|empirical formula
+3.3.1.1.3|molecular formula
+3.3.1.1.4|general formula
+3.3.1.1.5|structural formula
+3.3.1.1.6|displayed formula
+3.3.1.1.7|skeletal formula
+3.3.1.1.8|The characteristics of a homologous series, a series of compounds containing the same functional group
+3.3.1.1.9|IUPAC rules for nomenclature
+3.3.1.1.10|draw structural, displayed and skeletal formulas for given organic compounds
+3.3.1.1.11|apply IUPAC rules for nomenclature to name organic compounds limited to chains and rings with up to six carbon atoms each
+3.3.1.1.12|apply IUPAC rules for nomenclature to draw the structure of an organic compound from the IUPAC name limited to chains and rings with up to six carbon atoms each
+3.3.1.2.1|Reactions of organic compounds can be explained using mechanisms
+3.3.1.2.2|Free-radical mechanisms:
+3.3.1.2.3|the unpaired electron in a radical is represented by a dot
+3.3.1.2.4|the use of curly arrows is not required for radical mechanisms
+3.3.1.2.5|write balanced equations for the steps in a free- radical mechanism
+3.3.1.2.6|Other mechanisms:
+3.3.1.2.7|the formation of a covalent bond is shown by a curly arrow that starts from a lone electron pair or from another covalent bond
+3.3.1.2.8|the breaking of a covalent bond is shown by a curly arrow starting from the bond
+3.3.1.2.9|outline mechanisms by drawing the structures of the species involved and curly arrows to represent the movement of electron pairs
+3.3.1.3.1|Structural isomerism
+3.3.1.3.2|Stereoisomerism
+3.3.1.3.3|E–Z isomerism is a form of stereoisomerism and occurs as a result of restricted rotation about the planar carbon– carbon double bond
+3.3.1.3.4|Cahn–Ingold–Prelog (CIP) priority rules
+3.3.1.3.5|define the term structural isomer
+3.3.1.3.6|draw the structures of chain, position and functional group isomers
+3.3.1.3.7|define the term stereoisomer
+3.3.1.3.8|draw the structural formulas of E and Z isomers
+3.3.1.3.9|apply the CIP priority rules to E and Z isomers
+3.3.2.1.1|Alkanes are saturated hydrocarbons
+3.3.2.1.2|Petroleum is a mixture consisting mainly of alkane hydrocarbons that can be separated by fractional distillation
+3.3.2.2.1|Cracking involves breaking C–C bonds in alkanes
+3.3.2.2.2|Thermal cracking takes place at high pressure and high temperature and produces a high percentage of alkenes (mechanism not required)
+3.3.2.2.3|Catalytic cracking takes place at a slight pressure, high temperature and in the presence of a zeolite catalyst and is used mainly to produce motor fuels and aromatic hydrocarbons (mechanism not required)
+3.3.2.2.4|explain the economic reasons for cracking alkanes
+3.3.2.3.1|Alkanes are used as fuels
+3.3.2.3.2|Combustion of alkanes and other organic compounds can be complete or incomplete
+3.3.2.3.3|The internal combustion engine produces a number of pollutants including NOx, CO, carbon and unburned hydrocarbons
+3.3.2.3.4|These gaseous pollutants from internal combustion engines can be removed using catalytic converters
+3.3.2.3.5|Combustion of hydrocarbons containing sulfur leads to sulfur dioxide that causes air pollution
+3.3.2.3.6|explain why sulfur dioxide can be removed from flue gases using calcium oxide or calcium carbonate
+3.3.2.4.1|The reaction of methane with chlorine
+3.3.2.4.2|explain this reaction as a free-radical substitution mechanism involving initiation, propagation and termination steps
+3.3.3.1.1|Halogenoalkanes contain polar bonds
+3.3.3.1.2|Halogenoalkanes undergo substitution reactions with the nucleophiles OH–, CN– and NH3
+3.3.3.1.3|outline the nucleophilic substitution mechanisms of these reactions
+3.3.3.1.4|explain why the carbon–halogen bond enthalpy influences the rate of reaction
+3.3.3.2.1|The concurrent substitution and elimination reactions of a halogenoalkane (eg 2-bromopropane with potassium hydroxide)
+3.3.3.2.2|explain the role of the reagent as both nucleophile and base
+3.3.3.2.3|outline the mechanisms of these reactions
+3.3.3.3.1|Ozone, formed naturally in the upper atmosphere, is beneficial because it absorbs ultraviolet radiation
+3.3.3.3.2|Chlorine atoms are formed in the upper atmosphere when chemists in the introduction of ultraviolet radiation causes C–Cl bonds in chlorofluorocarbons (CFCs) to break
+3.3.3.3.3|Chlorine atoms catalyse the decomposition of ozone and contribute to the hole in the ozone layer
+3.3.3.3.4|Appreciate that results of research by different groups in the scientific community provided evidence for legislation to ban the use of CFCs as solvents and refrigerants
+3.3.3.3.5|Chemists have now developed alternative chlorine-free compounds
+3.3.3.3.6|use equations, such as the following, to explain how chlorine atoms catalyse decomposition of ozone: Cl• + O3 → ClO• + O2 and ClO• + O3 → 2O2 + Cl•
+3.3.4.1.1|Alkenes are unsaturated hydrocarbons
+3.3.4.1.2|Bonding in alkenes involves a double covalent bond, a centre of high electron density
+3.3.4.2.1|Electrophilic addition reactions of alkenes with HBr, H2SO4 and Br2 The use of bromine to test for unsaturation
+3.3.4.2.2|The formation of major and minor products in addition reactions of unsymmetrical alkenes
+3.3.4.2.3|outline the mechanisms for these reactions
+3.3.4.2.4|explain the formation of major and minor products by reference to the relative stabilities of primary, secondary and tertiary carbocation intermediates
+3.3.4.3.1|Addition polymers are formed from alkenes and substituted alkenes
+3.3.4.3.2|The repeating unit of addition polymers
+3.3.4.3.3|IUPAC rules for naming addition polymers
+3.3.4.3.4|Addition polymers are unreactive
+3.3.4.3.5|Appreciate that knowledge and understanding of the production and properties of polymers has developed over time
+3.3.4.3.6|Typical uses of poly(chloroethene), commonly known as PVC, and how its properties can be modified using a plasticiser
+3.3.4.3.7|draw the repeating unit from a monomer structure
+3.3.4.3.8|draw the repeating unit from a section of the polymer chain
+3.3.4.3.9|draw the structure of the monomer from a section of the polymer
+3.3.4.3.10|explain why addition polymers are unreactive
+3.3.4.3.11|explain the nature of intermolecular forces between molecules of polyalkenes
+3.3.5.1.1|Alcohols are produced industrially by hydration of alkenes AT a, d and k in the presence of an acid catalyst
+3.3.5.1.2|Ethanol is produced industrially by fermentation of glucose. The conditions for this process
+3.3.5.1.3|Ethanol produced industrially by fermentation is separated by fractional distillation and can then be used as a biofuel
+3.3.5.1.4|explain the meaning of the term biofuel
+3.3.5.1.5|justify the conditions used in the production of ethanol by fermentation of glucose
+3.3.5.1.6|write equations to support the statement that ethanol produced by fermentation is a carbon neutral fuel and give reasons why this statement is not valid
+3.3.5.1.7|outline the mechanism for the formation of an alcohol by the reaction of an alkene with steam in the presence of an acid catalyst
+3.3.5.1.8|discuss the environmental (including ethical) issues linked to decision making about biofuel use
+3.3.5.2.1|Alcohols are classified as primary, secondary and tertiary. AT b, d and k Primary alcohols can be oxidised to aldehydes which can Students could carry out the be further oxidised to carboxylic acids
+3.3.5.2.2|Secondary alcohols can be oxidised to ketones
+3.3.5.2.3|Tertiary alcohols are not easily oxidised
+3.3.5.2.4|Acidified potassium dichromate(VI) is a suitable oxidising oxidation of a primary alcohol
+3.3.5.2.5|write equations for these oxidation reactions (equations showing [O] as oxidant are acceptable)
+3.3.5.2.6|explain how the method used to oxidise a primary alcohol determines whether an aldehyde or carboxylic acid is obtained
+3.3.5.2.7|use chemical tests to distinguish between aldehydes and ketones including Fehling’s solution and Tollens’ reagent
+3.3.5.3.1|Alkenes can be formed from alcohols by acid-catalysed elimination reactions
+3.3.5.3.2|Alkenes produced by this method can be used to produce addition polymers without using monomers derived from crude oil
+3.3.5.3.3|outline the mechanism for the elimination of water from alcohols
+3.3.5.3.4|Required practical 5 Distillation of a product from a reaction
+3.3.6.1.1|The reactions of functional groups listed in the specification
+3.3.6.1.2|identify the functional groups using reactions in the specification
+3.3.6.1.3|Required practical 6 Tests for alcohol, aldehyde, alkene and carboxylic acid
+3.3.6.2.1|Mass spectrometry can be used to determine the molecular formula of a compound
+3.3.6.2.2|use precise atomic masses and the precise molecular mass to determine the molecular formula of a compound
+3.3.6.3.1|Bonds in a molecule absorb infrared radiation at characteristic wavenumbers
+3.3.6.3.2|‘Fingerprinting’ allows identification of a molecule by comparison of spectra
+3.3.6.3.3|use infrared spectra and the Chemistry Data Sheet or Booklet to identify particular bonds, and therefore functional groups, and also to identify impurities
+3.3.6.3.4|The link between absorption of infrared radiation by bonds in CO2, methane and water vapour and global warming
+3.3.7.1|Compounds that contain an asymmetric carbon atom form stereoisomers that differ in their effect on plane polarised light. This type of isomerism is called optical isomerism
+3.3.7.2|Optical isomerism is a form of stereoisomerism and occurs as a result of chirality in molecules, limited to molecules with a single chiral centre
+3.3.7.3|An asymmetric carbon atom is chiral and gives rise to optical isomers (enantiomers), which exist as non super- They could also be asked to draw the imposable mirror images and differ in their effect on plane 3D representation of chiral centres in polarised light
+3.3.7.4|A mixture of equal amounts of enantiomers is called a racemic mixture (racemate)
+3.3.7.5|draw the structural formulas and displayed formulas PS 1.2 of enantiomers
+3.3.7.6|understand how racemic mixtures (racemates) are formed and why they are optically inactive
+3.3.8.1|Aldehydes, ketones, carboxylic acids and their derivatives all contain the carbonyl group which is attacked by nucleophiles. This section includes the addition reactions of aldehydes and ketones
+3.3.8.2|Aldehydes are readily oxidised to carboxylic acids
+3.3.8.3|Chemical tests to distinguish between aldehydes and ketones including Fehling’s solution and Tollens’ reagent
+3.3.8.4|Aldehydes can be reduced to primary alcohols, and ketones to secondary alcohols, using NaBH4 in aqueous solution. These reduction reactions are examples of nucleophilic addition
+3.3.8.5|The nucleophilic addition reactions of carbonyl compounds with KCN, followed by dilute acid, to produce hydroxynitriles
+3.3.8.6|Aldehydes and unsymmetrical ketones form mixtures of enantiomers when they react with KCN followed by dilute acid
+3.3.8.7|The hazards of using KCN
+3.3.8.8|write overall equations for reduction reactions using [H] as the reductant
+3.3.8.9|outline the nucleophilic addition mechanism for reduction reactions with NaBH4 (the nucleophile should be shown as H–)
+3.3.8.10|write overall equations for the formation of hydroxynitriles using HCN
+3.3.8.11|outline the nucleophilic addition mechanism for the reaction with KCN followed by dilute acid
+3.3.8.12|explain why nucleophilic addition reactions of KCN, followed by dilute acid, can produce a mixture of enantiomers
+3.3.9.1.1|The structures of:
+3.3.9.1.2|carboxylic acids
+3.3.9.1.3|Carboxylic acids are weak acids but will liberate CO2 from reacting alcohols with carboxylic carbonates
+3.3.9.1.4|Carboxylic acids and alcohols react, in the presence of an acid catalyst, to give esters
+3.3.9.1.5|Common uses of esters (eg in solvents, plasticisers, perfumes and food flavourings)
+3.3.9.1.6|Vegetable oils and animal fats are esters of propane-1,2,3-triol (glycerol)
+3.3.9.1.7|Esters can be hydrolysed in acid or alkaline conditions to form alcohols and carboxylic acids or salts of carboxylic acids
+3.3.9.1.8|Vegetable oils and animal fats can be hydrolysed in alkaline conditions to give soap (salts of long-chain carboxylic acids) and glycerol
+3.3.9.1.9|Biodiesel is a mixture of methyl esters of long-chain carboxylic acids
+3.3.9.1.10|Biodiesel is produced by reacting vegetable oils with methanol in the presence of a catalyst
+3.3.9.2.1|The structures of:
+3.3.9.2.2|acid anhydrides
+3.3.9.2.3|acyl chlorides
+3.3.9.2.4|The nucleophilic addition–elimination reactions of water, alcohols, ammonia and primary amines with acyl chlorides and acid anhydrides
+3.3.9.2.5|The industrial advantages of ethanoic anhydride over ethanoyl chloride in the manufacture of the drug aspirin
+3.3.9.2.6|Required practical 10 Preparation of:
+3.3.9.2.7|a pure organic solid and test of its purity
+3.3.9.2.8|a pure organic liquid
+3.3.10.1.1|The nature of the bonding in a benzene ring, limited to planar structure and bond length intermediate between single and double
+3.3.10.1.2|Delocalisation of p electrons makes benzene more stable than the theoretical molecule cyclohexa-1,3,5-triene
+3.3.10.1.3|use thermochemical evidence from enthalpies of hydrogenation to account for this extra stability
+3.3.10.1.4|explain why substitution reactions occur in preference to addition reactions
+3.3.10.2.1|Electrophilic attack on benzene rings results in substitution, limited to monosubstitutions
+3.3.10.2.2|Nitration is an important step in synthesis, including the manufacture of explosives and formation of amines
+3.3.10.2.3|Friedel–Crafts acylation reactions are also important steps in synthesis
+3.3.10.2.4|nitration, including the generation of the nitronium ion
+3.3.10.2.5|acylation using AlCl3 as a catalyst
+3.3.11.1.1|Primary aliphatic amines can be prepared by the reaction of ammonia with halogenoalkanes and by the reduction of nitriles
+3.3.11.1.2|Aromatic amines, prepared by the reduction of nitro compounds, are used in the manufacture of dyes
+3.3.11.2.1|Amines are weak bases
+3.3.11.2.2|The difference in base strength between ammonia, primary aliphatic and primary aromatic amines
+3.3.11.2.3|explain the difference in base strength in terms of the availability of the lone pair of electrons on the N atom
+3.3.11.3.1|Amines are nucleophiles
+3.3.11.3.2|The nucleophilic substitution reactions of ammonia and amines with halogenoalkanes to form primary, secondary, tertiary amines and quaternary ammonium salts
+3.3.11.3.3|The use of quaternary ammonium salts as cationic surfactants
+3.3.11.3.4|The nucleophilic addition–elimination reactions of ammonia and primary amines with acyl chlorides and acid anhydrides
+3.3.11.3.5|these nucleophilic substitution reactions
+3.3.11.3.6|the nucleophilic addition–elimination reactions of ammonia and primary amines with acyl chlorides
+3.3.12.1.1|Condensation polymers are formed by reactions between: AT k
+3.3.12.1.2|dicarboxylic acids and diols
+3.3.12.1.3|dicarboxylic acids and diamines
+3.3.12.1.4|amino acids
+3.3.12.1.5|The repeating units in polyesters (eg Terylene) and polyamides (eg nylon 6,6 and Kevlar) and the linkages between these repeating units
+3.3.12.1.6|Typical uses of these polymers
+3.3.12.1.7|draw the repeating unit from monomer structure(s)
+3.3.12.1.8|draw the repeating unit from a section of the polymer chain
+3.3.12.1.9|draw the structure(s) of the monomer(s) from a section of the polymer
+3.3.12.1.10|explain the nature of the intermolecular forces between molecules of condensation polymers
+3.3.12.2.1|Polyalkenes are chemically inert and non-biodegradable
+3.3.12.2.2|Polyesters and polyamides can be broken down by hydrolysis and are biodegradable
+3.3.12.2.3|The advantages and disadvantages of different methods of disposal of polymers, including recycling
+3.3.12.2.4|explain why polyesters and polyamides can be hydrolysed but polyalkenes cannot
+3.3.13.1.1|Amino acids have both acidic and basic properties, including the formation of zwitterions
+3.3.13.1.2|in acid solution
+3.3.13.1.3|in alkaline solution
+3.3.13.2.1|Proteins are sequences of amino acids joined by peptide links
+3.3.13.2.2|The importance of hydrogen bonding and sulfur–sulfur bonds in proteins
+3.3.13.2.3|The primary, secondary (α-helix and β–pleated sheets) and tertiary structure of proteins
+3.3.13.2.4|Hydrolysis of the peptide link produces the constituent amino acids
+3.3.13.2.5|Amino acids can be separated and identified by thin-layer chromatography
+3.3.13.2.6|Amino acids can be located on a chromatogram using developing agents such as ninhydrin or ultraviolet light and identified by their Rf values
+3.3.13.2.7|draw the structure of a peptide formed from up to three amino acids
+3.3.13.2.8|draw the structure of the amino acids formed by hydrolysis of a peptide
+3.3.13.2.9|identify primary, secondary and tertiary structures in diagrams
+3.3.13.2.10|explain how these structures are maintained by hydrogen bonding and S–S bonds
+3.3.13.2.11|calculate Rf values from a chromatogram
+3.3.13.3.1|Enzymes are proteins
+3.3.13.3.2|The action of enzymes as catalysts, including the concept of a stereospecific active site that binds to a substrate molecule
+3.3.13.3.3|The principle of a drug acting as an enzyme inhibitor by blocking the active site
+3.3.13.3.4|Computers can be used to help design such drugs
+3.3.13.3.5|explain why a stereospecific active site can only bond to one enantiomeric form of a substrate or drug
+3.3.13.4.1|The structures of the phosphate ion, 2-deoxyribose (a pentose sugar) and the four bases adenine, cytosine, guanine and thymine are given in the Chemistry Data Booklet
+3.3.13.4.2|A nucleotide is made up from a phosphate ion bonded to 2-deoxyribose which is in turn bonded to one of the four bases adenine, cytosine, guanine and thymine
+3.3.13.4.3|A single strand of DNA (deoxyribonucleic acid) is a polymer of nucleotides linked by covalent bonds between the phosphate group of one nucleotide and the 2- deoxyribose of another nucleotide. This results in a sugar- phosphate-sugar-phosphate polymer chain with bases attached to the sugars in the chain
+3.3.13.4.4|DNA exists as two complementary strands arranged in the form of a double helix
+3.3.13.4.5|explain how hydrogen bonding between base pairs leads to the two complementary strands of DNA
+3.3.13.5.1|The Pt(II) complex cisplatin is used as an anticancer drug
+3.3.13.5.2|Cisplatin prevents DNA replication in cancer cells by a ligand replacement reaction with DNA in which a bond is formed between platinum and a nitrogen atom on guanine
+3.3.13.5.3|Appreciate that society needs to assess the balance between the benefits and the adverse effects of drugs, such as the anticancer drug cisplatin
+3.3.13.5.4|explain why cisplatin prevents DNA replication
+3.3.13.5.5|explain why such drugs can have adverse effects
+3.3.14.1|The formation of new organic compounds by multi-step syntheses using reactions included in the specification is covered in this section
+3.3.14.2|The synthesis of an organic compound can involve several steps
+3.3.14.3|explain why chemists aim to design processes that do not require a solvent and that use non- hazardous starting materials
+3.3.14.4|explain why chemists aim to design production methods with fewer steps that have a high percentage atom economy
+3.3.14.5|use reactions in this specification to devise a synthesis, with up to four steps, for an organic compound
+3.3.15.1|Chemists use a variety of techniques to deduce the structure of compounds. In this section, nuclear magnetic resonance spectroscopy is added to mass spectrometry and infrared spectroscopy as an analytical technique. The emphasis is on the use of analytical data to solve problems rather than on spectroscopic theory
+3.3.15.2|Appreciation that scientists have developed a range of analytical techniques which together enable the structures in the Chemistry Data Booklet to of new compounds to be confirmed
+3.3.15.3|Nuclear magnetic resonance (NMR) gives information about the position of 13C or 1H atoms in a molecule
+3.3.15.4|13C NMR gives simpler spectra than 1H NMR
+3.3.15.5|The use of the δ scale for recording chemical shift
+3.3.15.6|Chemical shift depends on the molecular environment
+3.3.15.7|Integrated spectra indicate the relative numbers of 1H atoms in different environments
+3.3.15.8|1H NMR spectra are obtained using samples dissolved in deuterated solvents or CCl4 The use of tetramethylsilane (TMS) as a standard
+3.3.15.9|explain why TMS is a suitable substance to use as a standard
+3.3.15.10|use 1H NMR and 13C NMR spectra and chemical shift data from the Chemistry Data Booklet to suggest possible structures or part structures for molecules
+3.3.15.11|use integration data from 1H NMR spectra to determine the relative numbers of equivalent protons in the molecule
+3.3.15.12|use the n+1 rule to deduce the spin–spin splitting patterns of adjacent, non-equivalent protons, limited to doublet, triplet and quartet formation in aliphatic compounds
+3.3.16.1|Chromatography provides an important method of separating and identifying components in a mixture. Different types of chromatography are used depending on the composition of mixture to be separated
+3.3.16.2|Chromatography can be used to separate and identify the AT a, i and k components in a mixture
+3.3.16.3|Types of chromatography include:
+3.3.16.4|thin-layer chromatography (TLC) – a plate is coated chromatography to identify with a solid and a solvent moves up the plate
+3.3.16.5|column chromatography (CC) – a column is packed Students could use thin-layer with a solid and a solvent moves down the column
+3.3.16.6|gas chromatography (GC) – a column is packed with a solid or with a solid coated by a liquid, and a gas is passed through the column under pressure at high temperature
+3.3.16.7|Separation depends on the balance between solubility in the moving phase and retention by the stationary phase
+3.3.16.8|Retention times and Rf values are used to identify different substances
+3.3.16.9|The use of mass spectrometry to analyse the components separated by GC
+3.3.16.10|calculate Rf values from a chromatogram
+3.3.16.11|compare retention times and Rf values with standards to identify different substances
+3.3.16.12|Required practical 12 Separation of species by thin-layer chromatography
+RP1|Make up a volumetric solution and carry out a simple acid–base titration
+RP2|Measurement of an enthalpy change
+RP3|Investigation of how the rate of a reaction changes with temperature
+RP4|Carry out simple test-tube reactions to identify cations and anions in aqueous solution
+RP5|Distillation of a product from a reaction
+RP6|Tests for alcohol, aldehyde, alkene and carboxylic acid
+RP7|Measuring the rate of reaction by an initial rate method and by a continuous monitoring method
+RP8|Measuring the EMF of an electrochemical cell
+RP9|Investigate how pH changes when a weak acid reacts with a strong base and when a strong acid reacts with a weak base
+RP10|Preparation of a pure organic solid and test of its purity; preparation of a pure organic liquid
+RP11|Carry out simple test-tube reactions to identify transition metal ions in aqueous solution
+RP12|Separation of species by thin-layer chromatography

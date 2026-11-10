@@ -1,20 +1,20 @@
 // v10: questions that use a diagram ([fig:name] prefix)
 # p-3-1|3.1 Motion|Module 3: Forces and motion
 2N|[fig:p-vt-graph] Use the velocity–time graph to find the total displacement in the 10 s.|70|0|m|Area: ½ × 4 × 10 + 4 × 10 + ½ × 2 × 10 = 70 m.|0.5*4*10+4*10+0.5*2*10
-1N|[fig:p-vt-graph] Use the graph to find the acceleration during the first 4 s.|2.5|0|m s⁻²|Gradient = 10 ÷ 4.|10/4
+1N|[fig:p-vt-graph] Use the graph to find the acceleration during the first 4 s.|2.5|0|m s⁻²|Acceleration is the gradient of the v–t graph: a = Δv ÷ Δt = 10 m s⁻¹ ÷ 4 s = 2.5 m s⁻².|10/4
 # p-3-2|3.2 Forces in action|Module 3: Forces and motion
-2N|[fig:p-slope-fbd] The block (2.0 kg) rests on the slope at θ = 30°. Find the friction force acting on it (g = 9.81, 3 s.f.).|9.81|0.5|N|At rest, F = mg sin θ = 2.0 × 9.81 × 0.5.|2.0*9.81*sin(radians(30))
-1N|[fig:p-moments] F₁ = 6.0 N acts at d₁ = 0.40 m. The beam balances with d₂ = 0.30 m. Find F₂.|8|0|N|F₁d₁ = F₂d₂ → 2.4 = 0.30 F₂.|6.0*0.40/0.30
+2N|[fig:p-slope-fbd] The block (2.0 kg) rests on the slope at θ = 30°. Find the friction force acting on it (g = 9.81, 3 s.f.).|9.81|0.5|N|At rest the forces along the slope balance, so friction = mg sin θ = 2.0 × 9.81 × sin 30° = 9.81 N, acting up the slope.|2.0*9.81*sin(radians(30))
+1N|[fig:p-moments] F₁ = 6.0 N acts at d₁ = 0.40 m. The beam balances with d₂ = 0.30 m. Find F₂.|8|0|N|Principle of moments: F₁d₁ = F₂d₂, so 6.0 × 0.40 = F₂ × 0.30 and F₂ = 2.4 ÷ 0.30 = 8.0 N.|6.0*0.40/0.30
 # p-3-5|3.5 Newton's laws and momentum|Module 3: Forces and motion
-2N|[fig:p-collision] For the collision shown, how much kinetic energy is lost?|3|0|J|Before ½ × 2 × 3² = 9 J; after ½ × 3 × 2² = 6 J.|0.5*2*9-0.5*3*4
+2N|[fig:p-collision] For the collision shown, how much kinetic energy is lost?|3|0|J|KE before = ½ × 2 × 3² = 9 J; KE after = ½ × 3 × 2² = 6 J. KE lost = 9 − 6 = 3 J, transferred to heat and sound.|0.5*2*9-0.5*3*4
 1M|[fig:p-collision] Which statement about the collision shown is true?|Momentum is conserved but kinetic energy is not|Both momentum and kinetic energy are conserved|Kinetic energy is conserved but momentum is not|Neither is conserved|Momentum is always conserved; KE falls from 9 J to 6 J, so it is inelastic.
 # p-4-3|4.3 Electrical circuits|Module 4: Electrons, waves and photons
-1M|[fig:p-series-parallel] In the parallel circuit, R₁ = R₂ = 10 Ω. What is the total resistance?|5 Ω|20 Ω|10 Ω|0.2 Ω|1/R = 1/10 + 1/10 = 1/5.
-2M|[fig:p-potdiv] The light on the LDR gets brighter. What happens to V_out?|It decreases|It increases|It stays the same|It becomes equal to V_in|R(LDR) falls, so it takes a smaller share of V_in.
+1M|[fig:p-series-parallel] In the parallel circuit, R₁ = R₂ = 10 Ω. What is the total resistance?|5 Ω|20 Ω|10 Ω|0.2 Ω|For resistors in parallel, 1/R = 1/R₁ + 1/R₂ = 1/10 + 1/10 = 1/5, so R = 5 Ω. Two equal resistors in parallel give half of one.
+2M|[fig:p-potdiv] The light on the LDR gets brighter. What happens to V_out?|It decreases|It increases|It stays the same|It becomes equal to V_in|More light lowers the LDR's resistance, so it takes a smaller share of V_in and V_out across it decreases.
 # p-4-4|4.4 Waves|Module 4: Electrons, waves and photons
-2N|[fig:p-stationary] The string shown is 1.5 m long. Find the wavelength of the progressive waves that formed it.|1|0|m|Three loops = 3 × λ/2 = 1.5 m.|1.5/1.5
+2N|[fig:p-stationary] The string shown is 1.5 m long. Find the wavelength of the progressive waves that formed it.|1|0|m|Three loops fit on the string, and each loop is half a wavelength: 3 × λ/2 = 1.5 m, so λ = 1.0 m.|1.5/1.5
 # p-4-5|4.5 Quantum physics|Module 4: Electrons, waves and photons
-3N|[fig:p-energy-levels] Find the wavelength of the photon emitted in the n = 3 → n = 2 transition (1.89 eV). Give it in nm (3 s.f.).|658|1|nm|λ = hc/E = (6.63 × 10⁻³⁴ × 3.00 × 10⁸)/(1.89 × 1.60 × 10⁻¹⁹).|6.63e-34*3e8/(1.89*1.6e-19)*1e9
+3N|[fig:p-energy-levels] Find the wavelength of the photon emitted in the n = 3 → n = 2 transition (1.89 eV). Give it in nm (3 s.f.).|658|1|nm|λ = hc ÷ E = (6.63 × 10⁻³⁴ × 3.00 × 10⁸) ÷ (1.89 × 1.60 × 10⁻¹⁹ J) = 6.58 × 10⁻⁷ m = 658 nm (red light).|6.63e-34*3e8/(1.89*1.6e-19)*1e9
 1M|[fig:p-photoelectric] What does the gradient of this graph equal?|the Planck constant h|the work function|the threshold frequency|the charge of an electron|hf = φ + KEmax, so KEmax = hf − φ: gradient h.
 # p-5-3|5.3 Oscillations|Module 5: Newtonian world and astrophysics
 1M|[fig:p-shm] When the displacement x is at a maximum, the velocity is|zero|at a maximum|equal to the acceleration|negative and maximum|The gradient of the x–t graph is zero at its peaks.

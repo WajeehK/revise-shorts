@@ -46,6 +46,8 @@ Q: A 1200 kg car tows a 400 kg trailer with a light rigid towbar. The driving fo
 A: $a=1.25$ m s⁻² and $T=600$ N
 :::
 - **Force on the pulley:** the two tensions combine to give a resultant force on the pulley. For vertical strings it is $2T$.
+- **The value of g.** Gravitational acceleration g is taken as 9.8 m s⁻² (SI units), or 9.81 or 10 if a question says so. Give answers to 2 or 3 s.f. when g = 9.8 is used. g is assumed constant near the Earth's surface.
+- **The coefficient of friction** μ depends on the two surfaces in contact. A rough surface has μ > 0; a smooth surface means μ = 0 (no friction).
 :::warn
 - Writing $R=mg$ on a slope, or when another force has a vertical component.
 - Using $F=\mu R$ when the object is not moving and not on the point of moving.

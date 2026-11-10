@@ -69,6 +69,12 @@ Q: A rectangular field is fenced on three sides with 100 m of fencing, and a wal
 A: The maximum area is $25\times50=1250$ m².
 :::
 - Real-world uses: maximising area or profit, and minimising cost or material. Always check that your answer is a maximum or minimum, and that it makes sense in context.
+# Constructing differential equations (A level)
+- A rate of change statement becomes a differential equation. "The rate of growth of a population $P$ is proportional to its size" gives $\frac{dP}{dt}=kP$.
+- In kinematics, $\frac{dv}{dt}$ is acceleration: "the deceleration is proportional to the square of the speed" gives $\frac{dv}{dt}=-kv^2$.
+- In economics, modelling the relationship between price and demand: "the rate of change of demand $D$ with price $p$ is inversely proportional to $p$" gives $\frac{dD}{dp}=-\frac{k}{p}$.
+- Pure mathematics examples: "the gradient at any point is twice the $x$ coordinate times $y$" gives $\frac{dy}{dx}=2xy$.
+- **Rational powers.** Differentiate $x^n$ for any rational $n$, with constant multiples, sums and differences: $\frac{d}{dx}\left(4x^{\frac32}-3x^{-1}\right)=6x^{\frac12}+3x^{-2}$.
 :::warn
 - Forgetting the $\frac{dy}{dx}$ when differentiating $y$ terms implicitly.
 - Using degrees when differentiating trig functions. Calculus always needs **radians**.

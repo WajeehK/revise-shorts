@@ -53,6 +53,7 @@ Q: A ball is kicked at 20 m s⁻¹ at 30° above the horizontal. Find its time o
 2. $u_x=17.32$ m s⁻¹, so the range $=17.32\times2.04$.
 A: 2.04 s and 35.3 m
 :::
+- The suvat formulae apply only to motion in a straight line with constant acceleration. In two dimensions, use them in vector form: $\mathbf v=\mathbf u+\mathbf at$ and $\mathbf r=\mathbf ut+\frac12\mathbf at^2$.
 :::warn
 - Mixing up signs. Choose a positive direction and keep to it.
 - Using suvat with variable acceleration. Use calculus instead.

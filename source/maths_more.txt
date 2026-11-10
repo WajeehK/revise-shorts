@@ -41,12 +41,12 @@
 3M|A student samples the first 50 cars entering a car park to estimate average age of cars in a city. The main problem is|the sample is not representative (bias)|the sample is too large|it is a census|it is stratified|Cars entering one car park at one time differ from the city's cars.
 3W|Why might a systematic sample be biased?|pattern;periodic;cycle;repeat|If the list has a repeating pattern matching the interval.
 3M|Cluster sampling involves|randomly choosing whole groups, then sampling within them|choosing every kth member|choosing people available|interviewing quotas|Cheaper for spread-out populations.
-3N|Random numbers 07, 23, 91, 23, 45 are used to pick 4 distinct items from a list numbered 01–80. Which number is the 4th item chosen?|45|0||Ignore 91 (out of range) and the repeat 23.|45
+3N|Random numbers 07, 23, 91, 23, 45, 62 are used to pick 4 distinct items from a list numbered 01–80. Which number is the 4th item chosen?|62|0||Ignore 91 (out of range) and the repeated 23, so the items are 07, 23, 45 and 62.|62
 3M|To improve reliability of a sample estimate you should|increase the sample size|use opportunity sampling|ignore outliers|use only one stratum|Larger random samples vary less.
 3W|A survey of a school is done by asking the first 20 students in the canteen. Suggest a better method.|stratified;random;systematic|Use stratified (by year group) or simple random sampling from a full school list.
 3M|A sampling frame for a school survey could be|the school register|students in the canteen|people on the bus|teachers only|Lists every member.
 3N|Population 2000, sample 5%. What sample size?|100|0||0.05 × 2000.|0.05*2000
-2M|Which method gives each member an equal chance and needs no sampling frame strata?|Simple random sampling|Quota sampling|Opportunity sampling|Judgement sampling|Simple random sampling: every member is equally likely and no division into strata is needed.
+2M|Which method gives each member an equal chance and does not divide the population into groups?|Simple random sampling|Quota sampling|Opportunity sampling|Judgement sampling|Simple random sampling: every member is equally likely and no division into strata is needed.
 1M|A sample should be|representative of the population|as small as possible|chosen by the researcher's preference|the whole population|To generalise.
 1W|What is bias in sampling?|not representative;unrepresentative;favour;systematic;skew|When the sample systematically differs from the population.
 2M|Which data is quantitative?|daily max temperature|wind direction (N, NE…)|cloud type|location name|Numerical data.
