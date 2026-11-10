@@ -184,25 +184,25 @@ label.btn{display:inline-block;cursor:pointer}
 .nend{margin:24px 16px 0}.nend .bar{margin-bottom:10px}
 :root{--link:#1f6fb2;--bx-def:#eaf4ff;--bx-def-b:#cfe3fb;--bx-eq:#f3ecff;--bx-eq-b:#e1d3fb;--bx-ex:#eefbe3;--bx-ex-b:#d3f0bb;--bx-warn:#fff0e8;--bx-warn-b:#ffd8c2;--bx-tip:#fff8d9;--bx-tip-b:#f6e59c;--bx-sum:#e9f8f3;--bx-sum-b:#c6eadb;--bx-prac:#f1f3f6;--bx-prac-b:#dde2e9}
 /* ===== dark mode ===== */
-[data-theme=dark]{color-scheme:dark;--page:#0d0f13;--bg:#15171c;--ink:#eceef2;--muted:#a9afba;--line:#2a2e36;--line2:#3a3f49;--soft:#1f232a;--okbg:#1f3a1a;--badbg:#45201f;
+[data-theme=dark]{color-scheme:dark;--page:#000;--bg:#000;--surf:#0b0b0d;--surf2:#141416;--ink:#eceef2;--muted:#a9afba;--line:#232327;--line2:#34343a;--soft:#141416;--okbg:#1f3a1a;--badbg:#45201f;
  --purple:#5b437e;--purple2:#2e2440;--purpleD:#b48ae6;--blue:#285a78;--blue2:#172e3d;--blueD:#58b8ec;--orange:#7d4a26;--orange2:#3b2617;--orangeD:#f39a55;--green:#41692a;--green2:#1f3318;--greenD:#6cc832;--yellow:#7a6620;--yellow2:#3a3216;--done:#5d6470;--link:#7cc4ff;
- --bx-def:#16273a;--bx-def-b:#24405e;--bx-eq:#231b35;--bx-eq-b:#3a2d58;--bx-ex:#18291a;--bx-ex-b:#2b4a2c;--bx-warn:#35211a;--bx-warn-b:#5a3424;--bx-tip:#332c14;--bx-tip-b:#574a1c;--bx-sum:#142b26;--bx-sum-b:#235246;--bx-prac:#1f232a;--bx-prac-b:#343a45}
+ --bx-def:#16273a;--bx-def-b:#24405e;--bx-eq:#231b35;--bx-eq-b:#3a2d58;--bx-ex:#18291a;--bx-ex-b:#2b4a2c;--bx-warn:#35211a;--bx-warn-b:#5a3424;--bx-tip:#332c14;--bx-tip-b:#574a1c;--bx-sum:#142b26;--bx-sum-b:#235246;--bx-prac:#141416;--bx-prac-b:#2e2e34}
 [data-theme=dark] body{-webkit-text-stroke:0}
 [data-theme=dark] .pill,[data-theme=dark] .prog{background:rgba(255,255,255,.15)}
 [data-theme=dark] .opt.ok,[data-theme=dark] .slot.ok{background:#24461d}[data-theme=dark] .opt.bad,[data-theme=dark] .slot.bad{background:#4d2222}
-[data-theme=dark] .calc{background:#1b1e24;border-top-color:#2a2e36}
-[data-theme=dark] .calc .mv,[data-theme=dark] .calc .disp,[data-theme=dark] .keys button{background:#2a2e36;box-shadow:0 1px 0 #111;color:var(--ink)}
+[data-theme=dark] .calc{background:#0b0b0d;border-top-color:#232327}
+[data-theme=dark] .calc .mv,[data-theme=dark] .calc .disp,[data-theme=dark] .keys button{background:#1c1c20;box-shadow:0 1px 0 #000;color:var(--ink)}
 [data-theme=dark] .calc .expr{color:var(--ink)}[data-theme=dark] .cur{background:var(--ink)}
-[data-theme=dark] .keys .eq{background:var(--blue)}[data-theme=dark] .keys .sh{background:#343944}[data-theme=dark] .keys .sh.on{background:var(--orange)}
-[data-theme=dark] .mi[data-p]::after{background:#eceef2;color:#15171c}
+[data-theme=dark] .keys .eq{background:var(--blue)}[data-theme=dark] .keys .sh{background:#2a2a30}[data-theme=dark] .keys .sh.on{background:var(--orange)}
+[data-theme=dark] .mi[data-p]::after{background:#eceef2;color:#000}
 [data-theme=dark] .avatar{box-shadow:none}[data-theme=dark] .appname{color:#b9a3f0}
 [data-theme=dark] .tabs svg .fillc,.tabs svg .fillc{fill:currentColor}
-[data-theme=dark] .seg button.on{background:#3a3f49}
+[data-theme=dark] .seg button.on{background:#2e2e34}
 [data-theme=dark] .nt h2 .sn{color:#fff}
-[data-theme=dark] .box.ex .exa{background:#10131a}
+[data-theme=dark] .box.ex .exa{background:#0b0b0d}
 /* diagrams: map the fixed light palette to theme colours */
 .fig svg{box-shadow:0 0 0 1px var(--line)}
-[data-theme=dark] .fig svg [fill="#fff"]{fill:#1b1e25}[data-theme=dark] .fig svg [stroke="#fff"]{stroke:#1b1e25}
+[data-theme=dark] .fig svg [fill="#fff"]{fill:#0e0e11}[data-theme=dark] .fig svg [stroke="#fff"]{stroke:#0e0e11}
 [data-theme=dark] .fig svg [fill="#1d1d1f"]{fill:#e9ebef}[data-theme=dark] .fig svg [stroke="#1d1d1f"]{stroke:#e9ebef}
 [data-theme=dark] .fig svg [fill="#8a8f98"]{fill:#a7adb7}[data-theme=dark] .fig svg [stroke="#8a8f98"]{stroke:#a7adb7}
 [data-theme=dark] .fig svg [fill="#d9363e"]{fill:#ff6b72}[data-theme=dark] .fig svg [stroke="#d9363e"]{stroke:#ff6b72}
@@ -210,30 +210,35 @@ label.btn{display:inline-block;cursor:pointer}
 [data-theme=dark] .fig svg [fill="#4aa516"]{fill:#72cf3c}[data-theme=dark] .fig svg [stroke="#4aa516"]{stroke:#72cf3c}
 [data-theme=dark] .fig svg [fill="#2b8fd0"]{fill:#4fb0ee}[data-theme=dark] .fig svg [stroke="#2b8fd0"]{stroke:#4fb0ee}
 [data-theme=dark] .fig svg [fill="#c9ecfd"],[data-theme=dark] .fig svg [fill="#cfe6ff"],[data-theme=dark] .fig svg [fill="#d8ecff"]{fill:#1d3a50}
-[data-theme=dark] .fig svg [fill="#eef2f6"],[data-theme=dark] .fig svg [fill="#dfe4ea"],[data-theme=dark] .fig svg [fill="#f7f7f2"],[data-theme=dark] .fig svg [fill="#cfcfd6"],[data-theme=dark] .fig svg [fill="#b8bec7"]{fill:#363b45}
+[data-theme=dark] .fig svg [fill="#eef2f6"],[data-theme=dark] .fig svg [fill="#dfe4ea"],[data-theme=dark] .fig svg [fill="#f7f7f2"],[data-theme=dark] .fig svg [fill="#cfcfd6"],[data-theme=dark] .fig svg [fill="#b8bec7"]{fill:#2c2c33}
 [data-theme=dark] .fig svg [fill="#ffe2cc"]{fill:#4a2f1c}[data-theme=dark] .fig svg [fill="#ffd0d0"]{fill:#4d2424}[data-theme=dark] .fig svg [fill="#d4f8b0"]{fill:#23401b}
 [data-theme=dark] .fig svg [stroke="#fff6d6"]{stroke:#4a4120}[data-theme=dark] .fig svg [fill="#d9894a"]{fill:#c47a3e}
 .npage .tx.d{overflow-x:auto;overflow-y:hidden;max-width:100%;-webkit-overflow-scrolling:touch}
 
-/* v12 liquid-glass tab bar */
-.tabs{position:fixed;z-index:5;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 24px));display:flex;padding:5px;border-radius:999px;
- background:rgba(255,255,255,.82);border:.5px solid rgba(0,0,0,.08);box-shadow:0 12px 32px rgba(20,24,40,.16),0 2px 6px rgba(20,24,40,.08),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(0,0,0,.03);-webkit-user-select:none;user-select:none}
+/* v13 persistent liquid-glass dock (spring-driven pill, see app.js) */
+.tabs{position:fixed;z-index:30;left:0;right:0;margin:0 auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(440px,calc(100% - 24px));display:flex;padding:5px;border-radius:999px;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;
+ background:rgba(255,255,255,.82);border:.5px solid rgba(0,0,0,.08);box-shadow:0 12px 32px rgba(20,24,40,.16),0 2px 6px rgba(20,24,40,.08),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(0,0,0,.03);
+ transition:transform .45s cubic-bezier(.2,1.2,.4,1),opacity .25s;will-change:transform}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.tabs{background:rgba(255,255,255,.52);backdrop-filter:blur(22px) saturate(190%);-webkit-backdrop-filter:blur(22px) saturate(190%)}}
+.tabs.off{transform:translate3d(0,150%,0);opacity:0;pointer-events:none}
 .tabs::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 55%)}
-.tabs .pill{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:999px;pointer-events:none;will-change:transform;transition:transform .62s cubic-bezier(.34,1.45,.5,1),width .3s}
-.tabs .pill i{position:absolute;inset:0;border-radius:inherit;background:rgba(240,138,60,.14);border:.5px solid rgba(240,138,60,.28);
- box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -6px 12px rgba(240,138,60,.06),0 4px 12px rgba(240,138,60,.16);transform-origin:center}
-.tabs .pill i::after{content:"";position:absolute;inset:1px;border-radius:inherit;background:radial-gradient(80% 60% at 50% 0%,rgba(255,255,255,.6),transparent 70%)}
-.tabs .pill.mv i{animation:pillStretch .55s cubic-bezier(.3,.9,.4,1)}
-@keyframes pillStretch{0%{transform:scale(1,1)}30%{transform:scale(1.22,.86)}62%{transform:scale(.96,1.04)}100%{transform:scale(1,1)}}
-.tabs button{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:999px;font-size:10.5px;font-weight:600;color:rgba(29,29,31,.62);transition:color .25s,transform .2s;-webkit-tap-highlight-color:transparent}
-.tabs button:active{transform:scale(.94)}
-.tabs svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.tabs .dpill{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:999px;pointer-events:none;will-change:transform;transform-origin:center}
+.tabs .dpill i{position:absolute;inset:0;border-radius:inherit;background:rgba(240,138,60,.14);border:.5px solid rgba(240,138,60,.28);transform-origin:center;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -6px 12px rgba(240,138,60,.06),0 4px 12px rgba(240,138,60,.16);transition:background .2s}
+.tabs .dpill i::after{content:"";position:absolute;inset:1px;border-radius:inherit;background:radial-gradient(80% 60% at 50% 0%,rgba(255,255,255,.6),transparent 70%)}
+.tabs.drag .dpill i{background:rgba(240,138,60,.22)}
+.tabs .dpill i.jelly{animation:jelly .5s cubic-bezier(.3,.7,.4,1)}
+@keyframes jelly{0%{transform:scale(1,1)}25%{transform:scale(.94,1.07)}50%{transform:scale(1.04,.97)}75%{transform:scale(.99,1.01)}100%{transform:scale(1,1)}}
+.tabs button{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:999px;font-size:10.5px;font-weight:600;color:rgba(29,29,31,.62);transition:color .25s;pointer-events:none}
+.tabs svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
 .tabs .on{color:var(--orangeD)}.tabs .on svg{stroke:var(--orangeD);transform:scale(1.08)}
-[data-theme=dark] .tabs{background:rgba(36,38,44,.8);border-color:rgba(255,255,255,.14);box-shadow:0 14px 40px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.16),inset 0 -1px 0 rgba(255,255,255,.04)}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){[data-theme=dark] .tabs{background:rgba(40,42,50,.5)}}
-[data-theme=dark] .tabs::before{background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,0) 55%)}
-[data-theme=dark] .tabs .pill i{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -6px 12px rgba(255,255,255,.04),0 6px 16px rgba(0,0,0,.35)}
-[data-theme=dark] .tabs .pill i::after{background:radial-gradient(80% 60% at 50% 0%,rgba(255,255,255,.2),transparent 70%)}
+.tabs.drag .on svg{transform:scale(1.18)}
+[data-theme=dark] .tabs{background:rgba(30,30,34,.82);border-color:rgba(255,255,255,.14);box-shadow:0 14px 40px rgba(0,0,0,.6),0 2px 8px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.16),inset 0 -1px 0 rgba(255,255,255,.04)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){[data-theme=dark] .tabs{background:rgba(255,255,255,.07)}}
+[data-theme=dark] .tabs::before{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 55%)}
+[data-theme=dark] .tabs .dpill i{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -6px 12px rgba(255,255,255,.04),0 6px 16px rgba(0,0,0,.35)}
+[data-theme=dark] .tabs.drag .dpill i{background:rgba(255,255,255,.22)}
+[data-theme=dark] .tabs .dpill i::after{background:radial-gradient(80% 60% at 50% 0%,rgba(255,255,255,.22),transparent 70%)}
 [data-theme=dark] .tabs button{color:rgba(235,238,242,.6)}[data-theme=dark] .tabs .on,[data-theme=dark] .tabs .on svg{color:#ffa65c;stroke:#ffa65c}
-@media (prefers-reduced-motion:reduce){.tabs .pill{transition:none}.tabs .pill.mv i{animation:none}}
+@media (prefers-reduced-motion:reduce){.tabs{transition:opacity .2s}.tabs .dpill i.jelly{animation:none}}
+[data-theme=dark] html,[data-theme=dark] body,html[data-theme=dark],html[data-theme=dark] body{background:#000}

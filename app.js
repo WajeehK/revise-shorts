@@ -17,7 +17,7 @@ const ID_MIGRATIONS={};
  store.set('progress',np);store.set('schema',3)})();
 const mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):{matches:false};
 function isDark(){return settings.theme==='dark'||(settings.theme==='system'&&mq.matches)}
-function applyTheme(){const r=document.documentElement;r.dataset.theme=isDark()?'dark':'light';r.style.setProperty('--ts',settings.ts);document.querySelectorAll('meta[name=theme-color]').forEach(m=>m.content=isDark()?'#15171c':'#ffffff')}
+function applyTheme(){const r=document.documentElement;r.dataset.theme=isDark()?'dark':'light';r.style.setProperty('--ts',settings.ts);document.querySelectorAll('meta[name=theme-color]').forEach(m=>m.content=isDark()?'#000000':'#ffffff')}
 if(mq.addEventListener)mq.addEventListener('change',()=>{applyTheme()});
 applyTheme();
 function saveSettings(){store.set('settings',settings);applyTheme();render()}
@@ -46,14 +46,41 @@ calc:'<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/>
 book:'<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 21V5M8 7h7M8 11h7"/></svg>',
 back:'<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
 up:'<svg viewBox="0 0 24 24"><path d="M6 14l6-6 6 6"/></svg>'};
-function tabs(on){const t=[['home','#/','Home'],['play','#/videos','Videos'],['trophy','#/scores','Scores'],['gear','#/settings','Settings']];
- return '<nav class="tabs" data-i="'+t.findIndex(x=>x[0]===on)+'"><span class="pill" aria-hidden="true"><i></i></span>'+t.map(([i,h,l])=>`<button class="${on===i?'on':''}" onclick="location.hash='${h}'" aria-label="${l}"${on===i?' aria-current="page"':''}>${ICON[i]}<span>${l}</span></button>`).join('')+'</nav>'}
-let TABI=-1;
-function placePill(){const nav=$('.tabs');if(!nav)return;const p=nav.querySelector('.pill'),bs=nav.querySelectorAll('button'),i=+nav.dataset.i;if(i<0||!bs[i])return;
- const at=k=>{p.style.width=bs[k].offsetWidth+'px';p.style.transform=`translate3d(${bs[k].offsetLeft}px,0,0)`};
- if(TABI<0||TABI===i||!bs[TABI]){p.style.transition='none';at(i);p.offsetWidth;p.style.transition='';TABI=i;return}
- p.style.transition='none';at(TABI);p.offsetWidth;p.style.transition='';requestAnimationFrame(()=>{at(i);p.classList.remove('mv');p.offsetWidth;p.classList.add('mv')});TABI=i}
-addEventListener('resize',()=>{TABI=-1;placePill()});
+function tabs(on){return ''}
+// ---- v13 persistent liquid-glass dock (ported from news-reel: spring physics, stretch while moving, drag to scrub) ----
+const DOCK_T=[['home','#/','Home'],['play','#/videos','Videos'],['trophy','#/scores','Scores'],['gear','#/settings','Settings']];
+const RMQ=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+const vib=n=>{if(navigator.vibrate&&navigator.userActivation&&navigator.userActivation.hasBeenActive)try{navigator.vibrate(n)}catch(_){}};
+let dock=null,bub=null,jel=null,tbs=[],dockI=-1,bw=0,press=1,ddrag=null,moved=0;
+function spring(o){const s={x:0,v:0,target:0,k:o.k,c:o.c,on:o.on,raf:0,set(t,instant){s.target=t;if(instant||RMQ.matches){if(s.raf){cancelAnimationFrame(s.raf);s.raf=0}s.x=t;s.v=0;s.on(s.x,0);return}
+  if(!s.raf){let last=performance.now();const f=now=>{const dt=Math.min(.032,(now-last)/1000);last=now;const a=-s.k*(s.x-s.target)-s.c*s.v;s.v+=a*dt;s.x+=s.v*dt;s.on(s.x,s.v);
+  if(Math.abs(s.v)<2&&Math.abs(s.x-s.target)<.3){s.x=s.target;s.v=0;s.on(s.x,0);s.raf=0;if(s.settle)s.settle();return}s.raf=requestAnimationFrame(f)};s.raf=requestAnimationFrame(f)}}};return s}
+const slotX=i=>tbs[i]?tbs[i].offsetLeft:0;
+function dpaint(x,v){const st=RMQ.matches?0:Math.min(.34,Math.abs(v)/2400);moved=Math.max(moved,Math.abs(v));
+ bub.style.transform=`translate3d(${x.toFixed(2)}px,0,0) scale(${((1+st)*press).toFixed(3)},${((1-st*.42)*press).toFixed(3)})`;
+ const c=x+bw/2;tbs.forEach(b=>b.classList.toggle('on',dockI>=0&&c>=b.offsetLeft&&c<b.offsetLeft+b.offsetWidth))}
+const bs=spring({k:380,c:26,on:(x,v)=>dpaint(x,v)});
+bs.settle=()=>{if(moved>600&&!RMQ.matches&&!ddrag){jel.classList.remove('jelly');void jel.offsetWidth;jel.classList.add('jelly')}moved=0};
+function sizeBubble(){if(!dock)return;bw=tbs[0].offsetWidth;bub.style.width=bw+'px';bs.set(slotX(Math.max(0,dockI)),true)}
+const rubber=x=>{const a=slotX(0),b=slotX(tbs.length-1);return x<a?a-Math.pow(a-x,.7):x>b?b+Math.pow(x-b,.7):x};
+const nearest=x=>{let best=0,d=1e9;tbs.forEach((b,i)=>{const dd=Math.abs(b.offsetLeft-x);if(dd<d){d=dd;best=i}});return best};
+function hashTab(h){if(h==='#/videos')return 1;if(h==='#/scores')return 2;if(h==='#/settings')return 3;if(h==='#/'||h===''||h.startsWith('#/s/')||h.startsWith('#/t/'))return 0;return -1}
+function dockGo(i){const prev=dockI;dockI=i;dock.classList.toggle('off',i<0);
+ tbs.forEach((b,k)=>{if(k===i)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+ if(i<0){dpaint(bs.x,0);return}
+ if(prev<0||!bw){if(!bw)sizeBubble();bs.set(slotX(i),prev<0&&bs.x===0?true:false)}else bs.set(slotX(i))}
+function mountDock(){if(dock)return;dock=document.createElement('nav');dock.className='tabs off';dock.id='dock';dock.setAttribute('aria-label','Tabs');
+ dock.innerHTML='<span class="dpill" aria-hidden="true"><i></i></span>'+DOCK_T.map(([ic,h,l],k)=>`<button type="button" data-k="${k}" aria-label="${l}">${ICON[ic]}<span>${l}</span></button>`).join('');
+ document.body.appendChild(dock);bub=dock.querySelector('.dpill');jel=bub.querySelector('i');tbs=[...dock.querySelectorAll('button')];
+ dock.addEventListener('pointerdown',e=>{if(e.button>0)return;try{dock.setPointerCapture(e.pointerId)}catch(_){}const r=dock.getBoundingClientRect();ddrag={left:r.left};press=1.08;dock.classList.add('drag');bs.set(rubber(e.clientX-r.left-bw/2))});
+ dock.addEventListener('pointermove',e=>{if(ddrag)bs.set(rubber(e.clientX-ddrag.left-bw/2))});
+ const end=e=>{if(!ddrag)return;const i=nearest(bs.target);ddrag=null;press=1;dock.classList.remove('drag');
+  if(e.type==='pointercancel'){bs.set(slotX(dockI));return}
+  const h=DOCK_T[i][1];if(i!==dockI)vib(6);if((location.hash||'#/')!==h){dockGo(i);location.hash=h}else{bs.set(slotX(i));if(i===dockI)window.scrollTo({top:0,behavior:RMQ.matches?'auto':'smooth'})}};
+ dock.addEventListener('pointerup',end);dock.addEventListener('pointercancel',end);
+ dock.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const b=e.target.closest('button');if(b){e.preventDefault();location.hash=DOCK_T[+b.dataset.k][1]}}});
+ addEventListener('resize',()=>{bw=0;sizeBubble()});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{bw=0;sizeBubble()});
+ window.__dock={go:dockGo,bs}}
 function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;const b=[1,2,3].map(k=>p[t.id+':'+k]).filter(Boolean);if(b.length){done++;sum+=Math.max(...b.map(x=>x.best))}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
 // ---------- screens
 function resumeBar(){const r=store.get('resume',null);if(r&&r.Q&&TOPICS[r.Q.tid]){const q=r.Q;return `<button class="bar b-yellow cont" onclick="resumeQuiz()"><span><small>Continue where you left off</small>${esc(q.title)} · question ${Math.min(q.i+1,q.qs.length)} of ${q.qs.length}</span><span class="arrow">➜</span></button>`}
@@ -288,14 +315,14 @@ function topicScr(id){const t=TOPICS[id];if(!t)return home();store.set('lastTopi
  </div>${tabs('home')}</div>`}
 // ---------- router
 let lastHash='';
-function render(){if(!DB)return;const h=location.hash||'#/';let html;
+function render(){if(!DB)return;const h=location.hash||'#/';let html;mountDock();dockGo(hashTab(h));
  if(h==='#/videos')html=videos();else if(h==='#/scores')html=scores();else if(h==='#/settings')html=settingsScr();
  else if(h.startsWith('#/s/'))html=subject(h.slice(4));
  else if(h.startsWith('#/t/'))html=topicScr(h.slice(4));
  else if(h.startsWith('#/n/'))html=notesScr(h.slice(4));
  else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(!Q||Q.key!==key)startTopic(id,+(n||1));html=quiz()}
  else if(h==='#/quiz')html=quiz();else html=home();
- $('#app').innerHTML=html;placePill();texAll();
+ $('#app').innerHTML=html;texAll();
  const changed=h!==lastHash;lastHash=h;
  if(h==='#/settings')settingsInfo();
  if(h.startsWith('#/n/')&&changed){const ln=store.get('lastNotes',null);const id=h.slice(4);if(ln&&ln.id===id&&ln.y>200&&ln.f<0.98)requestAnimationFrame(()=>window.scrollTo(0,ln.y));else window.scrollTo(0,0)}
