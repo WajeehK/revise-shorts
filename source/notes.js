@@ -37,7 +37,9 @@ for(const id of ids){
       emit(`<figure class="fig" data-fig="${fm[1]}"><figcaption>${inline(alt,w)}</figcaption></figure>`);return}
     const m=ln.match(/^\$\$(.+)\$\$$/);
     if(m){flush();const parts=[];let d=0,st=0;const t=m[1];for(let i=0;i<t.length;i++){const ch=t[i];if(ch==='{')d++;else if(ch==='}')d--;else if(d===0&&t.startsWith('\\qquad',i)){parts.push(t.slice(st,i));st=i+6;i+=5}}parts.push(t.slice(st));for(let q of parts){q=q.trim().replace(/^,|,$/g,'').trim();if(!q)continue;chk(q,true,w);emit(`<div class="tx d">${esc(q)}</div>`)}return}
-    if(ln.startsWith('|')){closeList();const cells=ln.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());if(cells.every(c=>/^:?-+:?$/.test(c)))return;table=table||[];table.push(cells.map(c=>inline(c,w)));return}
+    if(ln.startsWith('|')){closeList();const cells=[];let buf='',math=false;const row=ln.replace(/^\||\|$/g,'');
+      for(const ch of row){if(ch==='$'){math=!math;buf+=ch}else if(ch==='|'&&!math){cells.push(buf.trim());buf=''}else buf+=ch}
+      cells.push(buf.trim());if(cells.every(c=>/^:?-+:?$/.test(c)))return;table=table||[];table.push(cells.map(c=>inline(c,w)));return}
     closeTable();
     if(ln.startsWith('- ')){if(list!=='ul'){closeList();emit('<ul>');list='ul'}emit(`<li>${inline(ln.slice(2),w)}</li>`);return}
     const om=ln.match(/^\d+\.\s+(.*)$/);
