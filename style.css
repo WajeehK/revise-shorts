@@ -242,3 +242,11 @@ label.btn{display:inline-block;cursor:pointer}
 [data-theme=dark] .tabs button{color:rgba(235,238,242,.6)}[data-theme=dark] .tabs .on,[data-theme=dark] .tabs .on svg{color:#ffa65c;stroke:#ffa65c}
 @media (prefers-reduced-motion:reduce){.tabs{transition:opacity .2s}.tabs .dpill i.jelly{animation:none}}
 [data-theme=dark] html,[data-theme=dark] body,html[data-theme=dark],html[data-theme=dark] body{background:#000}
+
+/* v16 quiz resume */
+.rbadge{display:inline-block;font-size:11px;font-weight:700;background:var(--yellow);color:var(--ink);padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;white-space:nowrap;flex:none}
+.subjcard .nm{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.contcard .actions{display:flex;gap:8px;margin-top:12px}
+.contcard .actions .btn{flex:1;margin:0;padding:10px 8px;font-size:13px;text-align:center}
+.rprompt{padding-top:28px}
+[data-theme=dark] .rbadge{background:var(--yellow)}

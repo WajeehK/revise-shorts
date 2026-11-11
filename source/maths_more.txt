@@ -216,14 +216,14 @@
 3W|Why is a ladder more likely to slip as a person climbs higher?|moment;further;distance|The higher the person, the larger their moment about the base. The wall must push harder to balance it, so more friction is needed at the floor.
 # s-prob|3: Probability|Statistics
 3N|P(A) = 0.5, P(B given A) = 0.4, P(B given A′) = 0.2. Find P(B).|0.3|0||P(B) = P(A)P(B given A) + P(A′)P(B given A′) = 0.5 × 0.4 + 0.5 × 0.2 = 0.2 + 0.1 = 0.3.|0.5*0.4+0.5*0.2
-3N|Same events: find P(A given B) (3 s.f.).|0.667|0.5||P(A ∩ B) = 0.5 × 0.4 = 0.2. P(A given B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.3 = 0.667.|0.2/0.3
+3N|P(A) = 0.5, P(B given A) = 0.4, P(B given A′) = 0.2. Find P(A given B) (3 s.f.).|0.667|0.5||P(B) = P(A)P(B given A) + P(A′)P(B given A′) = 0.5 × 0.4 + 0.5 × 0.2 = 0.3. P(A ∩ B) = 0.5 × 0.4 = 0.2. P(A given B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.3 = 0.667.|0.2/0.3
 3N|Three fair coins are tossed. Find P(at least one head).|0.875|0||P(no heads) = (½)³ = 0.125, so P(at least one head) = 1 − 0.125 = 0.875.|1-0.5**3
 2N|A card is drawn from 52. Find P(king or heart) (3 s.f.).|0.308|0.5||4 kings + 13 hearts − 1 (king of hearts counted twice) = 16 cards. P = 16/52 = 0.308.|16/52
 # s-dist|4: Statistical distributions|Statistics
 3N|X ~ N(30, 25). Find x such that P(X < x) = 0.975 (3 s.f.).|39.8|0.5||σ = √25 = 5. P(Z < 1.96) = 0.975, so x = μ + 1.96σ = 30 + 1.96 × 5 = 39.8.|30+1.96*5
 # s-hyp|5: Statistical hypothesis testing|Statistics
 3N|A test of H₀: μ = 50 against H₁: μ > 50 uses n = 25 from N(μ, 10²). Find the z-value for x̄ = 53.5.|1.75|0.5||Standard error = σ/√n = 10/5 = 2. z = (53.5 − 50) ÷ 2 = 1.75.|(53.5-50)/(10/5)
-3N|For the test above at 5% (critical z = 1.645), find the smallest x̄ that leads to rejecting H₀ (3 s.f.).|53.3|0.5||Reject H₀ when (x̄ − 50)/2 > 1.645, so x̄ > 50 + 1.645 × 2 = 53.29 ≈ 53.3.|50+1.645*2
+3N|A test of H₀: μ = 50 against H₁: μ > 50 uses a sample of n = 25 from N(μ, 10²). At the 5% level (critical z = 1.645), find the smallest x̄ that leads to rejecting H₀ (3 s.f.).|53.3|0.5||Standard error = σ/√n = 10/√25 = 2. Reject H₀ when (x̄ − 50)/2 > 1.645, so x̄ > 50 + 1.645 × 2 = 53.29 ≈ 53.3.|50+1.645*2
 # k-units|6: Quantities and units in mechanics|Mechanics
 2N|Convert 0.25 km to cm.|25000|0|cm|1 km = 1000 m = 100 000 cm, so 0.25 km = 0.25 × 100 000 = 25 000 cm.|0.25*100000
 3N|A cyclist travels 4.5 km in 15 minutes. Find the average speed in m/s.|5|0|m/s|4.5 km = 4500 m and 15 minutes = 900 s. Average speed = 4500 ÷ 900 = 5 m/s.|4500/900

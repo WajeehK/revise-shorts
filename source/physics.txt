@@ -28,7 +28,7 @@ N|A car at 15 m/s decelerates at 3 m s⁻². Braking distance?|37.5|0|m|Use v² 
 M|The gradient of a displacement–time graph is|velocity|acceleration|distance|force|The gradient of a displacement–time graph is Δs/Δt, which is the velocity.
 N|A stone is thrown horizontally from a 20 m cliff. Time to land (g = 9.81, 3 s.f.)?|2.02|0.5|s|Vertically, u = 0 and s = ½gt², so t = √(2s/g) = √(2 × 20 ÷ 9.81) = 2.02 s.|sqrt(40/9.81)
 W|Define thinking distance.|reaction|Thinking distance is the distance travelled during the driver's reaction time, at constant speed, before the brakes are applied: speed × reaction time.
-N|The stone above is thrown at 12 m/s. Horizontal distance (3 s.f.)?|24.2|1|m|The horizontal velocity stays constant: distance = 12 × 2.02 = 24.2 m.|12*sqrt(40/9.81)
+N|A stone is thrown horizontally at 12 m/s from the top of a 20 m cliff. How far from the base of the cliff does it land? Take g = 9.81 m s⁻² and give your answer to 3 s.f.|24.2|1|m|Vertically, u = 0 and s = 20 m, so t = √(2s/g) = √(40/9.81) = 2.02 s. The horizontal velocity stays constant: distance = 12 × 2.02 = 24.2 m.|12*sqrt(40/9.81)
 # p-3-2|3.2 Forces in action|Module 3: Forces and motion
 M|Terminal velocity is reached when|drag equals weight|acceleration is maximum|drag is zero|weight is zero|At terminal velocity the drag equals the weight, so the resultant force is zero and the acceleration is zero.
 N|Density of a 0.50 kg object of volume 2.0 × 10⁻⁴ m³?|2500|0|kg m⁻³|ρ = m ÷ V = 0.50 ÷ 2.0 × 10⁻⁴ = 2500 kg m⁻³.|0.5/2e-4

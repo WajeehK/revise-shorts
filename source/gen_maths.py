@@ -255,7 +255,7 @@ for _ in range(3):
     break
 a('s-data',3,N('Coded y = (x − 100)/5 has ȳ = 2.4. Find x̄.',112,0,'','Rearrange the coding: x = 5y + 100, so x̄ = 5ȳ + 100 = 5 × 2.4 + 100 = 112.'))
 a('s-data',3,N('Grouped data: 10–20 (f = 4), 20–30 (f = 6), 30–50 (f = 10). Estimate the mean using midpoints.',(15*4+25*6+40*10)/20,0.5,'','Midpoints 15, 25 and 40. Σfx = 15 × 4 + 25 × 6 + 40 × 10 = 610 and Σf = 20, so the estimated mean = 610 ÷ 20 = 30.5.'))
-a('s-data',3,N('Same data: estimate the median by interpolation (classes 10–20 f 4, 20–30 f 6, 30–50 f 10).',30,0.5,'','n = 20, so the median is the 10th value (n/2). Cumulative frequencies are 4, 10, 20, so the 10th value is at the end of the 20–30 class: median ≈ 30.'))
+a('s-data',3,N('Grouped data: 10–20 (f = 4), 20–30 (f = 6), 30–50 (f = 10). Estimate the median by interpolation.',30,0.5,'','n = 20, so the median is the 10th value (n/2). Cumulative frequencies are 4, 10, 20, so the 10th value is at the end of the 20–30 class: median ≈ 30.'))
 a('s-data',3,N('Regression line y = 2.3 + 0.8x for x in [10, 40]. Predict y at x = 25.',22.3,0,'','y = 2.3 + 0.8 × 25 = 2.3 + 20 = 22.3. x = 25 is within the data range, so this is interpolation and reasonably reliable.'))
 for _ in range(3):
     pa,pb=pick(0.2,0.3,0.4,0.5),pick(0.1,0.2,0.3,0.6)

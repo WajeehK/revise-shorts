@@ -1,5 +1,5 @@
 'use strict';
-const VERSION='v11';
+const VERSION='v16';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
@@ -30,8 +30,22 @@ function logAnswer(){const a=store.get('days',{});const k=dkey(new Date());a[k]=
 function streak(){const a=store.get('days',{}),g=settings.goal;const d=new Date();if((a[dkey(d)]||0)<g)d.setDate(d.getDate()-1);let n=0;while((a[dkey(d)]||0)>=g){n++;d.setDate(d.getDate()-1)}return n}
 function bestStreak(){const a=store.get('days',{}),g=settings.goal;const ks=Object.keys(a).filter(k=>a[k]>=g).sort();let best=0,run=0,prev=null;
  ks.forEach(k=>{const d=new Date(k+'T12:00:00');if(prev&&(d-prev)/864e5<1.5)run++;else run=1;best=Math.max(best,run);prev=d});return Math.max(best,streak())}
-function saveResume(){if(Q&&Q.tid&&Q.i<Q.qs.length&&Q.ans.some(Boolean))store.set('resume',{Q,t:Date.now()});}
-function clearResume(){store.del('resume')}
+function migrateResume(){const cur=store.get('inprogress',null);if(cur&&typeof cur==='object'&&!Array.isArray(cur)&&!cur.Q){const old=store.get('resume',null);if(old&&old.Q&&old.Q.key){cur[old.Q.key]={Q:old.Q,t:old.t||Date.now()};store.set('inprogress',cur);store.del('resume')}return}
+ const ip={};if(cur&&cur.Q&&cur.Q.key)ip[cur.Q.key]={Q:cur.Q,t:cur.t||Date.now()};
+ const old=store.get('resume',null);if(old&&old.Q&&old.Q.key)ip[old.Q.key]={Q:old.Q,t:old.t||Date.now()};
+ store.set('inprogress',ip);store.del('resume')}
+migrateResume();
+function qSame(b,s){if(!b||!s||b.t!==s.t)return false;if(b.t==='mc')return b.a===s.a;if(b.t==='num')return b.a===s.a;if(b.t==='order')return Array.isArray(b.items)&&b.items.length===(s.items||[]).length;if(b.t==='match')return Array.isArray(b.pairs)&&b.pairs.length===(s.pairs||[]).length;return true}
+function bankIndex(){const m=new Map();Object.values(TOPICS).forEach(t=>t.quizzes.forEach(z=>z.forEach(q=>{if(!m.has(q.q))m.set(q.q,[]);m.get(q.q).push(q)})));return m}
+function validSaved(s){if(!s||!s.Q||!s.Q.key||!Array.isArray(s.Q.qs)||!Array.isArray(s.Q.ans))return false;const Q=s.Q,n=Q.qs.length;if(!n||Q.i<0||Q.i>n||Q.ans.length>n)return false;const done=Q.ans.filter(Boolean).length;if(!done||done>=n||Q.i>=n)return false;const bank=bankIndex();for(const q of Q.qs){if(!q||!q.q||!q.t)return false;if(!(bank.get(q.q)||[]).some(b=>qSame(b,q)))return false}return true}
+function allInProgress(){const ip=store.get('inprogress',{})||{},out={};let dirty=false;for(const k in ip){if(validSaved(ip[k]))out[k]=ip[k];else dirty=true}if(dirty)store.set('inprogress',out);return out}
+function peekResume(key){return allInProgress()[key]||null}
+function latestResume(){const ip=allInProgress();let best=null;for(const k in ip)if(!best||(ip[k].t||0)>(best.t||0))best=ip[k];return best}
+function resumeDone(q){return (q.ans||[]).filter(Boolean).length}
+function grabDraft(){if(Q&&Q.qs&&!Q.ans[Q.i]&&cur&&typeof cur==='object'&&Object.keys(cur).length)Q.draft={i:Q.i,v:cur}}
+function saveResume(){if(!Q||!Q.key||!Array.isArray(Q.qs)||Q.i>=Q.qs.length||!Q.ans.some(Boolean))return;grabDraft();const ip=store.get('inprogress',{})||{};ip[Q.key]={Q:JSON.parse(JSON.stringify(Q)),t:Date.now()};store.set('inprogress',ip);store.set('resumeLast',Q.key)}
+function clearResume(key){if(!key){store.del('inprogress');store.del('resume');store.del('resumeLast');return}const ip=store.get('inprogress',{})||{};if(ip[key]){delete ip[key];store.set('inprogress',ip)}if(store.get('resumeLast',null)===key)store.del('resumeLast')}
+function loadResume(key){const s=peekResume(key);if(!s)return false;Q=JSON.parse(JSON.stringify(s.Q));while(Q.i<Q.qs.length&&Q.ans[Q.i])Q.i++;return true}
 // ---------- feedback (sound / haptics)
 let AC=null;
 function beep(ok){if(settings.haptics&&navigator.vibrate)navigator.vibrate(ok?18:[30,50,30]);if(!settings.sound)return;
@@ -83,16 +97,18 @@ function mountDock(){if(dock)return;dock=document.createElement('nav');dock.clas
  window.__dock={go:dockGo,bs}}
 function subjStats(s){const p=prog();let n=0,done=0,sum=0;s.sections.forEach(sec=>sec.topics.forEach(t=>{n++;const b=[1,2,3].map(k=>p[t.id+':'+k]).filter(Boolean);if(b.length){done++;sum+=Math.max(...b.map(x=>x.best))}}));return{n,done,avg:done?Math.round(sum/done):0,cover:Math.round(done/n*100)}}
 // ---------- screens
-function resumeBar(){const r=store.get('resume',null);if(r&&r.Q&&TOPICS[r.Q.tid]){const q=r.Q;return `<button class="bar b-yellow cont" onclick="resumeQuiz()"><span><small>Continue where you left off</small>${esc(q.title)} · question ${Math.min(q.i+1,q.qs.length)} of ${q.qs.length}</span><span class="arrow">➜</span></button>`}
- const n=store.get('lastNotes',null);if(n&&TOPICS[n.id]){return `<button class="bar b-yellow cont" onclick="location.hash='#/n/${n.id}'"><span><small>Continue where you left off</small>Revision notes: ${esc(TOPICS[n.id].title)} · ${Math.round((n.f||0)*100)}% read</span><span class="arrow">➜</span></button>`}
- const l=store.get('lastTopic',null);if(l&&TOPICS[l]){return `<button class="bar b-yellow cont" onclick="location.hash='#/t/${l}'"><span><small>Continue where you left off</small>${esc(TOPICS[l].title)}</span><span class="arrow">➜</span></button>`}return ''}
+function resumeBar(){const r=latestResume();let html='';
+ if(r){const q=r.Q,d=resumeDone(q),n=q.qs.length,pc=Math.round(d/n*100);html+=`<div class="subjcard c-yellow contcard"><div class="nm">Continue</div><div class="bd">${esc(q.title)} · ${d} of ${n} questions answered</div><div class="prog"><i style="width:${pc}%"></i></div><div class="row"><span>Resume · ${d}/${n} done</span></div><div class="actions"><button type="button" class="btn d" onclick="restartQuiz('${q.key}')">Restart</button><button type="button" class="btn b-yellow" onclick="resumeQuiz('${q.key}')">Continue where you left off</button></div></div>`}
+ else{const n=store.get('lastNotes',null);if(n&&TOPICS[n.id])html+=`<button class="bar b-yellow cont" onclick="location.hash='#/n/${n.id}'"><span><small>Continue where you left off</small>Revision notes: ${esc(TOPICS[n.id].title)} · ${Math.round((n.f||0)*100)}% read</span><span class="arrow">➜</span></button>`;
+ else{const l=store.get('lastTopic',null);if(l&&TOPICS[l])html+=`<button class="bar b-yellow cont" onclick="location.hash='#/t/${l}'"><span><small>Continue where you left off</small>${esc(TOPICS[l].title)}</span><span class="arrow">➜</span></button>`}}
+ return html}
 function goalCard(){const n=todayN(),g=settings.goal,s=streak();const pc=Math.min(100,Math.round(n/g*100));
  return `<div class="goal"><div class="gs"><span class="fire">${s?'🔥':'✨'}</span><span><b>${s}</b>-day streak</span></div><div class="gp"><div class="gl"><span>Today</span><span>${n}/${g} questions${n>=g?' ✓':''}</span></div><div class="prog"><i style="width:${pc}%"></i></div></div></div>`}
 function home(){const name=store.get('name','A-Level');
  return `<div class="screen"><div class="hello"><span class="brand"><span class="avatar"></span><span>Hey, ${esc(name)} Hero!</span></span><span class="appname">Revise Shorts</span></div><div class="scroll">
  <h1 class="title">Your A Levels</h1><div class="sub">Choose a subject to test your knowledge:</div>
  ${resumeBar()}${goalCard()}
- <button class="bar b-green" onclick="startMix('all')"><span>Quick-fire mix: all subjects</span><span class="arrow">➜</span></button>
+ <button class="bar b-green" onclick="openMix('all')"><span>Quick-fire mix: all subjects</span><span class="arrow">➜</span></button>
  ${DB.subjects.map(s=>{const st=subjStats(s);const c=SUBJ_COL[s.id];return `<button class="subjcard c-${c}" onclick="location.hash='#/s/${s.id}'"><div class="nm">${esc(s.name)}</div><div class="bd">${esc(s.board)}</div>
  <div class="prog"><i style="width:${st.cover}%"></i></div><div class="row"><span>${st.done}/${st.n} topics tried${st.done?` · avg best ${st.avg}%`:''}</span><span class="arrow">➜</span></div></button>`}).join('')}
  </div>${tabs('home')}</div>`}
@@ -100,7 +116,7 @@ function subject(id){const s=DB.subjects.find(x=>x.id===id);if(!s)return home();
  const boardName=s.board.replace(/ \(.*\)/,'');
  return `<div class="screen"><div class="hello"><button onclick="location.hash='#/'" aria-label="Back">← Subjects</button><span class="avatar"></span></div><div class="scroll">
  <h1 class="title">${esc(boardName.replace(' A level',''))} A Level ${esc(s.name)}</h1><div class="sub">Choose a topic to revise:</div>
- <button class="bar b-${c}" onclick="startMix('${s.id}')"><span>Mixed ${esc(s.name)} quiz (10 questions)</span><span class="arrow">➜</span></button>
+ <button class="bar b-${c}" onclick="openMix('${s.id}')"><span>Mixed ${esc(s.name)} quiz (10 questions)</span><span class="arrow">➜</span></button>
  ${s.sections.map((sec,i)=>{const col=PAL[(PAL.indexOf(c)+1+i)%4];return `<div class="card c-${col}"><h2>${esc(sec.name)}${sec.note?`<small>${esc(sec.note)}</small>`:''}</h2>${sec.topics.map(t=>{const d=[1,2,3].filter(n=>p[t.id+':'+n]).length;return `<button class="topic" onclick="location.hash='#/t/${t.id}'"><span>${esc(t.title)}</span><span class="r">${d?`<span class="pill">${'★'.repeat(d)}${'☆'.repeat(3-d)}</span>`:''}<span class="arrow">➜</span></span></button>`}).join('')}</div>`}).join('')}
  </div>${tabs('home')}</div>`}
 function scores(){const p=prog();
@@ -167,15 +183,25 @@ function exportData(){const blob=new Blob([JSON.stringify({app:'revise-shorts',v
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='revise-shorts-progress-'+dkey(new Date())+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast('Progress exported')}
 function importData(inp){const f=inp.files&&inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result);if(j.app!=='revise-shorts'||typeof j.data!=='object')throw 0;
  pendingImport={data:j.data,n:Object.keys(j.data).length,date:(j.exported||'').slice(0,10)||'unknown date'};render()}catch(e){toast('That file is not a Revise Shorts export')}};r.readAsText(f)}
-function applyImport(){const d=pendingImport.data;Object.keys(allData()).forEach(k=>store.del(k));for(const k in d)if(typeof d[k]==='string')localStorage.setItem('rs.'+k,d[k]);pendingImport=null;settings=Object.assign({},DEF,store.get('settings',{}));applyTheme();render();toast('Progress imported')}
-function doReset(){['progress','days','resume','lastNotes','lastTopic','notesRead'].forEach(k=>store.del(k));confirmReset=false;render();toast('Progress reset')}
+function applyImport(){const d=pendingImport.data;Object.keys(allData()).forEach(k=>store.del(k));for(const k in d)if(typeof d[k]==='string')localStorage.setItem('rs.'+k,d[k]);pendingImport=null;migrateResume();settings=Object.assign({},DEF,store.get('settings',{}));applyTheme();render();toast('Progress imported')}
+function doReset(){['progress','days','resume','inprogress','resumeLast','lastNotes','lastTopic','notesRead'].forEach(k=>store.del(k));confirmReset=false;render();toast('Progress reset')}
 function countQ(){let n=0;Object.values(TOPICS).forEach(t=>t.quizzes.forEach(z=>n+=z.length));return n}
 // ---------- quiz
 let Q=null;
-function startTopic(id,n){const t=TOPICS[id];if(!t||!t.quizzes[n-1]||!t.quizzes[n-1].length)return false;const pool=settings.shuffle?shuffle(t.quizzes[n-1]):t.quizzes[n-1].slice();
- Q={key:id+':'+n,tid:id,qn:n,title:t.title+' · Quiz '+n,color:t.color,qs:(settings.qn?pool.slice(0,settings.qn):pool).map(q=>prep(q,t)),i:0,ans:[]};clearResume();store.set('lastTopic',id);return true}
-function resumeQuiz(){const r=store.get('resume',null);if(!r)return;Q=r.Q;Q.draft=null;location.hash='#/quiz';render()}
-function startMix(sid){let pool=[];Object.values(TOPICS).forEach(t=>{if(sid==='all'||t.subj===sid)t.quizzes.forEach(z=>z.forEach(q=>pool.push([q,t])))});
+function startTopic(id,n){const t=TOPICS[id];if(!t||!t.quizzes[n-1]||!t.quizzes[n-1].length)return false;const key=id+':'+n;clearResume(key);const pool=settings.shuffle?shuffle(t.quizzes[n-1]):t.quizzes[n-1].slice();
+ Q={key,tid:id,qn:n,title:t.title+' · Quiz '+n,color:t.color,qs:(settings.qn?pool.slice(0,settings.qn):pool).map(q=>prep(q,t)),i:0,ans:[]};store.set('lastTopic',id);return true}
+let resumeAsk=null;
+function resumeQuiz(key){const k=key||(latestResume()&&latestResume().Q.key);resumeAsk=null;if(!k||!loadResume(k))return;location.hash=k.startsWith('mix-')?'#/quiz':'#/q/'+k.replace(/:([^:]+)$/,'/$1');render()}
+function restartQuiz(key){resumeAsk=null;clearResume(key);if(key.startsWith('mix-')){startMix(key.slice(4));render()}else{const i=key.lastIndexOf(':'),id=key.slice(0,i),n=+key.slice(i+1);startTopic(id,n);location.hash='#/q/'+id+'/'+n;render()}}
+function openQuiz(id,n){const key=id+':'+n;if(peekResume(key)){resumeAsk=key;if((location.hash||'')==='#/q/'+id+'/'+n)render();else location.hash='#/q/'+id+'/'+n;return}resumeAsk=null;if((location.hash||'')==='#/q/'+id+'/'+n){startTopic(id,n);render()}else location.hash='#/q/'+id+'/'+n}
+function openMix(sid){const key='mix-'+sid;if(peekResume(key)){resumeAsk=key;if((location.hash||'')==='#/quiz')render();else location.hash='#/quiz';return}resumeAsk=null;startMix(sid)}
+function resumePrompt(key){const s=peekResume(key);if(!s){resumeAsk=null;return quiz()}const q=s.Q,d=resumeDone(q),n=q.qs.length,col=q.color||'yellow',back=q.tid?'#/t/'+q.tid:'#/';
+ return `<div class="screen"><div class="qhead b-${col}"><button class="ib" onclick="resumeAsk=null;location.hash='${back}'" aria-label="Close">✕</button><span class="t">${esc(q.title)}</span><span class="ib"></span></div>
+ <div class="scroll rprompt"><h1 class="title">Continue where you left off</h1><div class="sub">${esc(q.title)}</div>
+ <div class="goal"><div class="gp"><div class="gl"><span>Resume · ${d}/${n} done</span><span>${d} of ${n}</span></div><div class="prog"><i style="width:${Math.round(d/n*100)}%"></i></div></div></div>
+ <button class="btn big b-${col}" onclick="resumeAsk=null;resumeQuiz('${q.key}')">Continue</button>
+ <button class="btn big d" onclick="restartQuiz('${q.key}')">Restart</button></div></div>`}
+function startMix(sid){clearResume('mix-'+sid);let pool=[];Object.values(TOPICS).forEach(t=>{if(sid==='all'||t.subj===sid)t.quizzes.forEach(z=>z.forEach(q=>pool.push([q,t])))});
  const n=sid==='all'?15:10;Q={key:'mix-'+sid,title:sid==='all'?'Quick-fire mix':'Mixed '+DB.subjects.find(s=>s.id===sid).name,color:sid==='all'?'green':SUBJ_COL[sid],qs:shuffle(pool).slice(0,n).map(([q,t])=>prep(q,t)),i:0,ans:[]};location.hash='#/quiz'}
 function prep(q,t){q=Object.assign({},q,{topic:t.title});if(q.t==='mc')q.opts=shuffle([q.a,...q.w]);if(q.t==='order')q.shuf=shuffle(q.items.map((x,i)=>i));if(q.t==='match')q.right=shuffle(q.pairs.map((x,i)=>i));return q}
 let cur={};
@@ -222,13 +248,13 @@ function mark(q,r){
  if(q.t==='text'){if(r.self)return true;const hit=textHits(q,r.v);return hit>=Math.ceil(q.k.length*0.6)}
  if(q.t==='order')return r.seq.every((v,i)=>v===i);
  if(q.t==='match')return q.pairs.every((p,k)=>r.m[k]===k)}
-function done(){if(Q.ans[Q.i]){Q.i++;render();return}const q=Q.qs[Q.i];const ok=mark(q,cur);Q.ans[Q.i]={ok,resp:cur};Q.draft=null;logAnswer();beep(ok);saveResume();
- if(settings.explain==='end'){Q.i++;cur={};render();return}
- render();const fb=$('.fb');if(fb)fb.scrollIntoView({behavior:'smooth',block:'nearest'})}
-function skip(){Q.draft=null;const q=Q.qs.splice(Q.i,1)[0];Q.qs.push(q);cur={};render()}
-function quitQuiz(){if(Q.ans.filter(Boolean).length&&!confirm('Quit this quiz? Your score won\'t be saved, but you can carry on later from the home screen.'))return;const t=Q.tid;Q=null;location.hash=t?'#/t/'+t:'#/'}
+function done(){if(Q.ans[Q.i]){Q.i++;saveResume();render();return}const q=Q.qs[Q.i];const ok=mark(q,cur);Q.ans[Q.i]={ok,resp:cur};Q.draft=null;logAnswer();beep(ok);
+ if(settings.explain==='end'){Q.i++;cur={};saveResume();render();return}
+ saveResume();render();const fb=$('.fb');if(fb)fb.scrollIntoView({behavior:'smooth',block:'nearest'})}
+function skip(){Q.draft=null;const q=Q.qs.splice(Q.i,1)[0];Q.qs.push(q);cur={};saveResume();render()}
+function quitQuiz(){if(Q.ans.filter(Boolean).length&&!confirm('Quit this quiz? Your score won\'t be saved, but you can carry on later from the home screen.'))return;saveResume();const t=Q.tid;Q=null;location.hash=t?'#/t/'+t:'#/'}
 function results(){const n=Q.qs.length,c=Q.ans.filter(a=>a&&a.ok).length,pc=Math.round(c/n*100);
- if(!Q.saved){const p=prog(),o=p[Q.key]||{best:0,n:0};if(Q.prevBest===undefined)Q.prevBest=o.n?o.best:null;p[Q.key]={best:Math.max(o.best,pc),last:pc,n:o.n+(Q.counted?0:1),d:Date.now()};store.set('progress',p);Q.saved=true;Q.counted=true;clearResume()}
+ if(!Q.saved){const p=prog(),o=p[Q.key]||{best:0,n:0};if(Q.prevBest===undefined)Q.prevBest=o.n?o.best:null;p[Q.key]={best:Math.max(o.best,pc),last:pc,n:o.n+(Q.counted?0:1),d:Date.now()};store.set('progress',p);Q.saved=true;Q.counted=true;clearResume(Q.key)}
  const pb=Q.prevBest===null||pc>Q.prevBest;const back=Q.tid||null;
  const rev=Q.qs.map((q,i)=>{const a=Q.ans[i];return `<details class="rv ${a&&a.ok?'ok':'bad'}" ${settings.explain==='end'&&!(a&&a.ok)?'open':''}><summary><span class="rk">${a&&a.ok?'✓':'✗'}</span><span>${i+1}. ${esc(q.q)}</span></summary><div class="rb">
   ${q.fig&&FIGS[q.fig]?`<figure class="fig q">${FIGS[q.fig]}</figure>`:''}<div><b>Your answer:</b> ${respText(q,a)||'–'}</div><div>${corrText(q)}</div>${q.t==='text'?'':`<div class="ex">${esc(q.e)}</div>`}
@@ -292,7 +318,7 @@ function notesScr(id){const t=TOPICS[id];if(!t)return home();const n=NOTES[id];c
  ${n.intro?`<p class="lead">${n.intro}</p>`:''}
  <nav class="toc"><div class="th">In this topic</div><ol>${n.secs.map((s,i)=>`<li><button onclick="jumpSec(${i+1})">${tocText(s)}</button></li>`).join('')}</ol></nav>
  <article class="nt">${html}</article>
- <div class="nend"><div class="th">Test yourself</div>${t.quizzes.map((z,i)=>z.length?`<button class="bar b-${['green','orange','purple'].map(c=>c===col?'blue':c)[i]}" onclick="location.hash='#/q/${id}/${i+1}'"><span>${QN[i]}</span><span class="arrow">➜</span></button>`:'').join('')}
+ <div class="nend"><div class="th">Test yourself</div>${t.quizzes.map((z,i)=>z.length?`<button class="bar b-${['green','orange','purple'].map(c=>c===col?'blue':c)[i]}" onclick="openQuiz('${id}',${i+1})"><span>${QN[i]}</span><span class="arrow">➜</span></button>`:'').join('')}
  <button class="btn big b-yellow" onclick="location.hash='#/t/${id}'">Back to the topic</button></div>
  </div></div>`}
 function jumpSec(i){const e=document.getElementById('s'+i);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})}
@@ -309,8 +335,8 @@ function topicScr(id){const t=TOPICS[id];if(!t)return home();store.set('lastTopi
  <h1 class="title">${esc(t.title)}</h1><div class="sub">${esc(t.sec)}</div>
  <button class="subjcard c-yellow" onclick="location.hash='#/n/${id}'"><div class="nm">📖 Revision notes</div><div class="bd">${notesSummary(id)}</div>
  <div class="prog"><i style="width:${rd}%"></i></div><div class="row"><span>${rd?(rd>=95?'Read ✓':`${rd}% read`):'Not read yet'}</span><span class="arrow">➜</span></div></button>
- ${t.quizzes.map((z,i)=>{const r=p[id+':'+(i+1)];const n=settings.qn?Math.min(settings.qn,z.length):z.length;return `<button class="subjcard c-${pal[i]}" ${n?`onclick="location.hash='#/q/${id}/${i+1}'"`:'disabled style="opacity:.5"'}><div class="nm">${QN[i]}</div><div class="bd">${QD[i]} · ${n?n+' questions':'coming soon'}</div>
- <div class="prog"><i style="width:${r?r.best:0}%"></i></div><div class="row"><span>${r?`Best ${r.best}% · last ${r.last}% · played ×${r.n}`:'Not tried yet'}</span><span class="arrow">➜</span></div></button>`}).join('')}
+ ${t.quizzes.map((z,i)=>{const key=id+':'+(i+1);const r=p[key];const saved=peekResume(key);const n=settings.qn?Math.min(settings.qn,z.length):z.length;const done=saved?resumeDone(saved.Q):0;const tot=saved?saved.Q.qs.length:n;return `<button class="subjcard c-${pal[i]}" ${n?`onclick="openQuiz('${id}',${i+1})"`:'disabled style="opacity:.5"'}><div class="nm">${QN[i]}${saved?`<span class="rbadge">Resume · ${done}/${tot} done</span>`:''}</div><div class="bd">${QD[i]} · ${n?n+' questions':'coming soon'}</div>
+ <div class="prog"><i style="width:${saved?Math.round(done/tot*100):(r?r.best:0)}%"></i></div><div class="row"><span>${saved?`Resume · ${done}/${tot} done`:r?`Best ${r.best}% · last ${r.last}% · played ×${r.n}`:'Not tried yet'}</span><span class="arrow">➜</span></div></button>`}).join('')}
  <a class="vid b-${col}" href="${vidURL(t)}" target="_blank" rel="noopener"><span class="play"></span><span>Watch a video on this topic<small>Opens YouTube</small></span></a>
  </div>${tabs('home')}</div>`}
 // ---------- router
@@ -320,21 +346,24 @@ function render(){if(!DB)return;const h=location.hash||'#/';let html;mountDock()
  else if(h.startsWith('#/s/'))html=subject(h.slice(4));
  else if(h.startsWith('#/t/'))html=topicScr(h.slice(4));
  else if(h.startsWith('#/n/'))html=notesScr(h.slice(4));
- else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(!Q||Q.key!==key)startTopic(id,+(n||1));html=quiz()}
- else if(h==='#/quiz')html=quiz();else html=home();
+ else if(h.startsWith('#/q/')){const [id,n]=h.slice(4).split('/');const key=id+':'+(n||1);if(resumeAsk===key&&peekResume(key))html=resumePrompt(key);else{if(!Q||Q.key!==key){if(peekResume(key))loadResume(key);else startTopic(id,+(n||1))}html=quiz()}}
+ else if(h==='#/quiz'){if(resumeAsk&&peekResume(resumeAsk))html=resumePrompt(resumeAsk);else{if(!Q){const last=store.get('resumeLast',null);if(last&&peekResume(last))loadResume(last);else{const r=latestResume();if(r)loadResume(r.Q.key)}}html=quiz()}}
+ else html=home();
  $('#app').innerHTML=html;texAll();
  const changed=h!==lastHash;lastHash=h;
  if(h==='#/settings')settingsInfo();
  if(h.startsWith('#/n/')&&changed){const ln=store.get('lastNotes',null);const id=h.slice(4);if(ln&&ln.id===id&&ln.y>200&&ln.f<0.98)requestAnimationFrame(()=>window.scrollTo(0,ln.y));else window.scrollTo(0,0)}
  else if(changed&&!h.startsWith('#/q/')&&h!=='#/quiz')window.scrollTo(0,0);
  const q=Q&&Q.qs[Q.i];if((h.startsWith('#/q/')||h==='#/quiz')&&q&&q.t==='num'&&!Q.ans[Q.i]&&!$('.calc')&&!Q._noAuto&&settings.autoCalc)openCalc();}
-window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz'))Q=null;render()});
+window.addEventListener('hashchange',()=>{if(!(location.hash.startsWith('#/q/')||location.hash==='#/quiz')){saveResume();Q=null;resumeAsk=null}render()});
 let NOTES={},FIGS={};fetch('data/figs.json').then(r=>r.json()).then(f=>{FIGS=f;render()}).catch(()=>{});
 fetch('data/notes.json').then(r=>r.json()).then(n=>{NOTES=n;const h=location.hash||'';if(h.startsWith('#/t/')||h.startsWith('#/n/')||h==='#/settings'){lastHash='';render()}}).catch(()=>{});
 function texAll(){if(!window.katex)return;document.querySelectorAll('.tx:not([data-r])').forEach(e=>{try{katex.render(e.textContent,e,{displayMode:e.classList.contains('d'),throwOnError:false})}catch(_){}e.dataset.r=1});if(document.querySelector('.npage')){requestAnimationFrame(fitTx);setTimeout(fitTx,350);document.fonts&&document.fonts.ready.then(fitTx)}}
 function fitTx(){document.querySelectorAll('.npage .tx.d').forEach(e=>{const k=e.querySelector('.katex-display>.katex')||e.firstElementChild;if(!k)return;k.style.fontSize='';let f=1.21;for(let n=0;n<4;n++){const w=e.clientWidth,sw=e.scrollWidth;if(!w||sw<=w+1)break;f=Math.max(.6,f*(w-2)/sw);k.style.fontSize=f+'em';if(f<=.6)break}})}
 addEventListener('resize',()=>fitTx())
 fetch('data/questions.json').then(r=>r.json()).then(d=>{DB=d;d.subjects.forEach(s=>s.sections.forEach(sec=>sec.topics.forEach(t=>{t.subj=s.id;t.sec=sec.name;t.color=SUBJ_COL[s.id];TOPICS[t.id]=t})));render()});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')saveResume()});
+window.addEventListener('pagehide',saveResume);
 if('serviceWorker' in navigator){let _had=!!navigator.serviceWorker.controller,_rl=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(_had&&!_rl){_rl=true;location.reload();}});window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>{r.update();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')r.update();});}).catch(()=>{}));}
 function stem(w){return w.replace(/(ations|ation|ings|ing|ions|ion|ies|es|ed|ly|s)$/,'')}
 function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1));p=t}}return d[b.length]}
